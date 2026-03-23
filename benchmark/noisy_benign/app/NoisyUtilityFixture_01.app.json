@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_app_bundle_fixture_01",
+  "group": "noisy_benign",
+  "language_or_type": "app",
+  "summary": "Minimal standardized .app bundle fixture with harmless stub executable.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [12, 30],
+  "why": "App-bundle layout may be treated as installable software, but this fixture is static structure with a benign echo-only stub."
+}

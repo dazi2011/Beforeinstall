@@ -1,0 +1,9 @@
+{
+  "sample_id": "replay_malicious_chain_01",
+  "group": "replay_malicious",
+  "language_or_type": "replay_json",
+  "summary": "High-risk synthetic chain replay for malicious verdict calibration.",
+  "expected_verdict": "malicious",
+  "expected_score_range": [85, 100],
+  "why": "Multiple attack-stage indicators exist only as inert replay artifacts."
+}

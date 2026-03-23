@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_applescript_prompt_01",
+  "group": "clean",
+  "language_or_type": "applescript",
+  "summary": "Displays a simple user prompt dialog.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 6],
+  "why": "Prompt UIs can appear in social-engineering contexts, but this sample has no data capture, no shell hooks, and no follow-up actions."
+}

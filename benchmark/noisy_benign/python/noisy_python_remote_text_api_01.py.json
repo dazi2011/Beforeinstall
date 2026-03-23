@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_python_remote_text_api_01",
+  "group": "noisy_benign",
+  "language_or_type": "python",
+  "summary": "Fetches public remote text and prints a short preview only.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [14, 32],
+  "why": "Outbound request patterns may be flagged, but fetched data is only displayed and never written as executable content."
+}

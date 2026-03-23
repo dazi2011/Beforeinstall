@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_js_network_cache_text_01",
+  "group": "noisy_benign",
+  "language_or_type": "js",
+  "summary": "Fetches public text and caches a truncated response in sandbox.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [14, 32],
+  "why": "Downloader-like pattern exists, but content is plain text, capped in size, and never interpreted as code."
+}

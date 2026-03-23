@@ -1,0 +1,5 @@
+{
+  "mode": "fixture",
+  "auto_update": false,
+  "note": "Structure-only app bundle for static analyzer tests"
+}

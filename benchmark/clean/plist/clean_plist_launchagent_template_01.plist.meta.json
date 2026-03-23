@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_plist_launchagent_template_01",
+  "group": "clean",
+  "language_or_type": "plist",
+  "summary": "Static plist template fixture for parser tests only.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 18],
+  "why": "Template file is inert and never loaded by launchctl."
+}

@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_js_base64_demo_01",
+  "group": "clean",
+  "language_or_type": "js",
+  "summary": "Demonstrates benign base64 encode/decode operations.",
+  "expected_verdict": "clean",
+  "expected_score_range": [3, 15],
+  "why": "Encoding primitives may overlap with obfuscation signatures, but here they wrap static local text and no execution path exists."
+}

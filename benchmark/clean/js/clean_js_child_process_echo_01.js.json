@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_js_child_process_echo_01",
+  "group": "clean",
+  "language_or_type": "js",
+  "summary": "Uses child_process to run fixed echo command for test purposes.",
+  "expected_verdict": "clean",
+  "expected_score_range": [5, 18],
+  "why": "Process-spawn APIs can look risky, but this sample executes a constant harmless command and accepts no untrusted input."
+}

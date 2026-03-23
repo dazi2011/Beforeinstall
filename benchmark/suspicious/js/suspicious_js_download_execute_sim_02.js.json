@@ -1,0 +1,10 @@
+{
+  "sample_id": "suspicious_js_download_execute_sim_02",
+  "group": "suspicious",
+  "language_or_type": "js",
+  "summary": "Simulates network download-and-execute workflow but stores dry-run logs only.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [60, 78],
+  "why": "Downloader execution narrative is explicit, but implementation only fetches text and writes non-executable logs.",
+  "expected_rules_hit": ["download_execute_pattern"]
+}

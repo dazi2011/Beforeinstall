@@ -1,0 +1,8 @@
+{
+  "app_id": "com.synthetic.clean.app",
+  "name": "Synthetic Notes Viewer",
+  "version": "1.0.0",
+  "requested_permissions": ["read-local-config"],
+  "network_access": false,
+  "post_install_actions": []
+}

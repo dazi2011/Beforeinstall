@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_applescript_open_finder_01",
+  "group": "clean",
+  "language_or_type": "applescript",
+  "summary": "Opens Finder at the project sandbox_output directory.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 8],
+  "why": "UI automation is limited to opening a local folder and does not execute shell commands or alter system settings."
+}

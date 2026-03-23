@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_shell_chmod_tool_01",
+  "group": "noisy_benign",
+  "language_or_type": "shell",
+  "summary": "Applies executable bit to a local helper script in sandbox.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [10, 26],
+  "why": "Permission changes can look suspicious, but target is a local test script and no privileged or system path changes occur."
+}

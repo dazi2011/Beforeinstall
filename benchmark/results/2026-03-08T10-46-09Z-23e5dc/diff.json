@@ -1,0 +1,73 @@
+{
+  "addedSamples" : [
+
+  ],
+  "comparedAt" : "2026-03-08T10:46:10Z",
+  "newlyRaisedFalseNegatives" : [
+
+  ],
+  "newlyRaisedFalsePositives" : [
+
+  ],
+  "notes" : [
+    "shared_samples=85",
+    "verdict_changes=2",
+    "score_increased=2",
+    "score_decreased=0",
+    "new_false_positives=0",
+    "new_false_negatives=0"
+  ],
+  "previousRunID" : "2026-03-08T10-41-21Z-756fcf",
+  "removedSamples" : [
+
+  ],
+  "scoreDecreasedSamples" : [
+
+  ],
+  "scoreIncreasedSamples" : [
+    "suspicious_shell_launchagent_mirror_02",
+    "suspicious_shell_persistence_sim_01"
+  ],
+  "topScoreChanges" : [
+    {
+      "currentScore" : 30,
+      "currentVerdict" : "suspicious",
+      "delta" : 30,
+      "group" : "suspicious",
+      "id" : "9A3305E9-8F2D-4FE2-B0E9-58B591BB187A",
+      "previousScore" : 0,
+      "previousVerdict" : "clean",
+      "sampleID" : "suspicious_shell_launchagent_mirror_02"
+    },
+    {
+      "currentScore" : 30,
+      "currentVerdict" : "suspicious",
+      "delta" : 30,
+      "group" : "suspicious",
+      "id" : "C914E489-2723-4172-B962-83A9A91FE384",
+      "previousScore" : 0,
+      "previousVerdict" : "clean",
+      "sampleID" : "suspicious_shell_persistence_sim_01"
+    }
+  ],
+  "verdictChanges" : [
+    {
+      "currentScore" : 30,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "AFF672A3-B8BA-4A08-AC1F-22F3DF6F22B6",
+      "previousScore" : 0,
+      "previousVerdict" : "clean",
+      "sampleID" : "suspicious_shell_launchagent_mirror_02"
+    },
+    {
+      "currentScore" : 30,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "B6B7B1AB-BDDD-40AC-8EBA-731D2739CF86",
+      "previousScore" : 0,
+      "previousVerdict" : "clean",
+      "sampleID" : "suspicious_shell_persistence_sim_01"
+    }
+  ]
+}

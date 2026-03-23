@@ -1,0 +1,235 @@
+{
+  "addedSamples" : [
+
+  ],
+  "comparedAt" : "2026-03-08T10:11:41Z",
+  "newlyRaisedFalseNegatives" : [
+
+  ],
+  "newlyRaisedFalsePositives" : [
+
+  ],
+  "notes" : [
+    "shared_samples=85",
+    "verdict_changes=0",
+    "score_increased=0",
+    "score_decreased=0",
+    "new_false_positives=0",
+    "new_false_negatives=0"
+  ],
+  "previousRunID" : "2026-03-08T09-56-45Z-c386f0",
+  "removedSamples" : [
+
+  ],
+  "scoreDecreasedSamples" : [
+
+  ],
+  "scoreIncreasedSamples" : [
+
+  ],
+  "topScoreChanges" : [
+    {
+      "currentScore" : 0,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "D7B1F121-1D44-47C7-A5A6-099D3B2A86F9",
+      "previousScore" : 0,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_app_manifest_01"
+    },
+    {
+      "currentScore" : 0,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "E5F36E7A-50FA-428D-A1C3-CDC6524319A5",
+      "previousScore" : 0,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_applescript_notification_01"
+    },
+    {
+      "currentScore" : 0,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "66F446B4-0AD4-4E3A-9D8A-DF98DE366518",
+      "previousScore" : 0,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_applescript_open_finder_01"
+    },
+    {
+      "currentScore" : 0,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "0130349E-0358-4050-8D5C-0AB6FF50CF6C",
+      "previousScore" : 0,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_applescript_prompt_01"
+    },
+    {
+      "currentScore" : 0,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "004D7D1D-8623-4753-8E5A-78CEA90960A3",
+      "previousScore" : 0,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_applescript_textedit_newdoc_01"
+    },
+    {
+      "currentScore" : 25,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "2CCD82CF-2B92-45A4-86E8-9029B6075ACE",
+      "previousScore" : 25,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_js_base64_demo_01"
+    },
+    {
+      "currentScore" : 10,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "8D3BED95-8440-4F2C-A52D-3A132F328BF1",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_js_child_process_echo_01"
+    },
+    {
+      "currentScore" : 10,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "79072CC8-FD1C-47EE-A29C-952925A21B4B",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_js_config_merge_01"
+    },
+    {
+      "currentScore" : 10,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "15FD1AE6-074D-409A-B163-B0387D06F158",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_js_read_local_config_02"
+    },
+    {
+      "currentScore" : 0,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "CF58ADF1-6DA9-45C5-BDC7-96427C38546A",
+      "previousScore" : 0,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_pkg_receipt_stub_01"
+    },
+    {
+      "currentScore" : 0,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "029338E1-8D8E-433A-A1CB-DA7DCE9E4912",
+      "previousScore" : 0,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_plist_launchagent_template_01"
+    },
+    {
+      "currentScore" : 10,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "CECFB004-47E6-4116-96E1-BAA89B9B53AB",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_python_config_rw_02"
+    },
+    {
+      "currentScore" : 10,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "6A68AEB8-83BA-4546-B005-19AF3256D2CC",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_python_directory_scan_01"
+    },
+    {
+      "currentScore" : 10,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "2E54D3EB-4EC6-46B9-B9FE-97E9B044D50C",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_python_log_rotate_01"
+    },
+    {
+      "currentScore" : 10,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "53D4D571-EB4C-4A69-9492-11A55BE79015",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_python_subprocess_safe_01"
+    },
+    {
+      "currentScore" : 10,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "57880DDD-4039-489E-892B-7C388A3DFA02",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_python_text_summary_01"
+    },
+    {
+      "currentScore" : 10,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "8681A88F-859F-40EE-8FD5-81BF951C15CB",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_shell_backup_01"
+    },
+    {
+      "currentScore" : 10,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "211001FD-6D34-4B5F-9DB1-9DFBB190ED89",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_shell_backup_02"
+    },
+    {
+      "currentScore" : 10,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "A51276AC-0B95-4929-9563-1C07A355B81C",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_shell_log_archive_01"
+    },
+    {
+      "currentScore" : 10,
+      "currentVerdict" : "clean",
+      "delta" : 0,
+      "group" : "clean",
+      "id" : "14557350-D4FC-4746-83C7-F261ABD28648",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_shell_open_safe_site_01"
+    }
+  ],
+  "verdictChanges" : [
+
+  ]
+}

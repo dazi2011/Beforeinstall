@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_shell_backup_01",
+  "group": "clean",
+  "language_or_type": "shell",
+  "summary": "Sandbox local backup utility with no privileged operations.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 15],
+  "why": "Only writes inside benchmark sandbox_runtime and performs harmless file copy."
+}

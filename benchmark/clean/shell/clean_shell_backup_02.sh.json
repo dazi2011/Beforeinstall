@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_shell_backup_02",
+  "group": "clean",
+  "language_or_type": "shell",
+  "summary": "Backs up common user documents to project sandbox_output/backup only.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 12],
+  "why": "It copies normal files and may look like data collection logic, but scope is small and destination is project sandbox only. No persistence, download, or execution behavior exists."
+}

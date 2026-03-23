@@ -1,0 +1,10 @@
+{
+  "sample_id": "suspicious_python_echo_chain_02",
+  "group": "suspicious",
+  "language_or_type": "python",
+  "summary": "Uses os.system/subprocess APIs but only to echo simulated dangerous commands.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [52, 68],
+  "why": "Process APIs plus dangerous command text can trigger alerts, yet actual calls are fixed echo-only dry-run outputs.",
+  "expected_rules_hit": ["shell_spawn_pattern","download_execute_pattern"]
+}

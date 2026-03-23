@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_shell_installer_like_01",
+  "group": "noisy_benign",
+  "language_or_type": "shell",
+  "summary": "Installer-like script that prints risky command strings without running them.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [20, 45],
+  "why": "Contains high-risk patterns in text but enforces dry-run and sandbox logging only."
+}

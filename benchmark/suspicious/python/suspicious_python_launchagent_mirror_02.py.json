@@ -1,0 +1,10 @@
+{
+  "sample_id": "suspicious_python_launchagent_mirror_02",
+  "group": "suspicious",
+  "language_or_type": "python",
+  "summary": "Writes LaunchAgent-like plist data into sandbox mirror path for static detection tests.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [52, 68],
+  "why": "Persistence-formatted artifact exists, but it is isolated to project mirror and never loaded.",
+  "expected_rules_hit": ["persistence_pattern"]
+}

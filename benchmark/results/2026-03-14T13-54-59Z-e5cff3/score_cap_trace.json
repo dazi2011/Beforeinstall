@@ -1,0 +1,32 @@
+[
+  {
+    "caps" : [
+      {
+        "afterScore" : 11,
+        "applied" : false,
+        "beforeScore" : 11,
+        "cap" : 45,
+        "id" : "A0F09F77-4739-4CC9-B086-88986C42483F",
+        "reason" : "Documentation\/comment-only sample is capped."
+      }
+    ],
+    "detectedType" : "pkg",
+    "id" : "E0296724-8CCA-40BA-ABB3-9BE54A8FED01",
+    "sampleID" : "noisy_pkg_fixture_02"
+  },
+  {
+    "caps" : [
+      {
+        "afterScore" : 22,
+        "applied" : false,
+        "beforeScore" : 22,
+        "cap" : 45,
+        "id" : "B5CC6D60-DDD8-48DD-AEF0-6A7739428F70",
+        "reason" : "Documentation\/comment-only sample is capped."
+      }
+    ],
+    "detectedType" : "pkg",
+    "id" : "F19BDE48-3CE4-4C99-B979-E6B37A860E27",
+    "sampleID" : "suspicious_hybrid_pkg_fixture_02"
+  }
+]

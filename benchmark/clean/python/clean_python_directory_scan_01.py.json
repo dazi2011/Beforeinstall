@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_python_directory_scan_01",
+  "group": "clean",
+  "language_or_type": "python",
+  "summary": "Scans a local directory tree and reports file count and size totals.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 10],
+  "why": "Directory enumeration can look like discovery behavior, but it targets only project sandbox content and performs read-only analysis."
+}

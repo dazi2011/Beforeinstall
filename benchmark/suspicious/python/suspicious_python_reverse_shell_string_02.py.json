@@ -1,0 +1,10 @@
+{
+  "sample_id": "suspicious_python_reverse_shell_string_02",
+  "group": "suspicious",
+  "language_or_type": "python",
+  "summary": "Contains reverse-shell style pty/socket command string for pattern detection only.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [60, 78],
+  "why": "Reverse-shell signatures appear verbatim, but they are inert strings with no execution path.",
+  "expected_rules_hit": ["shell_spawn_pattern","network_beacon_pattern"]
+}

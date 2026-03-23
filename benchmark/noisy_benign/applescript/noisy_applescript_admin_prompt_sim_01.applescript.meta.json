@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_applescript_admin_prompt_sim_01",
+  "group": "noisy_benign",
+  "language_or_type": "applescript",
+  "summary": "Admin-prompt-like UI simulation without credential capture.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [18, 40],
+  "why": "Mimics social-engineering surface but contains no exfiltration or shell execution."
+}

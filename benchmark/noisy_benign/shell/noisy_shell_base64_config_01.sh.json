@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_shell_base64_config_01",
+  "group": "noisy_benign",
+  "language_or_type": "shell",
+  "summary": "Stores a base64-encoded local config blob and decodes it for verification.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [12, 30],
+  "why": "Base64 artifacts often trigger obfuscation rules, but this payload is transparent config data with no execution logic."
+}

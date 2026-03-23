@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_python_dynamic_loader_sim_01",
+  "group": "noisy_benign",
+  "language_or_type": "python",
+  "summary": "Demonstrates importlib dynamic loading and ctypes usage with local harmless stubs.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [16, 35],
+  "why": "Dynamic-loading primitives can overlap with malware traits, but module source is local sandbox text and no native library loading occurs."
+}

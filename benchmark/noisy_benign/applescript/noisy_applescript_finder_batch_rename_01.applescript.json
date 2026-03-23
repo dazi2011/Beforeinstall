@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_applescript_finder_batch_rename_01",
+  "group": "noisy_benign",
+  "language_or_type": "applescript",
+  "summary": "Batch-renames files via Finder automation inside sandbox folder.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [10, 28],
+  "why": "Bulk rename behavior may look stealthy, but the scope is explicit test files in project sandbox only."
+}

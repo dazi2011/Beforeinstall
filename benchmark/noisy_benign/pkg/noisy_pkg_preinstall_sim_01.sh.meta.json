@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_pkg_preinstall_sim_01",
+  "group": "noisy_benign",
+  "language_or_type": "pkg",
+  "summary": "PKG preinstall simulation with privileged-looking text only.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [22, 48],
+  "why": "Writes a sandbox log and never touches system install locations."
+}

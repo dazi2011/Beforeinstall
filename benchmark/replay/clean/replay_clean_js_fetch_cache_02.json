@@ -1,0 +1,78 @@
+{
+  "sample_id": "replay_clean_js_fetch_cache_02",
+  "group": "clean",
+  "summary": "Node.js utility fetches public text API and stores local cache.",
+  "expected_verdict": "clean",
+  "expected_score_range": [8, 20],
+  "expected_top_findings": [
+    "public_api_fetch",
+    "cache_file_write"
+  ],
+  "events": [
+    {
+      "timestamp": "2026-03-08T09:30:00Z",
+      "category": "processCreated",
+      "processID": 2400,
+      "parentProcessID": 1300,
+      "processName": "node",
+      "executablePath": "/usr/local/bin/node",
+      "action": "spawn",
+      "target": "benchmark/tools/fetch_cache.js",
+      "details": "Developer ran Node utility from Terminal.",
+      "riskScoreDeltaHint": 1,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:30:01Z",
+      "category": "scriptExecuted",
+      "processID": 2400,
+      "parentProcessID": 1300,
+      "processName": "node",
+      "executablePath": "/usr/local/bin/node",
+      "action": "executeScript",
+      "target": "benchmark/tools/fetch_cache.js",
+      "details": "Script started API request workflow.",
+      "riskScoreDeltaHint": 2,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:30:02Z",
+      "category": "networkConnect",
+      "processID": 2400,
+      "parentProcessID": 1300,
+      "processName": "node",
+      "executablePath": "/usr/local/bin/node",
+      "action": "connect",
+      "target": "https://example.org/api/text",
+      "details": "Fetched public text payload over TLS.",
+      "riskScoreDeltaHint": 3,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:30:03Z",
+      "category": "fileCreated",
+      "processID": 2400,
+      "parentProcessID": 1300,
+      "processName": "node",
+      "executablePath": "/usr/local/bin/node",
+      "action": "create",
+      "target": "benchmark/sandbox_output/network_cache/replay_clean_js_fetch_cache_02.txt",
+      "details": "Created local cache text file.",
+      "riskScoreDeltaHint": 1,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:30:04Z",
+      "category": "processExited",
+      "processID": 2400,
+      "parentProcessID": 1300,
+      "processName": "node",
+      "executablePath": "/usr/local/bin/node",
+      "action": "exit",
+      "target": "self",
+      "details": "Script finished normally.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    }
+  ]
+}

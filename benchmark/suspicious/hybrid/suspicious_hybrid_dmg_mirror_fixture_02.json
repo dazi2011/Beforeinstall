@@ -1,0 +1,10 @@
+{
+  "sample_id": "suspicious_hybrid_dmg_mirror_fixture_02",
+  "group": "suspicious",
+  "language_or_type": "hybrid_dmg",
+  "summary": "DMG-style mirror directory containing suspicious-looking app and helper script composition.",
+  "expected_verdict": "malicious",
+  "expected_score_range": [70, 80],
+  "why": "Multiple stacked suspicious artifacts (app bundle + command script + staged chain text) justify high-risk synthetic scoring.",
+  "expected_rules_hit": ["download_execute_pattern","persistence_pattern","installer_script_pattern"]
+}

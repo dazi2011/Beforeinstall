@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_shell_write_test_plist_01",
+  "group": "clean",
+  "language_or_type": "shell",
+  "summary": "Writes a test plist file only under project sandbox_output/plist_tests.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 14],
+  "why": "Plist syntax may look like launch configuration, but it is never installed or loaded and stays in a non-system path."
+}

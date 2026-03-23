@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_js_eval_math_only_01",
+  "group": "noisy_benign",
+  "language_or_type": "js",
+  "summary": "Uses eval with a fixed hardcoded arithmetic expression.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [15, 35],
+  "why": "Use of eval is a common high-risk signal, but here input is constant and non-user-controlled, with no command or file execution."
+}

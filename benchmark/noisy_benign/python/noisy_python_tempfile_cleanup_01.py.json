@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_python_tempfile_cleanup_01",
+  "group": "noisy_benign",
+  "language_or_type": "python",
+  "summary": "Creates then deletes a temporary file in sandbox output.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [10, 24],
+  "why": "Create-delete sequences can resemble anti-forensics heuristics, but this is ordinary temporary-file lifecycle in test scope."
+}

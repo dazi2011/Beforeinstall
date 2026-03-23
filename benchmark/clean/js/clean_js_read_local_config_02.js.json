@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_js_read_local_config_02",
+  "group": "clean",
+  "language_or_type": "js",
+  "summary": "Reads a local JSON file and prints parsed configuration.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 8],
+  "why": "File read behavior is straightforward local config handling without network or execution patterns."
+}

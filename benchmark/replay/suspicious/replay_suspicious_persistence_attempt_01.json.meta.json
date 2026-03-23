@@ -1,0 +1,9 @@
+{
+  "sample_id": "replay_suspicious_persistence_attempt_01",
+  "group": "replay_suspicious",
+  "language_or_type": "replay_json",
+  "summary": "Suspicious persistence-like behavior represented as blocked replay events.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [60, 80],
+  "why": "Contains persistence signatures but explicitly marks dry-run blocking."
+}

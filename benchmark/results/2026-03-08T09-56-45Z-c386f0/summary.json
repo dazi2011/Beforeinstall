@@ -1,0 +1,125 @@
+{
+  "benchmarkRootPath" : "\/Users\/wudazi\/Beforeinstall\/benchmark",
+  "discoveryWarnings" : [
+
+  ],
+  "finishedAt" : "2026-03-08T09:57:05Z",
+  "missingRequiredDirectories" : [
+
+  ],
+  "runID" : "2026-03-08T09-56-45Z-c386f0",
+  "schemaVersion" : "1.1",
+  "startedAt" : "2026-03-08T09:56:45Z",
+  "summary" : {
+    "analyzedSamples" : 73,
+    "averageScore" : 13.150684931506849,
+    "cleanCount" : 65,
+    "cleanFalsePositiveRate" : 0,
+    "confusionMatrix" : {
+      "clean" : {
+        "clean" : 40,
+        "suspicious" : 2,
+        "unknown" : 5
+      },
+      "malicious" : {
+        "clean" : 2,
+        "malicious" : 1,
+        "unknown" : 4
+      },
+      "suspicious" : {
+        "clean" : 23,
+        "malicious" : 1,
+        "suspicious" : 3,
+        "unknown" : 4
+      }
+    },
+    "failedSamples" : 12,
+    "falseNegativeCount" : 33,
+    "falseNegativeRate" : 0.868421052631579,
+    "falsePositiveCount" : 2,
+    "falsePositiveRate" : 0.0425531914893617,
+    "groupStats" : {
+      "clean" : {
+        "analyzed" : 21,
+        "avgScore" : 7.380952380952381,
+        "clean" : 21,
+        "failed" : 0,
+        "malicious" : 0,
+        "suspicious" : 0,
+        "total" : 21,
+        "unknown" : 0
+      },
+      "noisy_benign" : {
+        "analyzed" : 21,
+        "avgScore" : 12.142857142857142,
+        "clean" : 19,
+        "failed" : 0,
+        "malicious" : 0,
+        "suspicious" : 2,
+        "total" : 21,
+        "unknown" : 0
+      },
+      "replay_clean" : {
+        "analyzed" : 1,
+        "avgScore" : 0,
+        "clean" : 0,
+        "failed" : 4,
+        "malicious" : 0,
+        "suspicious" : 0,
+        "total" : 5,
+        "unknown" : 5
+      },
+      "replay_malicious" : {
+        "analyzed" : 1,
+        "avgScore" : 100,
+        "clean" : 0,
+        "failed" : 4,
+        "malicious" : 1,
+        "suspicious" : 0,
+        "total" : 5,
+        "unknown" : 4
+      },
+      "replay_suspicious" : {
+        "analyzed" : 1,
+        "avgScore" : 50,
+        "clean" : 0,
+        "failed" : 4,
+        "malicious" : 0,
+        "suspicious" : 1,
+        "total" : 5,
+        "unknown" : 4
+      },
+      "suspicious" : {
+        "analyzed" : 28,
+        "avgScore" : 14.285714285714286,
+        "clean" : 25,
+        "failed" : 0,
+        "malicious" : 1,
+        "suspicious" : 2,
+        "total" : 28,
+        "unknown" : 0
+      }
+    },
+    "isScoreMonotonic" : true,
+    "maliciousCount" : 2,
+    "medianScore" : 10,
+    "mismatchBreakdown" : {
+      "analysis_failed" : 12,
+      "score_too_high" : 4,
+      "score_too_low" : 18,
+      "verdict_too_high" : 3,
+      "verdict_too_low" : 26
+    },
+    "noisyBenignFalsePositiveRate" : 0.09523809523809523,
+    "replayMaliciousDetectionRate" : 1,
+    "scoreMonotonicityHints" : [
+
+    ],
+    "scoreRangeMatchRate" : 0.3287671232876712,
+    "suspiciousCount" : 5,
+    "suspiciousHitRate" : 0.10714285714285714,
+    "totalSamples" : 85,
+    "unknownCount" : 13,
+    "verdictAccuracy" : 0.5176470588235295
+  }
+}

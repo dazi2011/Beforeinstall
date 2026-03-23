@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_shell_open_safe_site_01",
+  "group": "clean",
+  "language_or_type": "shell",
+  "summary": "Opens a fixed safe website using macOS open command.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 8],
+  "why": "Network-looking behavior is limited to opening a known fixed URL in browser; it performs no download, execution, or file modifications."
+}

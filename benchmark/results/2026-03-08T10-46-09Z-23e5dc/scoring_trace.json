@@ -1,0 +1,1553 @@
+[
+  {
+    "baseScore" : 0,
+    "finalScore" : 22,
+    "findingDeltas" : [
+      {
+        "category" : "execution",
+        "explanation" : "检测到 child_process 模块使用，可直接执行 shell 或二进制命令。",
+        "ruleID" : "normalized.javascript.child_process",
+        "scoreDelta" : 11,
+        "severity" : "high"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "检测到 child_process 模块使用，可直接执行 shell 或二进制命令。",
+        "ruleID" : "normalized.javascript.child_process",
+        "scoreDelta" : 11,
+        "severity" : "high"
+      }
+    ],
+    "id" : "E4FABF26-EAA8-4739-88ED-AF071520871D",
+    "notes" : [
+      "group=clean",
+      "subtype=js",
+      "status=completed"
+    ],
+    "sampleID" : "clean_js_child_process_echo_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 10,
+    "findingDeltas" : [
+      {
+        "category" : "signature",
+        "explanation" : "The sample is executable-like but unsigned.",
+        "ruleID" : "signature.anomaly",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "5F02C3D7-09FF-42B0-ABA2-496558DA31F3",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=app",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_app_bundle_fixture_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "C0F54C4E-17C3-4267-9BFF-8EAD766AAF7C",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=app",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_app_updater_manifest_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "0D79E1C4-1238-4355-911B-428FD42C6F19",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=applescript",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_applescript_admin_prompt_sim_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 1,
+    "findingDeltas" : [
+      {
+        "category" : "automation",
+        "explanation" : "脚本可控制 Finder 进行文件操作，需要结合上下文评估风险。",
+        "ruleID" : "normalized.applescript.finder_control",
+        "scoreDelta" : 1,
+        "severity" : "low"
+      }
+    ],
+    "id" : "29B7F2DA-4B2A-4398-B7AF-AF11B9F7B248",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=applescript",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_applescript_finder_batch_rename_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 2,
+    "findingDeltas" : [
+      {
+        "category" : "automation",
+        "explanation" : "脚本可驱动 Terminal 执行命令，存在行为链隐藏风险。",
+        "ruleID" : "normalized.applescript.terminal_control",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "FF02B6AB-E80F-438E-B317-78544C92859E",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=applescript",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_applescript_terminal_echo_pwd_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 11,
+    "findingDeltas" : [
+      {
+        "category" : "execution",
+        "explanation" : "检测到 child_process 模块使用，可直接执行 shell 或二进制命令。",
+        "ruleID" : "normalized.javascript.child_process",
+        "scoreDelta" : 11,
+        "severity" : "high"
+      }
+    ],
+    "id" : "B3CD79EF-B99A-48E5-96FB-56756737BF28",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=js",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_js_child_process_ls_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "5ACE05DF-9858-4A7D-9148-51386040F3EC",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=js",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_js_network_cache_text_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "5945FDE5-F480-44D8-8A9F-15FA154BF0FA",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=js",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_js_postinstall_sim_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "0C2D0771-7FE7-4FDF-912E-3B4DD801D9AE",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=pkg",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_pkg_fixture_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "6E891BB6-F5B8-4CA1-AEEE-ECAECA338613",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=pkg",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_pkg_preinstall_sim_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 10,
+    "findingDeltas" : [
+      {
+        "category" : "execution",
+        "explanation" : "检测到 subprocess.run\/call\/Popen，脚本可直接拉起外部二进制或 shell。",
+        "ruleID" : "normalized.python.subprocess_exec",
+        "scoreDelta" : 10,
+        "severity" : "high"
+      }
+    ],
+    "id" : "BFA7A6A7-DF4A-47D3-92C6-FE6A6EBC5445",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=python",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_python_build_subprocess_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "F618BE1A-2B4D-4DAA-990B-583719952087",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=python",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_python_dynamic_loader_sim_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "D0A1DDF2-DB01-4606-956F-893E7A6E43CE",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=python",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_python_remote_text_api_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "2F62DF1B-DAAD-479A-8980-4478A3EBB4F4",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=python",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_python_tempfile_cleanup_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "C3D53D38-6CB8-47A7-BCF0-87236DFD933C",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=python",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_python_updater_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "F02A96C1-0089-4BF6-A8CA-03C7B14D3919",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=shell",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_shell_appsupport_style_write_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "0EB977AC-E40C-4201-817C-CAA6DF0566BA",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=shell",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_shell_base64_config_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "E05D8FF4-BBDA-40D3-BFB9-19EF47A7C871",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=shell",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_shell_chmod_tool_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 35,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "A download-then-execute pattern was observed, commonly used for staged payload delivery.",
+        "ruleID" : "script.download_execute_chain",
+        "scoreDelta" : 35,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "49D76428-48B0-4C63-913F-72C9609847F2",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=shell",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_shell_installer_like_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "1216A597-AF18-45BF-9CFE-96BC3E126734",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=shell",
+      "status=completed"
+    ],
+    "sampleID" : "noisy_shell_update_checker_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "ECB29632-81CE-4A71-94CF-BD57FD8B0FCA",
+    "notes" : [
+      "group=replay_clean",
+      "subtype=jsonReplay",
+      "status=completed"
+    ],
+    "sampleID" : "replay_clean_app_lifecycle_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "unknown"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "3B6F68B8-9ADC-4F5E-AFB3-FF4A0DF5BA56",
+    "notes" : [
+      "group=replay_clean",
+      "subtype=replay_json",
+      "status=completed"
+    ],
+    "sampleID" : "replay_clean_backup_flow_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "unknown"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 10,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "FE1FD718-D8FB-42F7-A217-8EB191C3AF17",
+    "notes" : [
+      "group=replay_clean",
+      "subtype=jsonReplay",
+      "status=completed"
+    ],
+    "sampleID" : "replay_clean_js_fetch_cache_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "ED989AB9-43DF-4EA8-9478-2A92DD923C3D",
+    "notes" : [
+      "group=replay_clean",
+      "subtype=jsonReplay",
+      "status=completed"
+    ],
+    "sampleID" : "replay_clean_pkg_appsupport_install_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "unknown"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "EA3D93A6-A6E2-4674-9E7F-F448C376ACD4",
+    "notes" : [
+      "group=replay_clean",
+      "subtype=jsonReplay",
+      "status=completed"
+    ],
+    "sampleID" : "replay_clean_python_scan_report_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "unknown"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 75,
+    "findingDeltas" : [
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "filesystem",
+        "explanation" : "The sample modified sensitive system\/user paths with potentially broad impact.",
+        "ruleID" : "filesystem.sensitive_path_change",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      }
+    ],
+    "id" : "58130CD7-EC29-4189-BF7E-6F55FCCAE762",
+    "notes" : [
+      "group=replay_malicious",
+      "subtype=jsonReplay",
+      "status=completed"
+    ],
+    "sampleID" : "replay_malicious_app_bash_curl_persist_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 25,
+    "findingDeltas" : [
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "AF9DD036-5C6E-4E0E-9986-EBCE151AD327",
+    "notes" : [
+      "group=replay_malicious",
+      "subtype=jsonReplay",
+      "status=completed"
+    ],
+    "sampleID" : "replay_malicious_app_osascript_chain_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "A download-then-execute pattern was observed, commonly used for staged payload delivery.",
+        "ruleID" : "script.download_execute_chain",
+        "scoreDelta" : 35,
+        "severity" : "critical"
+      },
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "filesystem",
+        "explanation" : "The sample modified sensitive system\/user paths with potentially broad impact.",
+        "ruleID" : "filesystem.sensitive_path_change",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      }
+    ],
+    "id" : "0F78D757-CD24-4B9E-B574-40AD1E9B20BC",
+    "notes" : [
+      "group=replay_malicious",
+      "subtype=replay_json",
+      "status=completed"
+    ],
+    "sampleID" : "replay_malicious_chain_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 95,
+    "findingDeltas" : [
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "persistence",
+        "explanation" : "The sample modified shell startup profiles, which may indicate persistence.",
+        "ruleID" : "persistence.shell_profile",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "filesystem",
+        "explanation" : "The sample modified sensitive system\/user paths with potentially broad impact.",
+        "ruleID" : "filesystem.sensitive_path_change",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      }
+    ],
+    "id" : "44DE8264-3D1E-4303-BF7A-7405AA73161C",
+    "notes" : [
+      "group=replay_malicious",
+      "subtype=jsonReplay",
+      "status=completed"
+    ],
+    "sampleID" : "replay_malicious_pkg_postinstall_multiegres_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 25,
+    "findingDeltas" : [
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "F29A42E8-3F3F-4CBF-ADF3-2571AF1139BB",
+    "notes" : [
+      "group=replay_malicious",
+      "subtype=jsonReplay",
+      "status=completed"
+    ],
+    "sampleID" : "replay_malicious_python_subprocess_priv_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 60,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "A download-then-execute pattern was observed, commonly used for staged payload delivery.",
+        "ruleID" : "script.download_execute_chain",
+        "scoreDelta" : 35,
+        "severity" : "critical"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "F2749129-5023-45A8-8E58-63C7F5DEBC47",
+    "notes" : [
+      "group=replay_suspicious",
+      "subtype=jsonReplay",
+      "status=completed"
+    ],
+    "sampleID" : "replay_suspicious_app_shell_egress_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 50,
+    "findingDeltas" : [
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "filesystem",
+        "explanation" : "The sample modified sensitive system\/user paths with potentially broad impact.",
+        "ruleID" : "filesystem.sensitive_path_change",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      }
+    ],
+    "id" : "31D8ECB8-AA4E-4283-B9E8-B1B075D0F455",
+    "notes" : [
+      "group=replay_suspicious",
+      "subtype=replay_json",
+      "status=completed"
+    ],
+    "sampleID" : "replay_suspicious_persistence_attempt_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 70,
+    "findingDeltas" : [
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "persistence",
+        "explanation" : "The sample modified shell startup profiles, which may indicate persistence.",
+        "ruleID" : "persistence.shell_profile",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "filesystem",
+        "explanation" : "The sample modified sensitive system\/user paths with potentially broad impact.",
+        "ruleID" : "filesystem.sensitive_path_change",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      }
+    ],
+    "id" : "3CD58CB0-F8C2-40EB-8B31-E1FC9D06411D",
+    "notes" : [
+      "group=replay_suspicious",
+      "subtype=jsonReplay",
+      "status=completed"
+    ],
+    "sampleID" : "replay_suspicious_pkg_persistence_mirror_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 65,
+    "findingDeltas" : [
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "Encoded\/obfuscated execution behavior was detected, suggesting evasion intent.",
+        "ruleID" : "script.obfuscation_base64_exec",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "filesystem",
+        "explanation" : "The sample modified sensitive system\/user paths with potentially broad impact.",
+        "ruleID" : "filesystem.sensitive_path_change",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      }
+    ],
+    "id" : "9E72E61E-282A-4014-AD2B-69FB56DDF0B7",
+    "notes" : [
+      "group=replay_suspicious",
+      "subtype=jsonReplay",
+      "status=completed"
+    ],
+    "sampleID" : "replay_suspicious_python_decode_plist_mirror_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 25,
+    "findingDeltas" : [
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "CE7273C4-BF6E-4509-BB64-94707BAD18C7",
+    "notes" : [
+      "group=replay_suspicious",
+      "subtype=jsonReplay",
+      "status=completed"
+    ],
+    "sampleID" : "replay_suspicious_shell_fanout_tmp_egress_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "1517B075-50EA-44F3-9D0E-AE483950A6BE",
+    "notes" : [
+      "group=suspicious",
+      "subtype=applescript",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_applescript_auth_lure_prompt_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 2,
+    "findingDeltas" : [
+      {
+        "category" : "automation",
+        "explanation" : "AppleScript do shell script 可直接执行系统命令。",
+        "ruleID" : "normalized.applescript.do_shell_script",
+        "scoreDelta" : 2,
+        "severity" : "high"
+      }
+    ],
+    "id" : "E0B464AD-3B7F-4E66-9162-5BFEC14134C1",
+    "notes" : [
+      "group=suspicious",
+      "subtype=applescript",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_applescript_doshell_echo_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "F8B8318F-7617-4CCF-8544-B9B172D32AD7",
+    "notes" : [
+      "group=suspicious",
+      "subtype=applescript",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_applescript_keystroke_sim_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "01F91DB8-2F06-482D-9E55-3DA6757013F7",
+    "notes" : [
+      "group=suspicious",
+      "subtype=applescript",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_applescript_system_settings_text_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 2,
+    "findingDeltas" : [
+      {
+        "category" : "automation",
+        "explanation" : "脚本可驱动 Terminal 执行命令，存在行为链隐藏风险。",
+        "ruleID" : "normalized.applescript.terminal_control",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "B6AB72B9-8F4D-44AA-B398-59130392DD81",
+    "notes" : [
+      "group=suspicious",
+      "subtype=applescript",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_applescript_terminal_download_print_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 63,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "A download-then-execute pattern was observed, commonly used for staged payload delivery.",
+        "ruleID" : "script.download_execute_chain",
+        "scoreDelta" : 35,
+        "severity" : "critical"
+      },
+      {
+        "category" : "signature",
+        "explanation" : "The sample is executable-like but unsigned.",
+        "ruleID" : "signature.anomaly",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "chain",
+        "explanation" : "Composed from normalized primitive findings.",
+        "ruleID" : "chain.download_then_execute",
+        "scoreDelta" : 18,
+        "severity" : "high"
+      }
+    ],
+    "id" : "4695968D-6F50-4A8D-91E3-B111D8726C28",
+    "notes" : [
+      "group=suspicious",
+      "subtype=hybrid_app",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_hybrid_app_bundle_fixture_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "851D4AE8-B06C-4182-84DF-0901C2B64BC6",
+    "notes" : [
+      "group=suspicious",
+      "subtype=hybrid",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_hybrid_chain_sim_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 53,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "A download-then-execute pattern was observed, commonly used for staged payload delivery.",
+        "ruleID" : "script.download_execute_chain",
+        "scoreDelta" : 35,
+        "severity" : "critical"
+      },
+      {
+        "category" : "chain",
+        "explanation" : "Composed from normalized primitive findings.",
+        "ruleID" : "chain.download_then_execute",
+        "scoreDelta" : 18,
+        "severity" : "high"
+      }
+    ],
+    "id" : "C4CF2F80-EAF9-4146-93D8-98D61445226E",
+    "notes" : [
+      "group=suspicious",
+      "subtype=hybrid_dmg",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_hybrid_dmg_mirror_fixture_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "7D0EBE72-18BA-4824-8E73-62620D6871D9",
+    "notes" : [
+      "group=suspicious",
+      "subtype=hybrid_pkg",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_hybrid_pkg_fixture_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 4,
+    "findingDeltas" : [
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "normalized.javascript.base64_obfuscation",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "normalized.javascript.base64_obfuscation",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "F9085E6B-7AB2-4DB1-A381-10B9EB4CED19",
+    "notes" : [
+      "group=suspicious",
+      "subtype=js",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_js_buffer_obfuscation_sim_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 11,
+    "findingDeltas" : [
+      {
+        "category" : "execution",
+        "explanation" : "检测到 child_process 模块使用，可直接执行 shell 或二进制命令。",
+        "ruleID" : "normalized.javascript.child_process",
+        "scoreDelta" : 11,
+        "severity" : "high"
+      }
+    ],
+    "id" : "0C601ABA-FA58-4E03-B5C9-F7AAC0D47DA6",
+    "notes" : [
+      "group=suspicious",
+      "subtype=js",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_js_child_process_echo_chain_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 70,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "A download-then-execute pattern was observed, commonly used for staged payload delivery.",
+        "ruleID" : "script.download_execute_chain",
+        "scoreDelta" : 35,
+        "severity" : "critical"
+      },
+      {
+        "category" : "chain",
+        "explanation" : "Composed from normalized primitive findings.",
+        "ruleID" : "chain.download_then_execute",
+        "scoreDelta" : 18,
+        "severity" : "high"
+      },
+      {
+        "category" : "network",
+        "explanation" : "检测到 http\/https\/fetch 下载内容并联动执行，符合远程载荷特征。",
+        "ruleID" : "normalized.javascript.network_download_exec",
+        "scoreDelta" : 17,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "46992EEF-713D-464E-966B-0A40796382FA",
+    "notes" : [
+      "group=suspicious",
+      "subtype=js",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_js_download_execute_sim_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 19,
+    "findingDeltas" : [
+      {
+        "category" : "obfuscation",
+        "explanation" : "Encoded\/obfuscated execution behavior was detected, suggesting evasion intent.",
+        "ruleID" : "script.obfuscation_base64_exec",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "normalized.javascript.base64_obfuscation",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "normalized.javascript.base64_obfuscation",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "13F2D28C-FEA7-432C-A318-1A79142BA3CD",
+    "notes" : [
+      "group=suspicious",
+      "subtype=js",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_js_eval_decode_message_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 21,
+    "findingDeltas" : [
+      {
+        "category" : "obfuscation",
+        "explanation" : "Encoded\/obfuscated execution behavior was detected, suggesting evasion intent.",
+        "ruleID" : "script.obfuscation_base64_exec",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "normalized.javascript.base64_obfuscation",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "normalized.javascript.base64_obfuscation",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      },
+      {
+        "category" : "script",
+        "explanation" : "发现 Node 脚本通过 osascript 或 shell 触发跨语言命令链。",
+        "ruleID" : "normalized.javascript.osascript_shell_chain",
+        "scoreDelta" : 2,
+        "severity" : "high"
+      }
+    ],
+    "id" : "6B322FEA-873E-4376-B58A-5452F5193385",
+    "notes" : [
+      "group=suspicious",
+      "subtype=js",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_js_obfuscation_sim_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "B3F866F8-EFC0-48BB-84B3-E65109208A0F",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_python_download_would_execute_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 91,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "A download-then-execute pattern was observed, commonly used for staged payload delivery.",
+        "ruleID" : "script.download_execute_chain",
+        "scoreDelta" : 35,
+        "severity" : "critical"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "Encoded\/obfuscated execution behavior was detected, suggesting evasion intent.",
+        "ruleID" : "script.obfuscation_base64_exec",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "chain",
+        "explanation" : "Composed from normalized primitive findings.",
+        "ruleID" : "chain.download_then_execute",
+        "scoreDelta" : 18,
+        "severity" : "high"
+      },
+      {
+        "category" : "chain",
+        "explanation" : "Composed from normalized primitive findings.",
+        "ruleID" : "chain.obfuscation_with_execution",
+        "scoreDelta" : 12,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "normalized.python.obfuscation",
+        "scoreDelta" : 7,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "normalized.python.obfuscation",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "normalized.python.obfuscation",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "4D1E281B-65CD-4625-9CB0-D5D14513033D",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_python_downloader_sim_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 4,
+    "findingDeltas" : [
+      {
+        "category" : "execution",
+        "explanation" : "Python 脚本调用 os.system 触发 shell 执行，具备命令注入与落地风险。",
+        "ruleID" : "normalized.python.os_system",
+        "scoreDelta" : 2,
+        "severity" : "high"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "检测到 subprocess.run\/call\/Popen，脚本可直接拉起外部二进制或 shell。",
+        "ruleID" : "normalized.python.subprocess_exec",
+        "scoreDelta" : 2,
+        "severity" : "high"
+      }
+    ],
+    "id" : "079A2215-2DF4-4AE1-8272-3B608628A9B4",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_python_echo_chain_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "B8F1D248-E56B-4B7E-8571-20A6868AF084",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_python_launchagent_mirror_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 34,
+    "findingDeltas" : [
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "normalized.python.obfuscation",
+        "scoreDelta" : 7,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "normalized.python.obfuscation",
+        "scoreDelta" : 7,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "normalized.python.obfuscation",
+        "scoreDelta" : 7,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "normalized.python.obfuscation",
+        "scoreDelta" : 7,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "normalized.python.obfuscation",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "normalized.python.obfuscation",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "normalized.python.obfuscation",
+        "scoreDelta" : 2,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "21383FE0-8EC8-404A-9E91-C23F930D5AA0",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_python_obfuscation_restore_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "D9E384D6-2F91-4CB4-8A12-F6F8A30044B7",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_python_reverse_shell_string_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "9AC00F3D-B0F6-4E00-90AE-22C3C9CFD2D0",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_python_socket_metadata_sim_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "EC373841-DD65-4B15-B3A1-D866BA5CABFE",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_shell_base64_decode_print_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 53,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "A download-then-execute pattern was observed, commonly used for staged payload delivery.",
+        "ruleID" : "script.download_execute_chain",
+        "scoreDelta" : 35,
+        "severity" : "critical"
+      },
+      {
+        "category" : "chain",
+        "explanation" : "Composed from normalized primitive findings.",
+        "ruleID" : "chain.download_then_execute",
+        "scoreDelta" : 18,
+        "severity" : "high"
+      }
+    ],
+    "id" : "4C1324C4-4A54-471C-A094-E52593D02D1B",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_shell_download_exec_string_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 30,
+    "findingDeltas" : [
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      }
+    ],
+    "id" : "9BD39C84-ED68-44EA-8987-3EB2945E907E",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_shell_launchagent_mirror_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "B5BD2AB3-9DCE-4412-9A1A-B99FBDDB4FA8",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_shell_mktemp_chain_sim_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "B738DA48-CC0E-4CF7-A5F2-DB5D5F320D33",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_shell_multistage_chain_note_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 30,
+    "findingDeltas" : [
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      }
+    ],
+    "id" : "1A7B96A4-8AA9-446D-9945-CB3164105AA8",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_shell_persistence_sim_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "65C8BC71-B850-4051-AF72-A21DC78DBEC5",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed"
+    ],
+    "sampleID" : "suspicious_shell_profile_mirror_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  }
+]

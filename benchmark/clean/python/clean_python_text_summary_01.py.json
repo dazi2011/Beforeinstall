@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_python_text_summary_01",
+  "group": "clean",
+  "language_or_type": "python",
+  "summary": "Reads local text and prints lightweight summary statistics.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 8],
+  "why": "Text parsing and summarization are ordinary local operations without process execution or persistence signals."
+}

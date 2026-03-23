@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_app_updater_manifest_01",
+  "group": "noisy_benign",
+  "language_or_type": "app",
+  "summary": "App manifest with noisy updater indicators and no executable hooks.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [18, 38],
+  "why": "Looks operational but is metadata-only fixture content."
+}

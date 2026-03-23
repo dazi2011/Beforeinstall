@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_python_build_subprocess_01",
+  "group": "noisy_benign",
+  "language_or_type": "python",
+  "summary": "Simulated build pipeline using subprocess.run with fixed echo commands.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [12, 28],
+  "why": "Repeated subprocess activity can look process-heavy, but commands are static, local, and non-destructive."
+}

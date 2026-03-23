@@ -1,0 +1,10 @@
+{
+  "sample_id": "suspicious_shell_mktemp_chain_sim_02",
+  "group": "suspicious",
+  "language_or_type": "shell",
+  "summary": "Simulates mktemp->download->chmod->execute chain using dry-run messages only.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [60, 78],
+  "why": "Execution-chain markers exist in sequence, but behavior is reduced to printed intents and cleanup only.",
+  "expected_rules_hit": ["download_execute_pattern","shell_spawn_pattern"]
+}

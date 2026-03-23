@@ -1,0 +1,11 @@
+{
+  "package_id": "com.synthetic.clean.pkg",
+  "install_mode": "sandbox-only",
+  "files": [
+    "./benchmark/sandbox_runtime/clean_pkg_receipt_stub_01/readme.txt"
+  ],
+  "scripts": {
+    "preinstall": null,
+    "postinstall": null
+  }
+}

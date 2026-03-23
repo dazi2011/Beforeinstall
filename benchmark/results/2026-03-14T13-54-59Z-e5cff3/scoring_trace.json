@@ -1,0 +1,4117 @@
+[
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "unknown",
+    "finalScore" : 22,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.671).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      }
+    ],
+    "id" : "01EE88A7-3346-45B7-8B37-04B9FBDF38D8",
+    "notes" : [
+      "group=clean",
+      "subtype=app",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "clean_app_manifest_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 14,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "D505860A-F7F1-4A3C-96D2-A7D20B878729",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "appleScript",
+    "finalScore" : 39,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.524).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "脚本可控制 Finder 进行文件操作，需要结合上下文评估风险。",
+        "ruleID" : "applescript.finder_control",
+        "scoreDelta" : 8,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "4DBA6A39-5709-4A17-AE1F-59618321A84D",
+    "notes" : [
+      "group=clean",
+      "subtype=applescript",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "clean_applescript_open_finder_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 34,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "B0E5F740-F04F-493F-AD11-0D434A63C085",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 59,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.682).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "88E1438C-9887-4D86-9D8D-78C8F14F402F",
+    "notes" : [
+      "group=clean",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "clean_js_base64_demo_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 38,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "43727C65-7B53-4E65-ACA1-87D299B5563E",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 71,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.759).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "检测到 child_process 模块使用，可直接执行 shell 或二进制命令。",
+        "ruleID" : "javascript.child_process",
+        "scoreDelta" : 28,
+        "severity" : "high"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "检测到 child_process 模块使用，可直接执行 shell 或二进制命令。",
+        "ruleID" : "javascript.child_process",
+        "scoreDelta" : 4,
+        "severity" : "high"
+      }
+    ],
+    "id" : "21C59278-D3A8-4F35-9117-2C62B8C26161",
+    "notes" : [
+      "group=clean",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "clean_js_child_process_echo_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 22,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.691).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      }
+    ],
+    "id" : "28B69051-8491-4BA5-83B8-562ED729FFDE",
+    "notes" : [
+      "group=clean",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "clean_js_config_merge_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 30,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.786).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      }
+    ],
+    "id" : "549E3BF7-AA44-4658-8F03-16C40D6AB26C",
+    "notes" : [
+      "group=clean",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "clean_js_read_local_config_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "unknown",
+    "finalScore" : 22,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.635).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      }
+    ],
+    "id" : "69281298-0929-4CAA-9AAD-893A2378ECD5",
+    "notes" : [
+      "group=clean",
+      "subtype=pkg",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "clean_pkg_receipt_stub_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 46,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : -3,
+        "id" : "1B7FC8E6-7689-4B7A-87CA-1D15CEABA658",
+        "name" : "plist_context",
+        "reason" : "Generic plist context is conservative."
+      }
+    ],
+    "detectedType" : "plist",
+    "finalScore" : 91,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.994).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [url].",
+        "ruleID" : "config.rule.file.intel.url.known_malicious_host",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [url].",
+        "ruleID" : "intel.url.known_malicious_host",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "E56B743A-033D-4120-8BEB-D82CED27518B",
+    "notes" : [
+      "group=clean",
+      "subtype=plist",
+      "status=completed",
+      "type_scorer=PlistPersistenceScorer"
+    ],
+    "sampleID" : "clean_plist_launchagent_template_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "PlistPersistenceScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 30,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.774).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      }
+    ],
+    "id" : "BAA8D5AE-0AA5-479A-B6FC-684BF3A5A8AC",
+    "notes" : [
+      "group=clean",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "clean_python_config_rw_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 30,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.752).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      }
+    ],
+    "id" : "41BE44E7-210C-4EBD-AD5C-41E95FF7360D",
+    "notes" : [
+      "group=clean",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "clean_python_directory_scan_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 36,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.845).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 36,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "91E7753E-CB58-4C96-A2EA-39938ED494E3",
+    "notes" : [
+      "group=clean",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "clean_python_log_rotate_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 32,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "77349F6F-1767-4BCE-8F9F-9277A0D950FF",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 65,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.723).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "检测到 subprocess.run\/call\/Popen，脚本可直接拉起外部二进制或 shell。",
+        "ruleID" : "python.subprocess_exec",
+        "scoreDelta" : 26,
+        "severity" : "high"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "59AEEE54-520A-466A-B7EC-064CA14FFDF9",
+    "notes" : [
+      "group=clean",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "clean_python_subprocess_safe_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 30,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.705).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      }
+    ],
+    "id" : "A5DD8EB4-A305-4512-91C3-BAFC081E84E0",
+    "notes" : [
+      "group=clean",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "clean_python_text_summary_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 42,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.919).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 42,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "B9F4DC39-F703-4122-A91E-B8171E62F332",
+    "notes" : [
+      "group=clean",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "clean_shell_backup_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 48,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.953).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "32266FBB-D8F5-4681-8BD5-03FF531CF864",
+    "notes" : [
+      "group=clean",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "clean_shell_backup_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 48,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.971).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "1BB83CF1-4AEF-491E-B3F5-BF481A8E84EC",
+    "notes" : [
+      "group=clean",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "clean_shell_log_archive_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 36,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "E33A5D3A-6880-4913-8AB7-C93ADE4808FE",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 69,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.714).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [url].",
+        "ruleID" : "intel.url.known_malicious_host",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [url].",
+        "ruleID" : "config.rule.file.intel.url.known_malicious_host",
+        "scoreDelta" : 10,
+        "severity" : "high"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "03446EC9-D4E9-43F1-8D6F-895B4CCA7361",
+    "notes" : [
+      "group=clean",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "clean_shell_open_safe_site_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 36,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "8D18CB32-6340-4114-B37D-664D8F29F12A",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 87,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.988).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [url].",
+        "ruleID" : "intel.url.known_malicious_host",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [url].",
+        "ruleID" : "config.rule.file.intel.url.known_malicious_host",
+        "scoreDelta" : 10,
+        "severity" : "high"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "27602AF1-298E-41BD-99AC-79A033A38EAB",
+    "notes" : [
+      "group=clean",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "clean_shell_write_test_plist_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "appBundle",
+    "finalScore" : 48,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.994).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "D034337F-BD88-4E54-A5D5-462E4CE65249",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=app",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "noisy_app_bundle_fixture_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "appleScript",
+    "finalScore" : 0,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted benign (malicious probability 0.497).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : -4,
+        "severity" : "info"
+      }
+    ],
+    "id" : "BA332588-E68B-4749-AA5B-73EC4942ED37",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=applescript",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "noisy_applescript_admin_prompt_sim_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 14,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "BB64A68B-0E33-4E77-B805-4783EB3AA3F9",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "appleScript",
+    "finalScore" : 53,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.845).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 36,
+        "severity" : "critical"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "脚本可控制 Finder 进行文件操作，需要结合上下文评估风险。",
+        "ruleID" : "applescript.finder_control",
+        "scoreDelta" : 8,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "879E311A-97C2-47F6-82E7-DEF7889EBD8D",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=applescript",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "noisy_applescript_finder_batch_rename_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 18,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "D8C320E4-8502-4E52-ABAF-D8280A0329EA",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "appleScript",
+    "finalScore" : 11,
+    "findingDeltas" : [
+      {
+        "category" : "generic",
+        "explanation" : "脚本可驱动 Terminal 执行命令，存在行为链隐藏风险。",
+        "ruleID" : "applescript.terminal_control",
+        "scoreDelta" : 12,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted benign (malicious probability 0.204).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : -10,
+        "severity" : "info"
+      }
+    ],
+    "id" : "B5E145C4-C54D-42D9-9577-2881E4AA6416",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=applescript",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "noisy_applescript_terminal_echo_pwd_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 34,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "5D24EEAE-A0A7-4FE3-AA35-770F8C9608FC",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 67,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.767).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "检测到 child_process 模块使用，可直接执行 shell 或二进制命令。",
+        "ruleID" : "javascript.child_process",
+        "scoreDelta" : 28,
+        "severity" : "high"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "915AE910-73DB-4DC8-91A8-746191EFDD01",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "noisy_js_child_process_ls_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 28,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "FA53054E-80BB-4551-AE3A-A62454E8FC22",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 53,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.615).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 eval\/Function 构造动态代码执行，存在混淆载荷风险。",
+        "ruleID" : "javascript.eval",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "9F08D69E-981B-45DE-B42A-BCBE0253C3EA",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "noisy_js_eval_math_only_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 36,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.800).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 36,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "E2A22E73-412B-4046-8128-A9E4AF9C3100",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "noisy_js_network_cache_text_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 70,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "BC8A25FD-14C9-4041-BF05-56DD44F424B0",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.782).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "AC338008-8D71-48F5-9968-2678A4DB3C33",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "noisy_js_postinstall_sim_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 11,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "pkg",
+    "finalScore" : 11,
+    "findingDeltas" : [
+      {
+        "category" : "installer",
+        "explanation" : "Package pre\/post install scripts can execute with installer privileges.",
+        "ruleID" : "pkg.install.script",
+        "scoreDelta" : 11,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "AADB9987-AAC2-49F1-827C-F9197C189559",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=pkg",
+      "status=completed",
+      "type_scorer=PKGRiskScorer"
+    ],
+    "sampleID" : "noisy_pkg_fixture_02",
+    "scoreCapsApplied" : [
+      {
+        "afterScore" : 11,
+        "applied" : false,
+        "beforeScore" : 11,
+        "cap" : 45,
+        "id" : "A0F09F77-4739-4CC9-B086-88986C42483F",
+        "reason" : "Documentation\/comment-only sample is capped."
+      }
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "PKGRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 36,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.890).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 36,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "07D0942D-1661-44D2-B6D7-7DD50664A8A5",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=pkg",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "noisy_pkg_preinstall_sim_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 32,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "F453035D-EFEE-4B57-9FF1-3B8A3CA39025",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 57,
+    "findingDeltas" : [
+      {
+        "category" : "execution",
+        "explanation" : "检测到 subprocess.run\/call\/Popen，脚本可直接拉起外部二进制或 shell。",
+        "ruleID" : "python.subprocess_exec",
+        "scoreDelta" : 26,
+        "severity" : "high"
+      },
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.684).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "F1EFA022-C91E-49C7-B059-2D3FA8DF11B2",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "noisy_python_build_subprocess_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 30,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.733).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      }
+    ],
+    "id" : "8306E805-DED2-4162-8E52-BE67DC65C904",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "noisy_python_dynamic_loader_sim_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 30,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.759).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      }
+    ],
+    "id" : "61E6047A-0C61-4B4C-8B35-687D99325047",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "noisy_python_remote_text_api_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 30,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.745).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      }
+    ],
+    "id" : "EA087F03-2D52-4C25-ADC4-83AB4926BF78",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "noisy_python_tempfile_cleanup_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 36,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.828).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 36,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "1F0A862D-529A-4CD0-ABEF-092FFD5F8355",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "noisy_python_updater_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 48,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.980).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "6A97C8E4-6B49-4530-9FDF-FD997D9D4CF3",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "noisy_shell_appsupport_style_write_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 48,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.978).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "3EE14FDB-350F-4751-ABA1-C316CE53C671",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "noisy_shell_base64_config_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 42,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.919).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 42,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "74313C56-B3C9-4705-9224-D417414B8190",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "noisy_shell_chmod_tool_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 95,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "A23E43B9-06F4-4FAE-A038-C642B56F4AA3",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.971).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      },
+      {
+        "category" : "network",
+        "explanation" : "检测到 curl 输出直接通过管道进入 sh\/bash\/zsh，属于典型远程代码直接执行链。",
+        "ruleID" : "shell.curl_pipe_sh",
+        "scoreDelta" : 35,
+        "severity" : "critical"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "D17A8859-D690-4B84-90C2-32B99A259A39",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "noisy_shell_installer_like_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 48,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.974).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "A3CD02D4-0A31-47BE-A484-256392CB955A",
+    "notes" : [
+      "group=noisy_benign",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "noisy_shell_update_checker_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "E17CBA51-A8BF-410A-BD72-D0D5938BBE12",
+    "notes" : [
+      "group=replay_clean",
+      "subtype=jsonReplay",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_clean_app_lifecycle_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "unknown"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "2A23682F-54B1-4112-AD2D-38BDB90ED6C7",
+    "notes" : [
+      "group=replay_clean",
+      "subtype=replay_json",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_clean_backup_flow_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "unknown"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 10,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "2E42A8F9-DAE2-4934-98C5-0997FB502F9A",
+    "notes" : [
+      "group=replay_clean",
+      "subtype=jsonReplay",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_clean_js_fetch_cache_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "42068064-A02A-4B40-B6E3-66075F4B53B8",
+    "notes" : [
+      "group=replay_clean",
+      "subtype=jsonReplay",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_clean_pkg_appsupport_install_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "unknown"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 0,
+    "findingDeltas" : [
+
+    ],
+    "id" : "18DD683A-AAA0-4AA6-AFF7-3C81E5BD0104",
+    "notes" : [
+      "group=replay_clean",
+      "subtype=jsonReplay",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_clean_python_scan_report_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "unknown"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 75,
+    "findingDeltas" : [
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "filesystem",
+        "explanation" : "The sample modified sensitive system\/user paths with potentially broad impact.",
+        "ruleID" : "filesystem.sensitive_path_change",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      }
+    ],
+    "id" : "E8935681-46CB-443E-8163-3627F88BB961",
+    "notes" : [
+      "group=replay_malicious",
+      "subtype=jsonReplay",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_malicious_app_bash_curl_persist_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 25,
+    "findingDeltas" : [
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "52715F27-3FD4-4A61-A7DF-EA8EE2A9BBC7",
+    "notes" : [
+      "group=replay_malicious",
+      "subtype=jsonReplay",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_malicious_app_osascript_chain_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "A download-then-execute pattern was observed, commonly used for staged payload delivery.",
+        "ruleID" : "script.download_execute_chain",
+        "scoreDelta" : 35,
+        "severity" : "critical"
+      },
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "filesystem",
+        "explanation" : "The sample modified sensitive system\/user paths with potentially broad impact.",
+        "ruleID" : "filesystem.sensitive_path_change",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      }
+    ],
+    "id" : "C317E977-465F-4EEB-9953-B651644C82E7",
+    "notes" : [
+      "group=replay_malicious",
+      "subtype=replay_json",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_malicious_chain_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 95,
+    "findingDeltas" : [
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "persistence",
+        "explanation" : "The sample modified shell startup profiles, which may indicate persistence.",
+        "ruleID" : "persistence.shell_profile",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "filesystem",
+        "explanation" : "The sample modified sensitive system\/user paths with potentially broad impact.",
+        "ruleID" : "filesystem.sensitive_path_change",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      }
+    ],
+    "id" : "071F40F3-563F-4820-90B8-03507694EAB6",
+    "notes" : [
+      "group=replay_malicious",
+      "subtype=jsonReplay",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_malicious_pkg_postinstall_multiegres_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 25,
+    "findingDeltas" : [
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "0277EFB2-54DB-4A7F-8206-C9ACCA17D836",
+    "notes" : [
+      "group=replay_malicious",
+      "subtype=jsonReplay",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_malicious_python_subprocess_priv_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 60,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "A download-then-execute pattern was observed, commonly used for staged payload delivery.",
+        "ruleID" : "script.download_execute_chain",
+        "scoreDelta" : 35,
+        "severity" : "critical"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "DDCCD14F-8586-4181-91C2-5E43915FA8BD",
+    "notes" : [
+      "group=replay_suspicious",
+      "subtype=jsonReplay",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_suspicious_app_shell_egress_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 50,
+    "findingDeltas" : [
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "filesystem",
+        "explanation" : "The sample modified sensitive system\/user paths with potentially broad impact.",
+        "ruleID" : "filesystem.sensitive_path_change",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      }
+    ],
+    "id" : "3E9111A3-5E3A-48D1-87EF-6EAB1811986B",
+    "notes" : [
+      "group=replay_suspicious",
+      "subtype=replay_json",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_suspicious_persistence_attempt_01",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 70,
+    "findingDeltas" : [
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "persistence",
+        "explanation" : "The sample modified shell startup profiles, which may indicate persistence.",
+        "ruleID" : "persistence.shell_profile",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "filesystem",
+        "explanation" : "The sample modified sensitive system\/user paths with potentially broad impact.",
+        "ruleID" : "filesystem.sensitive_path_change",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      }
+    ],
+    "id" : "3AFD4625-B210-4668-8AC0-D17006D5F968",
+    "notes" : [
+      "group=replay_suspicious",
+      "subtype=jsonReplay",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_suspicious_pkg_persistence_mirror_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 65,
+    "findingDeltas" : [
+      {
+        "category" : "persistence",
+        "explanation" : "The sample wrote into startup item paths, indicating persistence risk.",
+        "ruleID" : "persistence.launch_agent_write",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "Encoded\/obfuscated execution behavior was detected, suggesting evasion intent.",
+        "ruleID" : "script.obfuscation_base64_exec",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "filesystem",
+        "explanation" : "The sample modified sensitive system\/user paths with potentially broad impact.",
+        "ruleID" : "filesystem.sensitive_path_change",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      }
+    ],
+    "id" : "0617CE64-178F-4A0D-812A-2BF17B944F88",
+    "notes" : [
+      "group=replay_suspicious",
+      "subtype=jsonReplay",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_suspicious_python_decode_plist_mirror_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "detectedType" : "jsonReplay",
+    "finalScore" : 25,
+    "findingDeltas" : [
+      {
+        "category" : "execution",
+        "explanation" : "A shell process was spawned during execution, increasing command-execution risk.",
+        "ruleID" : "process.spawn_shell",
+        "scoreDelta" : 15,
+        "severity" : "medium"
+      },
+      {
+        "category" : "network",
+        "explanation" : "The sample made outbound connections to remote hosts at runtime.",
+        "ruleID" : "network.remote_connect",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "1A094B5C-8B14-43E0-9D51-FB1424534A36",
+    "notes" : [
+      "group=replay_suspicious",
+      "subtype=jsonReplay",
+      "status=completed",
+      "type_scorer=none"
+    ],
+    "sampleID" : "replay_suspicious_shell_fanout_tmp_egress_02",
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "appleScript",
+    "finalScore" : 22,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.593).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      }
+    ],
+    "id" : "8FCC98EF-1E06-4FF1-A351-0CA8B09C7C25",
+    "notes" : [
+      "group=suspicious",
+      "subtype=applescript",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "suspicious_applescript_auth_lure_prompt_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 81,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "F2A4BB5E-3B0C-4CF0-9A86-ECC9E12C0AB5",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "appleScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.512).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "AppleScript do shell script 可直接执行系统命令。",
+        "ruleID" : "applescript.do_shell_script",
+        "scoreDelta" : 5,
+        "severity" : "high"
+      }
+    ],
+    "id" : "13F8D8E2-03A5-44AD-96D1-5BC8979DC1C9",
+    "notes" : [
+      "group=suspicious",
+      "subtype=applescript",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_applescript_doshell_echo_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "appleScript",
+    "finalScore" : 22,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.616).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      }
+    ],
+    "id" : "B133310E-C68E-4340-B122-5AA77527D088",
+    "notes" : [
+      "group=suspicious",
+      "subtype=applescript",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "suspicious_applescript_keystroke_sim_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "appleScript",
+    "finalScore" : 22,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.654).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      }
+    ],
+    "id" : "8300DA5A-EA35-438F-BD8A-19AC51A21032",
+    "notes" : [
+      "group=suspicious",
+      "subtype=applescript",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "suspicious_applescript_system_settings_text_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 88,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "BC151A63-6282-4D2A-935B-037DB9E2D2FF",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "appleScript",
+    "finalScore" : 87,
+    "findingDeltas" : [
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "脚本可驱动 Terminal 执行命令，存在行为链隐藏风险。",
+        "ruleID" : "applescript.terminal_control",
+        "scoreDelta" : 12,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted benign (malicious probability 0.436).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : -4,
+        "severity" : "info"
+      }
+    ],
+    "id" : "02F53709-82E5-4787-869B-DDCAF4B4DDCC",
+    "notes" : [
+      "group=suspicious",
+      "subtype=applescript",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_applescript_terminal_download_print_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "appBundle",
+    "finalScore" : 48,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.994).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "4B7DD9AF-F844-41DA-ADF3-740B28343197",
+    "notes" : [
+      "group=suspicious",
+      "subtype=hybrid_app",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "suspicious_hybrid_app_bundle_fixture_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 94,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "79B84D68-3573-4D81-B018-9821788E88CE",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "appleScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.884).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 36,
+        "severity" : "critical"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 12,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "250321AB-C5DB-427D-8862-3F299AADD10A",
+    "notes" : [
+      "group=suspicious",
+      "subtype=hybrid",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_hybrid_chain_sim_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 74,
+    "chainBonuses" : [
+      {
+        "delta" : 16,
+        "id" : "44C35E6E-5628-4E05-88A6-D1F2F928D04F",
+        "name" : "chain_download_execute",
+        "reason" : "Download + execution chain formed in same static context."
+      }
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "archive",
+    "finalScore" : 90,
+    "findingDeltas" : [
+      {
+        "category" : "network",
+        "explanation" : "检测到 curl 输出直接通过管道进入 sh\/bash\/zsh，属于典型远程代码直接执行链。",
+        "ruleID" : "shell.curl_pipe_sh",
+        "scoreDelta" : 34,
+        "severity" : "critical"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "84B87AE4-F17B-4816-99DF-DDD4391A590C",
+    "notes" : [
+      "group=suspicious",
+      "subtype=hybrid_dmg",
+      "status=completed",
+      "type_scorer=HybridFixtureRiskScorer"
+    ],
+    "sampleID" : "suspicious_hybrid_dmg_mirror_fixture_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "HybridFixtureRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 22,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "pkg",
+    "finalScore" : 22,
+    "findingDeltas" : [
+      {
+        "category" : "installer",
+        "explanation" : "Package pre\/post install scripts can execute with installer privileges.",
+        "ruleID" : "pkg.install.script",
+        "scoreDelta" : 11,
+        "severity" : "medium"
+      },
+      {
+        "category" : "installer",
+        "explanation" : "Package pre\/post install scripts can execute with installer privileges.",
+        "ruleID" : "pkg.install.script",
+        "scoreDelta" : 11,
+        "severity" : "medium"
+      }
+    ],
+    "id" : "64F254D1-C266-4FA5-9876-F60BC0E8E911",
+    "notes" : [
+      "group=suspicious",
+      "subtype=hybrid_pkg",
+      "status=completed",
+      "type_scorer=PKGRiskScorer"
+    ],
+    "sampleID" : "suspicious_hybrid_pkg_fixture_02",
+    "scoreCapsApplied" : [
+      {
+        "afterScore" : 22,
+        "applied" : false,
+        "beforeScore" : 22,
+        "cap" : 45,
+        "id" : "B5CC6D60-DDD8-48DD-AEF0-6A7739428F70",
+        "reason" : "Documentation\/comment-only sample is capped."
+      }
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "PKGRiskScorer",
+    "verdict" : "clean"
+  },
+  {
+    "baseScore" : 96,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "65BE24D2-B683-40A8-BF16-94490CB28092",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.796).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 18,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 18,
+        "severity" : "high"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "high"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "6AE29F98-DC44-43A7-B000-176B4D5BEDB1",
+    "notes" : [
+      "group=suspicious",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_js_buffer_obfuscation_sim_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 104,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "8200EE3E-A906-4465-A89F-0F64EEB65F37",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.846).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 36,
+        "severity" : "critical"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "检测到 child_process 模块使用，可直接执行 shell 或二进制命令。",
+        "ruleID" : "javascript.child_process",
+        "scoreDelta" : 28,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "4943C908-C19F-4DFA-B9BC-DB71669E7B51",
+    "notes" : [
+      "group=suspicious",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_js_child_process_echo_chain_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 36,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.897).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 36,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "2D20E396-00AF-4614-B690-E7D2D9AA1342",
+    "notes" : [
+      "group=suspicious",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "suspicious_js_download_execute_sim_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 62,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "9F4E390B-B597-4FA4-8C68-D5CF55D721E1",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 95,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.729).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 eval\/Function 构造动态代码执行，存在混淆载荷风险。",
+        "ruleID" : "javascript.eval",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "25C04F03-1D18-48A9-A0DC-BE86907B3983",
+    "notes" : [
+      "group=suspicious",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_js_eval_decode_message_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 148,
+    "chainBonuses" : [
+      {
+        "delta" : 10,
+        "id" : "8E068404-DB38-4510-AEE2-F9593DE90E10",
+        "name" : "chain_obfuscation_execution",
+        "reason" : "Obfuscation + execution chain formed."
+      }
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "5802DC3D-2979-4872-9A81-6DD55D645A7A",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.750).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "发现 Node 脚本通过 osascript 或 shell 触发跨语言命令链。",
+        "ruleID" : "javascript.osascript_shell_chain",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "C8EF848C-C1EE-44A4-B698-028E9D6D51B3",
+    "notes" : [
+      "group=suspicious",
+      "subtype=js",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_js_obfuscation_sim_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 36,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.839).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 36,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "8F814EC9-049B-4B52-80DD-324BDC7FC881",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "suspicious_python_download_would_execute_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 129,
+    "chainBonuses" : [
+      {
+        "delta" : 10,
+        "id" : "C4C971AE-8991-4572-8328-BCB21F836094",
+        "name" : "chain_obfuscation_execution",
+        "reason" : "Obfuscation + execution chain formed."
+      }
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "2252C44C-4AC7-4AFF-97B7-94BF7D81C838",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.823).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 36,
+        "severity" : "critical"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "python.obfuscation",
+        "scoreDelta" : 25,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "python.obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "python.obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "E6B0D7D5-0B5E-4B80-A749-223C02093A5B",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_python_downloader_sim_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 92,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "094987FB-519A-427F-A703-D717C5E67E85",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.782).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "Python 脚本调用 os.system 触发 shell 执行，具备命令注入与落地风险。",
+        "ruleID" : "python.os_system",
+        "scoreDelta" : 5,
+        "severity" : "high"
+      },
+      {
+        "category" : "execution",
+        "explanation" : "检测到 subprocess.run\/call\/Popen，脚本可直接拉起外部二进制或 shell。",
+        "ruleID" : "python.subprocess_exec",
+        "scoreDelta" : 5,
+        "severity" : "high"
+      }
+    ],
+    "id" : "86AE882B-4F50-48BF-BF94-3F1E812F3B66",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_python_echo_chain_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 36,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "12600A27-69FE-45F9-B6A2-AA12FD8C0AEC",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 87,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.971).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [url].",
+        "ruleID" : "intel.url.known_malicious_host",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [url].",
+        "ruleID" : "config.rule.file.intel.url.known_malicious_host",
+        "scoreDelta" : 10,
+        "severity" : "high"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "DF082D0C-5499-475B-8680-DD3E6DCB988C",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_python_launchagent_mirror_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 104,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "A2742A37-E62E-40C7-852E-DCFEFCBFD75A",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.740).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 30,
+        "severity" : "high"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "python.obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "python.obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "python.obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "python.obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "python.obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "python.obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "obfuscation",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "ruleID" : "python.obfuscation",
+        "scoreDelta" : 14,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "6D499B5B-A20B-4801-BC2E-A01F8CCE2022",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_python_obfuscation_restore_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 46,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "79927695-7B9C-4090-ADAD-8A2CFBF8988E",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 71,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.618).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 22,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "BF00D067-4D6B-45A6-9D3E-7B5C2C251F61",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_python_reverse_shell_string_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "pythonScript",
+    "finalScore" : 36,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.816).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 36,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "2E2FE2DD-0F69-472B-99EC-F68A13617A7E",
+    "notes" : [
+      "group=suspicious",
+      "subtype=python",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "suspicious_python_socket_metadata_sim_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "suspicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 42,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.926).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 42,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "92447997-7BD7-4842-B170-0F15E8BF790A",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "suspicious_shell_base64_decode_print_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 118,
+    "chainBonuses" : [
+      {
+        "delta" : 16,
+        "id" : "B2204A23-63E3-4689-B2BE-FA8223838E89",
+        "name" : "chain_download_execute",
+        "reason" : "Download + execution chain formed in same static context."
+      }
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "81BCD5F8-9D20-4E59-B612-1F6ADC41F188",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.936).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 42,
+        "severity" : "critical"
+      },
+      {
+        "category" : "network",
+        "explanation" : "检测到 curl 输出直接通过管道进入 sh\/bash\/zsh，属于典型远程代码直接执行链。",
+        "ruleID" : "shell.curl_pipe_sh",
+        "scoreDelta" : 42,
+        "severity" : "critical"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "C3CC97F1-3F61-4BF7-B2E6-243B0022F18A",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_shell_download_exec_string_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 88,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "8F0EFE8A-B653-4A45-B06A-5DC4D0C0A60A",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.995).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [url].",
+        "ruleID" : "intel.url.known_malicious_host",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 18,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [url].",
+        "ruleID" : "config.rule.file.intel.url.known_malicious_host",
+        "scoreDelta" : 10,
+        "severity" : "high"
+      },
+      {
+        "category" : "persistence",
+        "explanation" : "Static analyzer surfaced persistence-related indicator.",
+        "ruleID" : "static.persistence.indicator",
+        "scoreDelta" : 7,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "persistence",
+        "explanation" : "脚本调用 launchctl load\/bootstrap，可能用于注册常驻项。",
+        "ruleID" : "shell.launchctl.persistence",
+        "scoreDelta" : 5,
+        "severity" : "high"
+      }
+    ],
+    "id" : "6C3426DA-2A0C-4926-A086-B4E0345A1B5A",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_shell_launchagent_mirror_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 42,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.905).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 42,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "A561EC15-BE47-4BC0-BA72-310CEECF89B5",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "suspicious_shell_mktemp_chain_sim_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 174,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "EC0361D8-6989-4139-965C-C830494A2FC5",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.940).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 42,
+        "severity" : "critical"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 24,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 24,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "medium"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 18,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 18,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 14,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "29C0DBAF-9214-4C40-9342-605C08E18A8A",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_shell_multistage_chain_note_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 155,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+      {
+        "delta" : 3,
+        "id" : "E882C861-BB20-4530-BE0C-A1B13043B146",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 100,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.995).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      },
+      {
+        "category" : "persistence",
+        "explanation" : "脚本尝试写入 LaunchAgents 或 LaunchDaemons 目录，属于持久化高风险行为。",
+        "ruleID" : "shell.write_launchagent",
+        "scoreDelta" : 39,
+        "severity" : "critical"
+      },
+      {
+        "category" : "persistence",
+        "explanation" : "脚本调用 launchctl load\/bootstrap，可能用于注册常驻项。",
+        "ruleID" : "shell.launchctl.persistence",
+        "scoreDelta" : 27,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [url].",
+        "ruleID" : "intel.url.known_malicious_host",
+        "scoreDelta" : 20,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDelta" : 18,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDelta" : 10,
+        "severity" : "high"
+      },
+      {
+        "category" : "generic",
+        "explanation" : "Matched unified threat profile section [url].",
+        "ruleID" : "config.rule.file.intel.url.known_malicious_host",
+        "scoreDelta" : 10,
+        "severity" : "high"
+      },
+      {
+        "category" : "persistence",
+        "explanation" : "Static analyzer surfaced persistence-related indicator.",
+        "ruleID" : "static.persistence.indicator",
+        "scoreDelta" : 7,
+        "severity" : "medium"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      },
+      {
+        "category" : "keyword",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDelta" : 6,
+        "severity" : "low"
+      }
+    ],
+    "id" : "6DCC7513-4D84-44B0-B025-87E917C54C70",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=ScriptRiskScorer"
+    ],
+    "sampleID" : "suspicious_shell_persistence_sim_01",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "ScriptRiskScorer",
+    "verdict" : "malicious"
+  },
+  {
+    "baseScore" : 0,
+    "chainBonuses" : [
+
+    ],
+    "contextAdjustments" : [
+
+    ],
+    "detectedType" : "shellScript",
+    "finalScore" : 48,
+    "findingDeltas" : [
+      {
+        "category" : "ai",
+        "explanation" : "Random-Forest predicted malicious (malicious probability 0.961).",
+        "ruleID" : "ai.random_forest_prediction",
+        "scoreDelta" : 48,
+        "severity" : "critical"
+      }
+    ],
+    "id" : "D7685AAD-FD15-43F2-8EFE-2F487BB5A89C",
+    "notes" : [
+      "group=suspicious",
+      "subtype=shell",
+      "status=completed",
+      "type_scorer=DefaultRiskScorer"
+    ],
+    "sampleID" : "suspicious_shell_profile_mirror_02",
+    "scoreCapsApplied" : [
+
+    ],
+    "thresholdUsed" : "suspicious>=30, malicious>=60",
+    "typeScorerUsed" : "DefaultRiskScorer",
+    "verdict" : "malicious"
+  }
+]

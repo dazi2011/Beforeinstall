@@ -1,0 +1,104 @@
+{
+  "sample_id": "replay_clean_pkg_appsupport_install_02",
+  "group": "clean",
+  "summary": "Installer writes app support files for a normal package install flow.",
+  "expected_verdict": "clean",
+  "expected_score_range": [5, 20],
+  "expected_top_findings": [
+    "installer_lifecycle_normal",
+    "app_support_write"
+  ],
+  "events": [
+    {
+      "timestamp": "2026-03-08T09:20:00Z",
+      "category": "processCreated",
+      "processID": 2300,
+      "parentProcessID": 1,
+      "processName": "Installer",
+      "executablePath": "/System/Library/CoreServices/Installer.app/Contents/MacOS/Installer",
+      "action": "spawn",
+      "target": "com.example.safe.pkg",
+      "details": "User opened signed package installer.",
+      "riskScoreDeltaHint": 2,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:20:01Z",
+      "category": "processCreated",
+      "processID": 2301,
+      "parentProcessID": 2300,
+      "processName": "postinstall",
+      "executablePath": "/bin/sh",
+      "action": "spawn",
+      "target": "pkg postinstall script",
+      "details": "Installer invoked postinstall hook.",
+      "riskScoreDeltaHint": 3,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:20:02Z",
+      "category": "fileCreated",
+      "processID": 2301,
+      "parentProcessID": 2300,
+      "processName": "postinstall",
+      "executablePath": "/bin/sh",
+      "action": "create",
+      "target": "~/Library/Application Support/ExampleSafeApp/settings.json",
+      "details": "Installer created application support settings.",
+      "riskScoreDeltaHint": 2,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:20:03Z",
+      "category": "fileModified",
+      "processID": 2301,
+      "parentProcessID": 2300,
+      "processName": "postinstall",
+      "executablePath": "/bin/sh",
+      "action": "append",
+      "target": "~/Library/Application Support/ExampleSafeApp/settings.json",
+      "details": "Added install timestamp field.",
+      "riskScoreDeltaHint": 1,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:20:04Z",
+      "category": "privilegeRelatedAction",
+      "processID": 2300,
+      "parentProcessID": 1,
+      "processName": "Installer",
+      "executablePath": "/System/Library/CoreServices/Installer.app/Contents/MacOS/Installer",
+      "action": "authorizationCheck",
+      "target": "user_scope_install",
+      "details": "Installer validated install scope and continued without privileged system changes.",
+      "riskScoreDeltaHint": 2,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:20:05Z",
+      "category": "processExited",
+      "processID": 2301,
+      "parentProcessID": 2300,
+      "processName": "postinstall",
+      "executablePath": "/bin/sh",
+      "action": "exit",
+      "target": "self",
+      "details": "Postinstall hook exited code 0.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:20:06Z",
+      "category": "processExited",
+      "processID": 2300,
+      "parentProcessID": 1,
+      "processName": "Installer",
+      "executablePath": "/System/Library/CoreServices/Installer.app/Contents/MacOS/Installer",
+      "action": "exit",
+      "target": "self",
+      "details": "Installation completed successfully.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    }
+  ]
+}

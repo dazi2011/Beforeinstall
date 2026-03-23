@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_shell_log_archive_01",
+  "group": "clean",
+  "language_or_type": "shell",
+  "summary": "Archives log files from a local test log directory to sandbox tmp.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 12],
+  "why": "Bulk file traversal and archiving can resemble collection activity, but it only handles local test logs and writes into project temp storage."
+}

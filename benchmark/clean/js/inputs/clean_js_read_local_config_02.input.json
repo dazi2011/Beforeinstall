@@ -1,0 +1,5 @@
+{
+  "featureA": true,
+  "maxItems": 20,
+  "env": "dev"
+}

@@ -1,0 +1,2 @@
+DMG mirror fixture with suspicious-looking bundle and helper scripts.
+Everything is synthetic and non-executing by default.

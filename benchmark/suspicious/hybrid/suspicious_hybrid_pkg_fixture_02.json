@@ -1,0 +1,10 @@
+{
+  "sample_id": "suspicious_hybrid_pkg_fixture_02",
+  "group": "suspicious",
+  "language_or_type": "hybrid_pkg",
+  "summary": "PKG-like fixture with postinstall persistence simulation writing only to sandbox mirror.",
+  "expected_verdict": "malicious",
+  "expected_score_range": [68, 80],
+  "why": "Installer lifecycle plus persistence-like postinstall logic is high-risk structurally, though constrained to non-system mirror paths.",
+  "expected_rules_hit": ["persistence_pattern","installer_script_pattern","shell_spawn_pattern"]
+}

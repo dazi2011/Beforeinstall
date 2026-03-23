@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_js_child_process_ls_01",
+  "group": "noisy_benign",
+  "language_or_type": "js",
+  "summary": "Runs child_process ls to list local benchmark directory.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [12, 30],
+  "why": "Process execution is present, but command is fixed read-only listing with no shell interpolation or unsafe arguments."
+}

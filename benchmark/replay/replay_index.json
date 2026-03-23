@@ -1,0 +1,190 @@
+[
+  {
+    "sample_id": "replay_clean_app_lifecycle_02",
+    "group": "clean",
+    "path": "benchmark/replay/clean/replay_clean_app_lifecycle_02.json",
+    "event_count": 5,
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      15
+    ],
+    "expected_top_findings": [
+      "normal_user_app_activity",
+      "local_cache_write"
+    ]
+  },
+  {
+    "sample_id": "replay_clean_js_fetch_cache_02",
+    "group": "clean",
+    "path": "benchmark/replay/clean/replay_clean_js_fetch_cache_02.json",
+    "event_count": 5,
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      8,
+      20
+    ],
+    "expected_top_findings": [
+      "public_api_fetch",
+      "cache_file_write"
+    ]
+  },
+  {
+    "sample_id": "replay_clean_pkg_appsupport_install_02",
+    "group": "clean",
+    "path": "benchmark/replay/clean/replay_clean_pkg_appsupport_install_02.json",
+    "event_count": 7,
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      5,
+      20
+    ],
+    "expected_top_findings": [
+      "installer_lifecycle_normal",
+      "app_support_write"
+    ]
+  },
+  {
+    "sample_id": "replay_clean_python_scan_report_02",
+    "group": "clean",
+    "path": "benchmark/replay/clean/replay_clean_python_scan_report_02.json",
+    "event_count": 5,
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      18
+    ],
+    "expected_top_findings": [
+      "local_inventory_scan",
+      "report_generation"
+    ]
+  },
+  {
+    "sample_id": "replay_malicious_app_bash_curl_persist_02",
+    "group": "malicious",
+    "path": "benchmark/replay/malicious/replay_malicious_app_bash_curl_persist_02.json",
+    "event_count": 11,
+    "expected_verdict": "malicious",
+    "expected_score_range": [
+      82,
+      95
+    ],
+    "expected_top_findings": [
+      "download_execute_pattern",
+      "persistence_pattern",
+      "network_beacon_pattern"
+    ]
+  },
+  {
+    "sample_id": "replay_malicious_app_osascript_chain_02",
+    "group": "malicious",
+    "path": "benchmark/replay/malicious/replay_malicious_app_osascript_chain_02.json",
+    "event_count": 13,
+    "expected_verdict": "malicious",
+    "expected_score_range": [
+      78,
+      92
+    ],
+    "expected_top_findings": [
+      "osascript_to_shell_chain",
+      "payload_staging_in_tmp",
+      "multi_process_execution_chain"
+    ]
+  },
+  {
+    "sample_id": "replay_malicious_pkg_postinstall_multiegres_02",
+    "group": "malicious",
+    "path": "benchmark/replay/malicious/replay_malicious_pkg_postinstall_multiegres_02.json",
+    "event_count": 12,
+    "expected_verdict": "malicious",
+    "expected_score_range": [
+      80,
+      94
+    ],
+    "expected_top_findings": [
+      "installer_script_pattern",
+      "persistence_pattern",
+      "multi_destination_egress"
+    ]
+  },
+  {
+    "sample_id": "replay_malicious_python_subprocess_priv_02",
+    "group": "malicious",
+    "path": "benchmark/replay/malicious/replay_malicious_python_subprocess_priv_02.json",
+    "event_count": 9,
+    "expected_verdict": "malicious",
+    "expected_score_range": [
+      76,
+      90
+    ],
+    "expected_top_findings": [
+      "subprocess_shell_chain",
+      "network_beacon_pattern",
+      "privilege_related_pattern"
+    ]
+  },
+  {
+    "sample_id": "replay_suspicious_app_shell_egress_02",
+    "group": "suspicious",
+    "path": "benchmark/replay/suspicious/replay_suspicious_app_shell_egress_02.json",
+    "event_count": 7,
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      48,
+      62
+    ],
+    "expected_top_findings": [
+      "shell_spawn_pattern",
+      "network_egress_to_raw_ip",
+      "tmp_script_drop"
+    ]
+  },
+  {
+    "sample_id": "replay_suspicious_pkg_persistence_mirror_02",
+    "group": "suspicious",
+    "path": "benchmark/replay/suspicious/replay_suspicious_pkg_persistence_mirror_02.json",
+    "event_count": 7,
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      58,
+      74
+    ],
+    "expected_top_findings": [
+      "installer_script_pattern",
+      "persistence_pattern",
+      "profile_modification_pattern"
+    ]
+  },
+  {
+    "sample_id": "replay_suspicious_python_decode_plist_mirror_02",
+    "group": "suspicious",
+    "path": "benchmark/replay/suspicious/replay_suspicious_python_decode_plist_mirror_02.json",
+    "event_count": 5,
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      52,
+      68
+    ],
+    "expected_top_findings": [
+      "obfuscation_pattern",
+      "persistence_pattern",
+      "launchagent_mirror_write"
+    ]
+  },
+  {
+    "sample_id": "replay_suspicious_shell_fanout_tmp_egress_02",
+    "group": "suspicious",
+    "path": "benchmark/replay/suspicious/replay_suspicious_shell_fanout_tmp_egress_02.json",
+    "event_count": 13,
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      60,
+      78
+    ],
+    "expected_top_findings": [
+      "rapid_process_fanout",
+      "tmp_artifact_burst",
+      "network_egress_to_raw_ip"
+    ]
+  }
+]

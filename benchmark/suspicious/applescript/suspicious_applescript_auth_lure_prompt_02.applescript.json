@@ -1,0 +1,10 @@
+{
+  "sample_id": "suspicious_applescript_auth_lure_prompt_02",
+  "group": "suspicious",
+  "language_or_type": "applescript",
+  "summary": "Displays social-engineering-like authorization lure text for UI detection tests.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [35, 52],
+  "why": "Prompt language mimics coercive update flows, but it captures no credentials and performs no privileged action.",
+  "expected_rules_hit": ["social_engineering_pattern"]
+}

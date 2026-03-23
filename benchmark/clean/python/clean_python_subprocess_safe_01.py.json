@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_python_subprocess_safe_01",
+  "group": "clean",
+  "language_or_type": "python",
+  "summary": "Demonstrates normal subprocess usage with echo/pwd/ls only.",
+  "expected_verdict": "clean",
+  "expected_score_range": [5, 18],
+  "why": "Subprocess invocation may trigger heuristic suspicion, but commands are fixed, local, and non-destructive with no shell injection path."
+}

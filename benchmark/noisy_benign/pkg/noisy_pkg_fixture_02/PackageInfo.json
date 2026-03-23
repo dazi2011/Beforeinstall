@@ -1,0 +1,7 @@
+{
+  "identifier": "com.synthetic.noisy.pkg.fixture02",
+  "version": "1.0.0",
+  "install_location": "./benchmark/sandbox_output/pkg_install_target",
+  "scripts": ["preinstall.sh", "postinstall.sh"],
+  "note": "Synthetic package fixture for static analysis only"
+}

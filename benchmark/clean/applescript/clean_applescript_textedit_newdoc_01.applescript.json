@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_applescript_textedit_newdoc_01",
+  "group": "clean",
+  "language_or_type": "applescript",
+  "summary": "Launches TextEdit and creates a new blank document.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 8],
+  "why": "Application control exists, but the action is basic productivity automation with no hidden command execution."
+}

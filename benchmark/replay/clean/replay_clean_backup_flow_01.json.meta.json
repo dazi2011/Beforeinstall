@@ -1,0 +1,9 @@
+{
+  "sample_id": "replay_clean_backup_flow_01",
+  "group": "replay_clean",
+  "language_or_type": "replay_json",
+  "summary": "Benign behavioral replay trace for low-risk scoring validation.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 15],
+  "why": "Event stream contains only local file operations and logging."
+}

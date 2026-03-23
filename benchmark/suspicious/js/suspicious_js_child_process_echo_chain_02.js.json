@@ -1,0 +1,10 @@
+{
+  "sample_id": "suspicious_js_child_process_echo_chain_02",
+  "group": "suspicious",
+  "language_or_type": "js",
+  "summary": "child_process API used with suspicious chain string but only echo is executed.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [55, 72],
+  "why": "Spawn APIs plus command-chain text can raise scores, yet effective behavior is non-executing dry-run logging.",
+  "expected_rules_hit": ["shell_spawn_pattern","download_execute_pattern"]
+}

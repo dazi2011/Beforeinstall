@@ -1,0 +1,17 @@
+[
+  {
+    "caps" : [
+      {
+        "afterScore" : 11,
+        "applied" : false,
+        "beforeScore" : 11,
+        "cap" : 45,
+        "id" : "7DB441D5-197A-405F-86E5-DE439895CAC3",
+        "reason" : "Documentation\/comment-only sample is capped."
+      }
+    ],
+    "detectedType" : "pkg",
+    "id" : "96D479F6-8D40-450D-8A35-3E05CA7E566C",
+    "sampleID" : "noisy_pkg_fixture_02"
+  }
+]

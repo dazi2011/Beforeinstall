@@ -1,0 +1,429 @@
+{
+  "addedSamples" : [
+
+  ],
+  "comparedAt" : "2026-03-11T13:09:02Z",
+  "newlyRaisedFalseNegatives" : [
+
+  ],
+  "newlyRaisedFalsePositives" : [
+    "clean_plist_launchagent_template_01"
+  ],
+  "notes" : [
+    "shared_samples=85",
+    "verdict_changes=18",
+    "score_increased=31",
+    "score_decreased=4",
+    "new_false_positives=1",
+    "new_false_negatives=0"
+  ],
+  "previousRunID" : "2026-03-11T11-03-17Z-0aeca4",
+  "removedSamples" : [
+
+  ],
+  "scoreDecreasedSamples" : [
+    "noisy_app_bundle_fixture_01",
+    "noisy_js_postinstall_sim_01",
+    "suspicious_hybrid_app_bundle_fixture_02",
+    "suspicious_js_download_execute_sim_02"
+  ],
+  "scoreIncreasedSamples" : [
+    "clean_applescript_open_finder_01",
+    "clean_js_base64_demo_01",
+    "clean_js_child_process_echo_01",
+    "clean_plist_launchagent_template_01",
+    "clean_python_subprocess_safe_01",
+    "clean_shell_open_safe_site_01",
+    "clean_shell_write_test_plist_01",
+    "noisy_applescript_finder_batch_rename_01",
+    "noisy_applescript_terminal_echo_pwd_01",
+    "noisy_js_child_process_ls_01",
+    "noisy_js_eval_math_only_01",
+    "noisy_pkg_fixture_02",
+    "noisy_python_build_subprocess_01",
+    "noisy_shell_installer_like_01",
+    "suspicious_applescript_doshell_echo_02",
+    "suspicious_applescript_terminal_download_print_02",
+    "suspicious_hybrid_chain_sim_01",
+    "suspicious_hybrid_dmg_mirror_fixture_02",
+    "suspicious_hybrid_pkg_fixture_02",
+    "suspicious_js_buffer_obfuscation_sim_02",
+    "suspicious_js_child_process_echo_chain_02",
+    "suspicious_js_eval_decode_message_02",
+    "suspicious_js_obfuscation_sim_01",
+    "suspicious_python_downloader_sim_01",
+    "suspicious_python_echo_chain_02",
+    "suspicious_python_launchagent_mirror_02",
+    "suspicious_python_obfuscation_restore_02",
+    "suspicious_python_reverse_shell_string_02",
+    "suspicious_shell_download_exec_string_02",
+    "suspicious_shell_launchagent_mirror_02",
+    "suspicious_shell_persistence_sim_01"
+  ],
+  "topScoreChanges" : [
+    {
+      "currentScore" : 0,
+      "currentVerdict" : "clean",
+      "delta" : -70,
+      "group" : "suspicious",
+      "id" : "5F950DA8-FE0F-4418-A145-18DCF05E384A",
+      "previousScore" : 70,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_js_download_execute_sim_02"
+    },
+    {
+      "currentScore" : 100,
+      "currentVerdict" : "suspicious",
+      "delta" : 66,
+      "group" : "suspicious",
+      "id" : "B828B232-F609-4BFA-B33E-0DE7A9EBD143",
+      "previousScore" : 34,
+      "previousVerdict" : "suspicious",
+      "sampleID" : "suspicious_python_obfuscation_restore_02"
+    },
+    {
+      "currentScore" : 65,
+      "currentVerdict" : "suspicious",
+      "delta" : 46,
+      "group" : "suspicious",
+      "id" : "73769789-D4BC-43E6-8892-DC12C0EE8742",
+      "previousScore" : 19,
+      "previousVerdict" : "clean",
+      "sampleID" : "suspicious_js_eval_decode_message_02"
+    },
+    {
+      "currentScore" : 100,
+      "currentVerdict" : "suspicious",
+      "delta" : 40,
+      "group" : "suspicious",
+      "id" : "B7E0CC1D-E538-43F5-8AA4-94C8D276E8CB",
+      "previousScore" : 60,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_js_obfuscation_sim_01"
+    },
+    {
+      "currentScore" : 37,
+      "currentVerdict" : "clean",
+      "delta" : 33,
+      "group" : "clean",
+      "id" : "B3198E5C-ED5F-4624-B43E-97FBE20D35FB",
+      "previousScore" : 4,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_js_base64_demo_01"
+    },
+    {
+      "currentScore" : 40,
+      "currentVerdict" : "clean",
+      "delta" : 30,
+      "group" : "suspicious",
+      "id" : "2C055151-B983-440D-ACE8-D1CF22146532",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "suspicious_hybrid_pkg_fixture_02"
+    },
+    {
+      "currentScore" : 100,
+      "currentVerdict" : "suspicious",
+      "delta" : 30,
+      "group" : "suspicious",
+      "id" : "60D77E83-1BBE-41D3-B60B-A9C190AB2E9E",
+      "previousScore" : 70,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_shell_persistence_sim_01"
+    },
+    {
+      "currentScore" : 98,
+      "currentVerdict" : "suspicious",
+      "delta" : 29,
+      "group" : "noisy_benign",
+      "id" : "24908D2A-8913-468F-8545-CB81FC51C9E7",
+      "previousScore" : 69,
+      "previousVerdict" : "malicious",
+      "sampleID" : "noisy_shell_installer_like_01"
+    },
+    {
+      "currentScore" : 49,
+      "currentVerdict" : "suspicious",
+      "delta" : 29,
+      "group" : "suspicious",
+      "id" : "BAECEE17-0E3E-47C6-AE2C-631E666E10CC",
+      "previousScore" : 20,
+      "previousVerdict" : "clean",
+      "sampleID" : "suspicious_python_reverse_shell_string_02"
+    },
+    {
+      "currentScore" : 37,
+      "currentVerdict" : "clean",
+      "delta" : 26,
+      "group" : "noisy_benign",
+      "id" : "8E14D436-1F92-4255-BFE7-AE558DE06413",
+      "previousScore" : 11,
+      "previousVerdict" : "clean",
+      "sampleID" : "noisy_js_child_process_ls_01"
+    },
+    {
+      "currentScore" : 35,
+      "currentVerdict" : "clean",
+      "delta" : 25,
+      "group" : "clean",
+      "id" : "C2880AC0-2A9B-46B3-9874-2200594B3F6A",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_python_subprocess_safe_01"
+    },
+    {
+      "currentScore" : 35,
+      "currentVerdict" : "clean",
+      "delta" : 25,
+      "group" : "noisy_benign",
+      "id" : "ACF5FA98-F42C-4FB2-82FD-8CD5E35133B3",
+      "previousScore" : 10,
+      "previousVerdict" : "clean",
+      "sampleID" : "noisy_python_build_subprocess_01"
+    },
+    {
+      "currentScore" : 99,
+      "currentVerdict" : "suspicious",
+      "delta" : 24,
+      "group" : "suspicious",
+      "id" : "C980D825-E637-4D4A-A3FE-F229C7FDCBAE",
+      "previousScore" : 75,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_js_buffer_obfuscation_sim_02"
+    },
+    {
+      "currentScore" : 43,
+      "currentVerdict" : "suspicious",
+      "delta" : 23,
+      "group" : "clean",
+      "id" : "9972C092-0A07-4437-B56D-46617AD7EA06",
+      "previousScore" : 20,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_plist_launchagent_template_01"
+    },
+    {
+      "currentScore" : 91,
+      "currentVerdict" : "suspicious",
+      "delta" : 21,
+      "group" : "suspicious",
+      "id" : "9F32CF89-06CA-4CB0-A27F-9791E36C6608",
+      "previousScore" : 70,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_shell_launchagent_mirror_02"
+    },
+    {
+      "currentScore" : 100,
+      "currentVerdict" : "suspicious",
+      "delta" : 20,
+      "group" : "suspicious",
+      "id" : "D25DB495-D984-4ED4-A006-5A51D1955B9A",
+      "previousScore" : 80,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_js_child_process_echo_chain_02"
+    },
+    {
+      "currentScore" : 100,
+      "currentVerdict" : "malicious",
+      "delta" : 20,
+      "group" : "suspicious",
+      "id" : "8C7498FC-CA14-412D-B1FF-E95641F4F1E0",
+      "previousScore" : 80,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_shell_download_exec_string_02"
+    },
+    {
+      "currentScore" : 41,
+      "currentVerdict" : "clean",
+      "delta" : 19,
+      "group" : "clean",
+      "id" : "6676F66E-8828-4F53-AD1F-30748CDA014E",
+      "previousScore" : 22,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_js_child_process_echo_01"
+    },
+    {
+      "currentScore" : 39,
+      "currentVerdict" : "clean",
+      "delta" : 19,
+      "group" : "clean",
+      "id" : "3ACFF680-D0DA-4BDB-8670-017BFD11CAEE",
+      "previousScore" : 20,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_shell_open_safe_site_01"
+    },
+    {
+      "currentScore" : 39,
+      "currentVerdict" : "clean",
+      "delta" : 19,
+      "group" : "clean",
+      "id" : "DC22A643-5D02-4912-9E66-96CEFC33979B",
+      "previousScore" : 20,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_shell_write_test_plist_01"
+    }
+  ],
+  "verdictChanges" : [
+    {
+      "currentScore" : 43,
+      "currentVerdict" : "suspicious",
+      "group" : "clean",
+      "id" : "A39F4D17-E83E-47C6-A324-32B426F1E9DA",
+      "previousScore" : 20,
+      "previousVerdict" : "clean",
+      "sampleID" : "clean_plist_launchagent_template_01"
+    },
+    {
+      "currentScore" : 73,
+      "currentVerdict" : "suspicious",
+      "group" : "noisy_benign",
+      "id" : "14B0642D-D121-4327-B3F2-1F1E7610322A",
+      "previousScore" : 80,
+      "previousVerdict" : "malicious",
+      "sampleID" : "noisy_js_postinstall_sim_01"
+    },
+    {
+      "currentScore" : 98,
+      "currentVerdict" : "suspicious",
+      "group" : "noisy_benign",
+      "id" : "F7A085D7-EE9F-4FB2-B000-5EAE01E2146E",
+      "previousScore" : 69,
+      "previousVerdict" : "malicious",
+      "sampleID" : "noisy_shell_installer_like_01"
+    },
+    {
+      "currentScore" : 84,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "C63358F3-64E1-4A46-8F42-1D6005B2216D",
+      "previousScore" : 80,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_applescript_doshell_echo_02"
+    },
+    {
+      "currentScore" : 91,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "E6D098F4-C4EC-40B5-B951-4172AA3E4F70",
+      "previousScore" : 80,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_applescript_terminal_download_print_02"
+    },
+    {
+      "currentScore" : 82,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "BC6C3EA5-0EBA-4692-8F8A-92A65C0A7041",
+      "previousScore" : 83,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_hybrid_app_bundle_fixture_02"
+    },
+    {
+      "currentScore" : 97,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "F5E3DE46-5FEA-4260-A8ED-D4738BB92324",
+      "previousScore" : 80,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_hybrid_chain_sim_01"
+    },
+    {
+      "currentScore" : 99,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "614449E0-DC52-497C-8B79-B43F56F7B998",
+      "previousScore" : 75,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_js_buffer_obfuscation_sim_02"
+    },
+    {
+      "currentScore" : 100,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "640B1759-8B48-4D2C-BB2B-ECD1576455AB",
+      "previousScore" : 80,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_js_child_process_echo_chain_02"
+    },
+    {
+      "currentScore" : 0,
+      "currentVerdict" : "clean",
+      "group" : "suspicious",
+      "id" : "42FDD9D9-6DCF-41EC-B4F8-778110EED8CA",
+      "previousScore" : 70,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_js_download_execute_sim_02"
+    },
+    {
+      "currentScore" : 65,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "870681B5-8917-450E-BE7F-7D50DBC61525",
+      "previousScore" : 19,
+      "previousVerdict" : "clean",
+      "sampleID" : "suspicious_js_eval_decode_message_02"
+    },
+    {
+      "currentScore" : 100,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "94EE97F5-EA60-4B5C-AF07-837086E3B469",
+      "previousScore" : 60,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_js_obfuscation_sim_01"
+    },
+    {
+      "currentScore" : 100,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "B8251114-5292-47EC-B667-2885B3F11BA2",
+      "previousScore" : 95,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_python_downloader_sim_01"
+    },
+    {
+      "currentScore" : 95,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "7B82EA85-73D1-4374-8E99-E7B4C3DD5155",
+      "previousScore" : 80,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_python_echo_chain_02"
+    },
+    {
+      "currentScore" : 49,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "C0368ED6-002E-4DF1-8485-EF8BF7C06BED",
+      "previousScore" : 20,
+      "previousVerdict" : "clean",
+      "sampleID" : "suspicious_python_reverse_shell_string_02"
+    },
+    {
+      "currentScore" : 91,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "C7464607-1BF7-4B4A-B0B3-C377FBDCDC3E",
+      "previousScore" : 70,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_shell_launchagent_mirror_02"
+    },
+    {
+      "currentScore" : 100,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "4151FF47-4A48-4B3E-B363-1A3B04C0FC26",
+      "previousScore" : 100,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_shell_multistage_chain_note_02"
+    },
+    {
+      "currentScore" : 100,
+      "currentVerdict" : "suspicious",
+      "group" : "suspicious",
+      "id" : "0DA84113-39BC-4410-AE5F-6FC090EC61CE",
+      "previousScore" : 70,
+      "previousVerdict" : "malicious",
+      "sampleID" : "suspicious_shell_persistence_sim_01"
+    }
+  ]
+}

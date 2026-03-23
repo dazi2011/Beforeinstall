@@ -1,0 +1,131 @@
+{
+  "sample_id": "replay_malicious_python_subprocess_priv_02",
+  "group": "malicious",
+  "summary": "Python subprocess chain performs network contact, drops file artifact, and attempts privilege-impacting action.",
+  "expected_verdict": "malicious",
+  "expected_score_range": [76, 90],
+  "expected_top_findings": [
+    "subprocess_shell_chain",
+    "network_beacon_pattern",
+    "privilege_related_pattern"
+  ],
+  "events": [
+    {
+      "timestamp": "2026-03-08T11:30:00Z",
+      "category": "processCreated",
+      "processID": 4400,
+      "parentProcessID": 1300,
+      "processName": "python3",
+      "executablePath": "/usr/bin/python3",
+      "action": "spawn",
+      "target": "benchmark/fixtures/agent_stage.py",
+      "details": "Python runner started from Terminal.",
+      "riskScoreDeltaHint": 3,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T11:30:01Z",
+      "category": "processCreated",
+      "processID": 4401,
+      "parentProcessID": 4400,
+      "processName": "sh",
+      "executablePath": "/bin/sh",
+      "action": "spawn",
+      "target": "subprocess command",
+      "details": "Python spawned shell subprocess.",
+      "riskScoreDeltaHint": 12,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T11:30:02Z",
+      "category": "networkConnect",
+      "processID": 4401,
+      "parentProcessID": 4400,
+      "processName": "sh",
+      "executablePath": "/bin/sh",
+      "action": "connect",
+      "target": "203.0.113.120:443",
+      "details": "Shell subprocess opened outbound connection.",
+      "riskScoreDeltaHint": 15,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T11:30:03Z",
+      "category": "fileCreated",
+      "processID": 4401,
+      "parentProcessID": 4400,
+      "processName": "sh",
+      "executablePath": "/bin/sh",
+      "action": "create",
+      "target": "/tmp/agent_stage.bin",
+      "details": "Binary-like stage artifact created in tmp.",
+      "riskScoreDeltaHint": 12,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T11:30:04Z",
+      "category": "privilegeRelatedAction",
+      "processID": 4401,
+      "parentProcessID": 4400,
+      "processName": "sh",
+      "executablePath": "/bin/sh",
+      "action": "simulatePrivilegeEscalation",
+      "target": "sudo -n spctl --master-disable",
+      "details": "Privilege-impact command pattern observed in chain.",
+      "riskScoreDeltaHint": 16,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T11:30:05Z",
+      "category": "persistenceAttempt",
+      "processID": 4401,
+      "parentProcessID": 4400,
+      "processName": "sh",
+      "executablePath": "/bin/sh",
+      "action": "simulatePersistenceWrite",
+      "target": "benchmark/sandbox_sensitive_mirror/home/.zprofile",
+      "details": "Profile persistence marker recorded in mirror path.",
+      "riskScoreDeltaHint": 14,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T11:30:06Z",
+      "category": "fileDeleted",
+      "processID": 4401,
+      "parentProcessID": 4400,
+      "processName": "sh",
+      "executablePath": "/bin/sh",
+      "action": "delete",
+      "target": "/tmp/agent_stage.bin",
+      "details": "Stage artifact removed after chain completed.",
+      "riskScoreDeltaHint": 8,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T11:30:07Z",
+      "category": "processExited",
+      "processID": 4401,
+      "parentProcessID": 4400,
+      "processName": "sh",
+      "executablePath": "/bin/sh",
+      "action": "exit",
+      "target": "self",
+      "details": "Subprocess exited.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T11:30:08Z",
+      "category": "processExited",
+      "processID": 4400,
+      "parentProcessID": 1300,
+      "processName": "python3",
+      "executablePath": "/usr/bin/python3",
+      "action": "exit",
+      "target": "self",
+      "details": "Python runner exited.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    }
+  ]
+}

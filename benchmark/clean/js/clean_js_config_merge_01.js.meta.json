@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_js_config_merge_01",
+  "group": "clean",
+  "language_or_type": "js",
+  "summary": "Simple local configuration merge utility.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 12],
+  "why": "Pure data transform; no side effects beyond stdout."
+}

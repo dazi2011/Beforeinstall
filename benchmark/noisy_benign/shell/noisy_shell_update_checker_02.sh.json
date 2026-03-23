@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_shell_update_checker_02",
+  "group": "noisy_benign",
+  "language_or_type": "shell",
+  "summary": "Checks a fixed remote text endpoint and stores response in sandbox cache.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [12, 30],
+  "why": "Use of curl and remote content resembles updater logic, but data is cached only and never executed or piped to a shell."
+}

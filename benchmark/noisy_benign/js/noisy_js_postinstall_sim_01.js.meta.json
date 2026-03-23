@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_js_postinstall_sim_01",
+  "group": "noisy_benign",
+  "language_or_type": "js",
+  "summary": "Postinstall-themed token emitter for static detection testing.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [20, 42],
+  "why": "Potentially alarming strings are emitted only to stdout."
+}

@@ -1,0 +1,878 @@
+[
+  {
+    "sample_id": "clean_app_manifest_01",
+    "group": "clean",
+    "language_or_type": "app",
+    "sample_path": "benchmark/clean/app/clean_app_manifest_01.json",
+    "meta_path": "benchmark/clean/app/clean_app_manifest_01.json.meta.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      10
+    ]
+  },
+  {
+    "sample_id": "clean_applescript_notification_01",
+    "group": "clean",
+    "language_or_type": "applescript",
+    "sample_path": "benchmark/clean/applescript/clean_applescript_notification_01.applescript",
+    "meta_path": "benchmark/clean/applescript/clean_applescript_notification_01.applescript.meta.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      12
+    ]
+  },
+  {
+    "sample_id": "clean_applescript_open_finder_01",
+    "group": "clean",
+    "language_or_type": "applescript",
+    "sample_path": "benchmark/clean/applescript/clean_applescript_open_finder_01.applescript",
+    "meta_path": "benchmark/clean/applescript/clean_applescript_open_finder_01.applescript.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      8
+    ]
+  },
+  {
+    "sample_id": "clean_applescript_prompt_01",
+    "group": "clean",
+    "language_or_type": "applescript",
+    "sample_path": "benchmark/clean/applescript/clean_applescript_prompt_01.applescript",
+    "meta_path": "benchmark/clean/applescript/clean_applescript_prompt_01.applescript.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      6
+    ]
+  },
+  {
+    "sample_id": "clean_applescript_textedit_newdoc_01",
+    "group": "clean",
+    "language_or_type": "applescript",
+    "sample_path": "benchmark/clean/applescript/clean_applescript_textedit_newdoc_01.applescript",
+    "meta_path": "benchmark/clean/applescript/clean_applescript_textedit_newdoc_01.applescript.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      8
+    ]
+  },
+  {
+    "sample_id": "clean_js_base64_demo_01",
+    "group": "clean",
+    "language_or_type": "js",
+    "sample_path": "benchmark/clean/js/clean_js_base64_demo_01.js",
+    "meta_path": "benchmark/clean/js/clean_js_base64_demo_01.js.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      3,
+      15
+    ]
+  },
+  {
+    "sample_id": "clean_js_child_process_echo_01",
+    "group": "clean",
+    "language_or_type": "js",
+    "sample_path": "benchmark/clean/js/clean_js_child_process_echo_01.js",
+    "meta_path": "benchmark/clean/js/clean_js_child_process_echo_01.js.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      5,
+      18
+    ]
+  },
+  {
+    "sample_id": "clean_js_config_merge_01",
+    "group": "clean",
+    "language_or_type": "js",
+    "sample_path": "benchmark/clean/js/clean_js_config_merge_01.js",
+    "meta_path": "benchmark/clean/js/clean_js_config_merge_01.js.meta.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      12
+    ]
+  },
+  {
+    "sample_id": "clean_js_read_local_config_02",
+    "group": "clean",
+    "language_or_type": "js",
+    "sample_path": "benchmark/clean/js/clean_js_read_local_config_02.js",
+    "meta_path": "benchmark/clean/js/clean_js_read_local_config_02.js.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      8
+    ]
+  },
+  {
+    "sample_id": "clean_pkg_receipt_stub_01",
+    "group": "clean",
+    "language_or_type": "pkg",
+    "sample_path": "benchmark/clean/pkg/clean_pkg_receipt_stub_01.json",
+    "meta_path": "benchmark/clean/pkg/clean_pkg_receipt_stub_01.json.meta.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      10
+    ]
+  },
+  {
+    "sample_id": "clean_plist_launchagent_template_01",
+    "group": "clean",
+    "language_or_type": "plist",
+    "sample_path": "benchmark/clean/plist/clean_plist_launchagent_template_01.plist",
+    "meta_path": "benchmark/clean/plist/clean_plist_launchagent_template_01.plist.meta.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      18
+    ]
+  },
+  {
+    "sample_id": "clean_python_config_rw_02",
+    "group": "clean",
+    "language_or_type": "python",
+    "sample_path": "benchmark/clean/python/clean_python_config_rw_02.py",
+    "meta_path": "benchmark/clean/python/clean_python_config_rw_02.py.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      12
+    ]
+  },
+  {
+    "sample_id": "clean_python_directory_scan_01",
+    "group": "clean",
+    "language_or_type": "python",
+    "sample_path": "benchmark/clean/python/clean_python_directory_scan_01.py",
+    "meta_path": "benchmark/clean/python/clean_python_directory_scan_01.py.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      10
+    ]
+  },
+  {
+    "sample_id": "clean_python_log_rotate_01",
+    "group": "clean",
+    "language_or_type": "python",
+    "sample_path": "benchmark/clean/python/clean_python_log_rotate_01.py",
+    "meta_path": "benchmark/clean/python/clean_python_log_rotate_01.py.meta.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      15
+    ]
+  },
+  {
+    "sample_id": "clean_python_subprocess_safe_01",
+    "group": "clean",
+    "language_or_type": "python",
+    "sample_path": "benchmark/clean/python/clean_python_subprocess_safe_01.py",
+    "meta_path": "benchmark/clean/python/clean_python_subprocess_safe_01.py.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      5,
+      18
+    ]
+  },
+  {
+    "sample_id": "clean_python_text_summary_01",
+    "group": "clean",
+    "language_or_type": "python",
+    "sample_path": "benchmark/clean/python/clean_python_text_summary_01.py",
+    "meta_path": "benchmark/clean/python/clean_python_text_summary_01.py.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      8
+    ]
+  },
+  {
+    "sample_id": "clean_shell_backup_01",
+    "group": "clean",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/clean/shell/clean_shell_backup_01.sh",
+    "meta_path": "benchmark/clean/shell/clean_shell_backup_01.sh.meta.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      15
+    ]
+  },
+  {
+    "sample_id": "clean_shell_backup_02",
+    "group": "clean",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/clean/shell/clean_shell_backup_02.sh",
+    "meta_path": "benchmark/clean/shell/clean_shell_backup_02.sh.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      12
+    ]
+  },
+  {
+    "sample_id": "clean_shell_log_archive_01",
+    "group": "clean",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/clean/shell/clean_shell_log_archive_01.sh",
+    "meta_path": "benchmark/clean/shell/clean_shell_log_archive_01.sh.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      12
+    ]
+  },
+  {
+    "sample_id": "clean_shell_open_safe_site_01",
+    "group": "clean",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/clean/shell/clean_shell_open_safe_site_01.sh",
+    "meta_path": "benchmark/clean/shell/clean_shell_open_safe_site_01.sh.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      8
+    ]
+  },
+  {
+    "sample_id": "clean_shell_write_test_plist_01",
+    "group": "clean",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/clean/shell/clean_shell_write_test_plist_01.sh",
+    "meta_path": "benchmark/clean/shell/clean_shell_write_test_plist_01.sh.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      14
+    ]
+  },
+  {
+    "sample_id": "noisy_app_bundle_fixture_01",
+    "group": "noisy_benign",
+    "language_or_type": "app",
+    "sample_path": "benchmark/noisy_benign/app/NoisyUtilityFixture_01.app",
+    "meta_path": "benchmark/noisy_benign/app/NoisyUtilityFixture_01.app.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      12,
+      30
+    ]
+  },
+  {
+    "sample_id": "noisy_app_updater_manifest_01",
+    "group": "noisy_benign",
+    "language_or_type": "app",
+    "sample_path": "benchmark/noisy_benign/app/noisy_app_updater_manifest_01.json",
+    "meta_path": "benchmark/noisy_benign/app/noisy_app_updater_manifest_01.json.meta.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      18,
+      38
+    ]
+  },
+  {
+    "sample_id": "noisy_applescript_admin_prompt_sim_01",
+    "group": "noisy_benign",
+    "language_or_type": "applescript",
+    "sample_path": "benchmark/noisy_benign/applescript/noisy_applescript_admin_prompt_sim_01.applescript",
+    "meta_path": "benchmark/noisy_benign/applescript/noisy_applescript_admin_prompt_sim_01.applescript.meta.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      18,
+      40
+    ]
+  },
+  {
+    "sample_id": "noisy_applescript_finder_batch_rename_01",
+    "group": "noisy_benign",
+    "language_or_type": "applescript",
+    "sample_path": "benchmark/noisy_benign/applescript/noisy_applescript_finder_batch_rename_01.applescript",
+    "meta_path": "benchmark/noisy_benign/applescript/noisy_applescript_finder_batch_rename_01.applescript.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      10,
+      28
+    ]
+  },
+  {
+    "sample_id": "noisy_applescript_terminal_echo_pwd_01",
+    "group": "noisy_benign",
+    "language_or_type": "applescript",
+    "sample_path": "benchmark/noisy_benign/applescript/noisy_applescript_terminal_echo_pwd_01.applescript",
+    "meta_path": "benchmark/noisy_benign/applescript/noisy_applescript_terminal_echo_pwd_01.applescript.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      12,
+      30
+    ]
+  },
+  {
+    "sample_id": "noisy_js_child_process_ls_01",
+    "group": "noisy_benign",
+    "language_or_type": "js",
+    "sample_path": "benchmark/noisy_benign/js/noisy_js_child_process_ls_01.js",
+    "meta_path": "benchmark/noisy_benign/js/noisy_js_child_process_ls_01.js.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      12,
+      30
+    ]
+  },
+  {
+    "sample_id": "noisy_js_eval_math_only_01",
+    "group": "noisy_benign",
+    "language_or_type": "js",
+    "sample_path": "benchmark/noisy_benign/js/noisy_js_eval_math_only_01.js",
+    "meta_path": "benchmark/noisy_benign/js/noisy_js_eval_math_only_01.js.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      15,
+      35
+    ]
+  },
+  {
+    "sample_id": "noisy_js_network_cache_text_01",
+    "group": "noisy_benign",
+    "language_or_type": "js",
+    "sample_path": "benchmark/noisy_benign/js/noisy_js_network_cache_text_01.js",
+    "meta_path": "benchmark/noisy_benign/js/noisy_js_network_cache_text_01.js.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      14,
+      32
+    ]
+  },
+  {
+    "sample_id": "noisy_js_postinstall_sim_01",
+    "group": "noisy_benign",
+    "language_or_type": "js",
+    "sample_path": "benchmark/noisy_benign/js/noisy_js_postinstall_sim_01.js",
+    "meta_path": "benchmark/noisy_benign/js/noisy_js_postinstall_sim_01.js.meta.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      20,
+      42
+    ]
+  },
+  {
+    "sample_id": "noisy_pkg_fixture_02",
+    "group": "noisy_benign",
+    "language_or_type": "pkg",
+    "sample_path": "benchmark/noisy_benign/pkg/noisy_pkg_fixture_02",
+    "meta_path": "benchmark/noisy_benign/pkg/noisy_pkg_fixture_02.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      15,
+      35
+    ]
+  },
+  {
+    "sample_id": "noisy_pkg_preinstall_sim_01",
+    "group": "noisy_benign",
+    "language_or_type": "pkg",
+    "sample_path": "benchmark/noisy_benign/pkg/noisy_pkg_preinstall_sim_01.sh",
+    "meta_path": "benchmark/noisy_benign/pkg/noisy_pkg_preinstall_sim_01.sh.meta.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      22,
+      48
+    ]
+  },
+  {
+    "sample_id": "noisy_python_build_subprocess_01",
+    "group": "noisy_benign",
+    "language_or_type": "python",
+    "sample_path": "benchmark/noisy_benign/python/noisy_python_build_subprocess_01.py",
+    "meta_path": "benchmark/noisy_benign/python/noisy_python_build_subprocess_01.py.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      12,
+      28
+    ]
+  },
+  {
+    "sample_id": "noisy_python_dynamic_loader_sim_01",
+    "group": "noisy_benign",
+    "language_or_type": "python",
+    "sample_path": "benchmark/noisy_benign/python/noisy_python_dynamic_loader_sim_01.py",
+    "meta_path": "benchmark/noisy_benign/python/noisy_python_dynamic_loader_sim_01.py.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      16,
+      35
+    ]
+  },
+  {
+    "sample_id": "noisy_python_remote_text_api_01",
+    "group": "noisy_benign",
+    "language_or_type": "python",
+    "sample_path": "benchmark/noisy_benign/python/noisy_python_remote_text_api_01.py",
+    "meta_path": "benchmark/noisy_benign/python/noisy_python_remote_text_api_01.py.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      14,
+      32
+    ]
+  },
+  {
+    "sample_id": "noisy_python_tempfile_cleanup_01",
+    "group": "noisy_benign",
+    "language_or_type": "python",
+    "sample_path": "benchmark/noisy_benign/python/noisy_python_tempfile_cleanup_01.py",
+    "meta_path": "benchmark/noisy_benign/python/noisy_python_tempfile_cleanup_01.py.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      10,
+      24
+    ]
+  },
+  {
+    "sample_id": "noisy_python_updater_01",
+    "group": "noisy_benign",
+    "language_or_type": "python",
+    "sample_path": "benchmark/noisy_benign/python/noisy_python_updater_01.py",
+    "meta_path": "benchmark/noisy_benign/python/noisy_python_updater_01.py.meta.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      20,
+      45
+    ]
+  },
+  {
+    "sample_id": "noisy_shell_appsupport_style_write_01",
+    "group": "noisy_benign",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/noisy_benign/shell/noisy_shell_appsupport_style_write_01.sh",
+    "meta_path": "benchmark/noisy_benign/shell/noisy_shell_appsupport_style_write_01.sh.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      10,
+      24
+    ]
+  },
+  {
+    "sample_id": "noisy_shell_base64_config_01",
+    "group": "noisy_benign",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/noisy_benign/shell/noisy_shell_base64_config_01.sh",
+    "meta_path": "benchmark/noisy_benign/shell/noisy_shell_base64_config_01.sh.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      12,
+      30
+    ]
+  },
+  {
+    "sample_id": "noisy_shell_chmod_tool_01",
+    "group": "noisy_benign",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/noisy_benign/shell/noisy_shell_chmod_tool_01.sh",
+    "meta_path": "benchmark/noisy_benign/shell/noisy_shell_chmod_tool_01.sh.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      10,
+      26
+    ]
+  },
+  {
+    "sample_id": "noisy_shell_installer_like_01",
+    "group": "noisy_benign",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/noisy_benign/shell/noisy_shell_installer_like_01.sh",
+    "meta_path": "benchmark/noisy_benign/shell/noisy_shell_installer_like_01.sh.meta.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      20,
+      45
+    ]
+  },
+  {
+    "sample_id": "noisy_shell_update_checker_02",
+    "group": "noisy_benign",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/noisy_benign/shell/noisy_shell_update_checker_02.sh",
+    "meta_path": "benchmark/noisy_benign/shell/noisy_shell_update_checker_02.sh.json",
+    "expected_verdict": "benign_noisy",
+    "expected_score_range": [
+      12,
+      30
+    ]
+  },
+  {
+    "sample_id": "replay_clean_backup_flow_01",
+    "group": "replay_clean",
+    "language_or_type": "replay_json",
+    "sample_path": "benchmark/replay/clean/replay_clean_backup_flow_01.json",
+    "meta_path": "benchmark/replay/clean/replay_clean_backup_flow_01.json.meta.json",
+    "expected_verdict": "clean",
+    "expected_score_range": [
+      0,
+      15
+    ]
+  },
+  {
+    "sample_id": "replay_malicious_chain_01",
+    "group": "replay_malicious",
+    "language_or_type": "replay_json",
+    "sample_path": "benchmark/replay/malicious/replay_malicious_chain_01.json",
+    "meta_path": "benchmark/replay/malicious/replay_malicious_chain_01.json.meta.json",
+    "expected_verdict": "malicious",
+    "expected_score_range": [
+      85,
+      100
+    ]
+  },
+  {
+    "sample_id": "replay_suspicious_persistence_attempt_01",
+    "group": "replay_suspicious",
+    "language_or_type": "replay_json",
+    "sample_path": "benchmark/replay/suspicious/replay_suspicious_persistence_attempt_01.json",
+    "meta_path": "benchmark/replay/suspicious/replay_suspicious_persistence_attempt_01.json.meta.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      60,
+      80
+    ]
+  },
+  {
+    "sample_id": "suspicious_applescript_auth_lure_prompt_02",
+    "group": "suspicious",
+    "language_or_type": "applescript",
+    "sample_path": "benchmark/suspicious/applescript/suspicious_applescript_auth_lure_prompt_02.applescript",
+    "meta_path": "benchmark/suspicious/applescript/suspicious_applescript_auth_lure_prompt_02.applescript.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      35,
+      52
+    ]
+  },
+  {
+    "sample_id": "suspicious_applescript_doshell_echo_02",
+    "group": "suspicious",
+    "language_or_type": "applescript",
+    "sample_path": "benchmark/suspicious/applescript/suspicious_applescript_doshell_echo_02.applescript",
+    "meta_path": "benchmark/suspicious/applescript/suspicious_applescript_doshell_echo_02.applescript.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      55,
+      72
+    ]
+  },
+  {
+    "sample_id": "suspicious_applescript_keystroke_sim_01",
+    "group": "suspicious",
+    "language_or_type": "applescript",
+    "sample_path": "benchmark/suspicious/applescript/suspicious_applescript_keystroke_sim_01.applescript",
+    "meta_path": "benchmark/suspicious/applescript/suspicious_applescript_keystroke_sim_01.applescript.meta.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      58,
+      78
+    ]
+  },
+  {
+    "sample_id": "suspicious_applescript_system_settings_text_02",
+    "group": "suspicious",
+    "language_or_type": "applescript",
+    "sample_path": "benchmark/suspicious/applescript/suspicious_applescript_system_settings_text_02.applescript",
+    "meta_path": "benchmark/suspicious/applescript/suspicious_applescript_system_settings_text_02.applescript.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      35,
+      50
+    ]
+  },
+  {
+    "sample_id": "suspicious_applescript_terminal_download_print_02",
+    "group": "suspicious",
+    "language_or_type": "applescript",
+    "sample_path": "benchmark/suspicious/applescript/suspicious_applescript_terminal_download_print_02.applescript",
+    "meta_path": "benchmark/suspicious/applescript/suspicious_applescript_terminal_download_print_02.applescript.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      52,
+      70
+    ]
+  },
+  {
+    "sample_id": "suspicious_hybrid_app_bundle_fixture_02",
+    "group": "suspicious",
+    "language_or_type": "hybrid_app",
+    "sample_path": "benchmark/suspicious/hybrid/SyntheticSuspiciousFixture_02.app",
+    "meta_path": "benchmark/suspicious/hybrid/SyntheticSuspiciousFixture_02.app.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      60,
+      78
+    ]
+  },
+  {
+    "sample_id": "suspicious_hybrid_chain_sim_01",
+    "group": "suspicious",
+    "language_or_type": "hybrid",
+    "sample_path": "benchmark/suspicious/hybrid/suspicious_hybrid_chain_sim_01.json",
+    "meta_path": "benchmark/suspicious/hybrid/suspicious_hybrid_chain_sim_01.json.meta.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      65,
+      88
+    ]
+  },
+  {
+    "sample_id": "suspicious_hybrid_dmg_mirror_fixture_02",
+    "group": "suspicious",
+    "language_or_type": "hybrid_dmg",
+    "sample_path": "benchmark/suspicious/hybrid/suspicious_hybrid_dmg_mirror_fixture_02",
+    "meta_path": "benchmark/suspicious/hybrid/suspicious_hybrid_dmg_mirror_fixture_02.json",
+    "expected_verdict": "malicious",
+    "expected_score_range": [
+      70,
+      80
+    ]
+  },
+  {
+    "sample_id": "suspicious_hybrid_pkg_fixture_02",
+    "group": "suspicious",
+    "language_or_type": "hybrid_pkg",
+    "sample_path": "benchmark/suspicious/hybrid/suspicious_hybrid_pkg_fixture_02",
+    "meta_path": "benchmark/suspicious/hybrid/suspicious_hybrid_pkg_fixture_02.json",
+    "expected_verdict": "malicious",
+    "expected_score_range": [
+      68,
+      80
+    ]
+  },
+  {
+    "sample_id": "suspicious_js_buffer_obfuscation_sim_02",
+    "group": "suspicious",
+    "language_or_type": "js",
+    "sample_path": "benchmark/suspicious/js/suspicious_js_buffer_obfuscation_sim_02.js",
+    "meta_path": "benchmark/suspicious/js/suspicious_js_buffer_obfuscation_sim_02.js.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      55,
+      74
+    ]
+  },
+  {
+    "sample_id": "suspicious_js_child_process_echo_chain_02",
+    "group": "suspicious",
+    "language_or_type": "js",
+    "sample_path": "benchmark/suspicious/js/suspicious_js_child_process_echo_chain_02.js",
+    "meta_path": "benchmark/suspicious/js/suspicious_js_child_process_echo_chain_02.js.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      55,
+      72
+    ]
+  },
+  {
+    "sample_id": "suspicious_js_download_execute_sim_02",
+    "group": "suspicious",
+    "language_or_type": "js",
+    "sample_path": "benchmark/suspicious/js/suspicious_js_download_execute_sim_02.js",
+    "meta_path": "benchmark/suspicious/js/suspicious_js_download_execute_sim_02.js.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      60,
+      78
+    ]
+  },
+  {
+    "sample_id": "suspicious_js_eval_decode_message_02",
+    "group": "suspicious",
+    "language_or_type": "js",
+    "sample_path": "benchmark/suspicious/js/suspicious_js_eval_decode_message_02.js",
+    "meta_path": "benchmark/suspicious/js/suspicious_js_eval_decode_message_02.js.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      58,
+      76
+    ]
+  },
+  {
+    "sample_id": "suspicious_js_obfuscation_sim_01",
+    "group": "suspicious",
+    "language_or_type": "js",
+    "sample_path": "benchmark/suspicious/js/suspicious_js_obfuscation_sim_01.js",
+    "meta_path": "benchmark/suspicious/js/suspicious_js_obfuscation_sim_01.js.meta.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      60,
+      80
+    ]
+  },
+  {
+    "sample_id": "suspicious_python_download_would_execute_02",
+    "group": "suspicious",
+    "language_or_type": "python",
+    "sample_path": "benchmark/suspicious/python/suspicious_python_download_would_execute_02.py",
+    "meta_path": "benchmark/suspicious/python/suspicious_python_download_would_execute_02.py.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      55,
+      72
+    ]
+  },
+  {
+    "sample_id": "suspicious_python_downloader_sim_01",
+    "group": "suspicious",
+    "language_or_type": "python",
+    "sample_path": "benchmark/suspicious/python/suspicious_python_downloader_sim_01.py",
+    "meta_path": "benchmark/suspicious/python/suspicious_python_downloader_sim_01.py.meta.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      62,
+      82
+    ]
+  },
+  {
+    "sample_id": "suspicious_python_echo_chain_02",
+    "group": "suspicious",
+    "language_or_type": "python",
+    "sample_path": "benchmark/suspicious/python/suspicious_python_echo_chain_02.py",
+    "meta_path": "benchmark/suspicious/python/suspicious_python_echo_chain_02.py.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      52,
+      68
+    ]
+  },
+  {
+    "sample_id": "suspicious_python_launchagent_mirror_02",
+    "group": "suspicious",
+    "language_or_type": "python",
+    "sample_path": "benchmark/suspicious/python/suspicious_python_launchagent_mirror_02.py",
+    "meta_path": "benchmark/suspicious/python/suspicious_python_launchagent_mirror_02.py.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      52,
+      68
+    ]
+  },
+  {
+    "sample_id": "suspicious_python_obfuscation_restore_02",
+    "group": "suspicious",
+    "language_or_type": "python",
+    "sample_path": "benchmark/suspicious/python/suspicious_python_obfuscation_restore_02.py",
+    "meta_path": "benchmark/suspicious/python/suspicious_python_obfuscation_restore_02.py.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      58,
+      76
+    ]
+  },
+  {
+    "sample_id": "suspicious_python_reverse_shell_string_02",
+    "group": "suspicious",
+    "language_or_type": "python",
+    "sample_path": "benchmark/suspicious/python/suspicious_python_reverse_shell_string_02.py",
+    "meta_path": "benchmark/suspicious/python/suspicious_python_reverse_shell_string_02.py.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      60,
+      78
+    ]
+  },
+  {
+    "sample_id": "suspicious_python_socket_metadata_sim_02",
+    "group": "suspicious",
+    "language_or_type": "python",
+    "sample_path": "benchmark/suspicious/python/suspicious_python_socket_metadata_sim_02.py",
+    "meta_path": "benchmark/suspicious/python/suspicious_python_socket_metadata_sim_02.py.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      40,
+      58
+    ]
+  },
+  {
+    "sample_id": "suspicious_shell_base64_decode_print_02",
+    "group": "suspicious",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/suspicious/shell/suspicious_shell_base64_decode_print_02.sh",
+    "meta_path": "benchmark/suspicious/shell/suspicious_shell_base64_decode_print_02.sh.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      55,
+      72
+    ]
+  },
+  {
+    "sample_id": "suspicious_shell_download_exec_string_02",
+    "group": "suspicious",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/suspicious/shell/suspicious_shell_download_exec_string_02.sh",
+    "meta_path": "benchmark/suspicious/shell/suspicious_shell_download_exec_string_02.sh.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      60,
+      75
+    ]
+  },
+  {
+    "sample_id": "suspicious_shell_launchagent_mirror_02",
+    "group": "suspicious",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/suspicious/shell/suspicious_shell_launchagent_mirror_02.sh",
+    "meta_path": "benchmark/suspicious/shell/suspicious_shell_launchagent_mirror_02.sh.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      58,
+      72
+    ]
+  },
+  {
+    "sample_id": "suspicious_shell_mktemp_chain_sim_02",
+    "group": "suspicious",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/suspicious/shell/suspicious_shell_mktemp_chain_sim_02.sh",
+    "meta_path": "benchmark/suspicious/shell/suspicious_shell_mktemp_chain_sim_02.sh.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      60,
+      78
+    ]
+  },
+  {
+    "sample_id": "suspicious_shell_multistage_chain_note_02",
+    "group": "suspicious",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/suspicious/shell/suspicious_shell_multistage_chain_note_02.sh",
+    "meta_path": "benchmark/suspicious/shell/suspicious_shell_multistage_chain_note_02.sh.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      62,
+      80
+    ]
+  },
+  {
+    "sample_id": "suspicious_shell_persistence_sim_01",
+    "group": "suspicious",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/suspicious/shell/suspicious_shell_persistence_sim_01.sh",
+    "meta_path": "benchmark/suspicious/shell/suspicious_shell_persistence_sim_01.sh.meta.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      60,
+      80
+    ]
+  },
+  {
+    "sample_id": "suspicious_shell_profile_mirror_02",
+    "group": "suspicious",
+    "language_or_type": "shell",
+    "sample_path": "benchmark/suspicious/shell/suspicious_shell_profile_mirror_02.sh",
+    "meta_path": "benchmark/suspicious/shell/suspicious_shell_profile_mirror_02.sh.json",
+    "expected_verdict": "suspicious",
+    "expected_score_range": [
+      50,
+      68
+    ]
+  }
+]

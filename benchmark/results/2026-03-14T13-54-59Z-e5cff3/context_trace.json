@@ -1,0 +1,392 @@
+[
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "D505860A-F7F1-4A3C-96D2-A7D20B878729",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "appleScript",
+    "id" : "CBE7DF7D-E1E4-41E1-B400-297C11D97967",
+    "sampleID" : "clean_applescript_open_finder_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "B0E5F740-F04F-493F-AD11-0D434A63C085",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "id" : "D4090219-90F7-4CC9-83FE-9224E1C97659",
+    "sampleID" : "clean_js_base64_demo_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "43727C65-7B53-4E65-ACA1-87D299B5563E",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "id" : "EB07E420-7F77-48D0-B5E4-508B67263BED",
+    "sampleID" : "clean_js_child_process_echo_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : -3,
+        "id" : "1B7FC8E6-7689-4B7A-87CA-1D15CEABA658",
+        "name" : "plist_context",
+        "reason" : "Generic plist context is conservative."
+      }
+    ],
+    "detectedType" : "plist",
+    "id" : "E8954816-646B-417E-83F4-DB9DEF5BFFA2",
+    "sampleID" : "clean_plist_launchagent_template_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "77349F6F-1767-4BCE-8F9F-9277A0D950FF",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "id" : "CDEA354C-CE8E-42F9-837D-4052D8885F8B",
+    "sampleID" : "clean_python_subprocess_safe_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "E33A5D3A-6880-4913-8AB7-C93ADE4808FE",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "id" : "76CBD168-B753-43A2-BCF6-68D71AF00C54",
+    "sampleID" : "clean_shell_open_safe_site_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "8D18CB32-6340-4114-B37D-664D8F29F12A",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "id" : "3EE940D2-5021-4758-B055-0819076AA3FA",
+    "sampleID" : "clean_shell_write_test_plist_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "BB64A68B-0E33-4E77-B805-4783EB3AA3F9",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "appleScript",
+    "id" : "6BEA327E-6E19-42A4-B489-45459DAD4FBB",
+    "sampleID" : "noisy_applescript_finder_batch_rename_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "D8C320E4-8502-4E52-ABAF-D8280A0329EA",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "appleScript",
+    "id" : "7FED0953-6DAD-492F-A09C-61210E947D1A",
+    "sampleID" : "noisy_applescript_terminal_echo_pwd_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "5D24EEAE-A0A7-4FE3-AA35-770F8C9608FC",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "id" : "A3A48A56-D8A5-46C8-A94D-809F2E9E1E72",
+    "sampleID" : "noisy_js_child_process_ls_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "FA53054E-80BB-4551-AE3A-A62454E8FC22",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "id" : "05EDCC1C-27CB-461F-946F-C732CBEE4EA9",
+    "sampleID" : "noisy_js_eval_math_only_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "BC8A25FD-14C9-4041-BF05-56DD44F424B0",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "id" : "CD4AEF94-5EB7-4736-BF6C-D96B555D4783",
+    "sampleID" : "noisy_js_postinstall_sim_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "F453035D-EFEE-4B57-9FF1-3B8A3CA39025",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "id" : "6BAC085D-0418-4DEE-922D-ED0930011799",
+    "sampleID" : "noisy_python_build_subprocess_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "A23E43B9-06F4-4FAE-A038-C642B56F4AA3",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "id" : "ADB46181-5DB4-461B-9558-F5D7883968DD",
+    "sampleID" : "noisy_shell_installer_like_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "F2A4BB5E-3B0C-4CF0-9A86-ECC9E12C0AB5",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "appleScript",
+    "id" : "B6BB0FBF-7120-4FE8-885C-4D9402F2AD93",
+    "sampleID" : "suspicious_applescript_doshell_echo_02"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "BC151A63-6282-4D2A-935B-037DB9E2D2FF",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "appleScript",
+    "id" : "8660F5AC-99B3-4A7B-87EB-16D416C9B9B0",
+    "sampleID" : "suspicious_applescript_terminal_download_print_02"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "79B84D68-3573-4D81-B018-9821788E88CE",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "appleScript",
+    "id" : "379697C3-6C4C-4572-8B70-45C4A23E4EB9",
+    "sampleID" : "suspicious_hybrid_chain_sim_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "65BE24D2-B683-40A8-BF16-94490CB28092",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "id" : "44C5A827-48FF-4669-92FD-125A43324097",
+    "sampleID" : "suspicious_js_buffer_obfuscation_sim_02"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "8200EE3E-A906-4465-A89F-0F64EEB65F37",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "id" : "6FF0A482-61FD-4404-A257-F536807D8314",
+    "sampleID" : "suspicious_js_child_process_echo_chain_02"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "9F4E390B-B597-4FA4-8C68-D5CF55D721E1",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "id" : "0AC68D68-90C2-471D-865F-2822360E2AD4",
+    "sampleID" : "suspicious_js_eval_decode_message_02"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "5802DC3D-2979-4872-9A81-6DD55D645A7A",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "javaScript",
+    "id" : "00B21271-BE45-4E29-8E8A-7AA9C854F130",
+    "sampleID" : "suspicious_js_obfuscation_sim_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "2252C44C-4AC7-4AFF-97B7-94BF7D81C838",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "id" : "7C298F5D-86F0-441D-B5BB-A6AFA7551E32",
+    "sampleID" : "suspicious_python_downloader_sim_01"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "094987FB-519A-427F-A703-D717C5E67E85",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "id" : "B9E09C08-475A-4393-90CA-C2483FAC70F1",
+    "sampleID" : "suspicious_python_echo_chain_02"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "12600A27-69FE-45F9-B6A2-AA12FD8C0AEC",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "id" : "897B651A-67B9-403E-BBDA-B600B00AD1FB",
+    "sampleID" : "suspicious_python_launchagent_mirror_02"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "A2742A37-E62E-40C7-852E-DCFEFCBFD75A",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "id" : "2D0341BC-2058-4D12-ABBF-197F007CF82C",
+    "sampleID" : "suspicious_python_obfuscation_restore_02"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "79927695-7B9C-4090-ADAD-8A2CFBF8988E",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "pythonScript",
+    "id" : "821D443A-6F87-4375-BD15-C5D90D54C44B",
+    "sampleID" : "suspicious_python_reverse_shell_string_02"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "81BCD5F8-9D20-4E59-B612-1F6ADC41F188",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "id" : "47DD01D5-00E7-46D6-A881-839DAD22C90A",
+    "sampleID" : "suspicious_shell_download_exec_string_02"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "8F0EFE8A-B653-4A45-B06A-5DC4D0C0A60A",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "id" : "36B8833E-59B4-47A6-A8C0-0BD43FD390C3",
+    "sampleID" : "suspicious_shell_launchagent_mirror_02"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "EC0361D8-6989-4139-965C-C830494A2FC5",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "id" : "0855850F-0850-449E-8FC6-512CC645D9C7",
+    "sampleID" : "suspicious_shell_multistage_chain_note_02"
+  },
+  {
+    "adjustments" : [
+      {
+        "delta" : 3,
+        "id" : "E882C861-BB20-4530-BE0C-A1B13043B146",
+        "name" : "executable_context",
+        "reason" : "Executable-like object raises exploitability potential."
+      }
+    ],
+    "detectedType" : "shellScript",
+    "id" : "F81891FC-A67A-404E-9680-809456642C9C",
+    "sampleID" : "suspicious_shell_persistence_sim_01"
+  }
+]

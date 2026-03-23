@@ -1,0 +1,34 @@
+name: BeforeInstall
+options:
+  minimumXcodeGenVersion: 2.38.0
+  xcodeVersion: "26.3"
+attributes:
+  LastUpgradeCheck: "2630"
+settings:
+  base:
+    SWIFT_VERSION: 6.0
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: ""
+
+targets:
+  BeforeInstall:
+    type: application
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - Sources/BeforeInstall
+      - path: Resources
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.beforeinstall.app
+        PRODUCT_NAME: BeforeInstall
+        GENERATE_INFOPLIST_FILE: YES
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 1.0.0beta1
+        INFOPLIST_KEY_CFBundleDisplayName: BeforeInstall
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
+        INFOPLIST_KEY_NSPrincipalClass: NSApplication
+        SWIFT_EMIT_LOC_STRINGS: NO
+    scheme:
+      gatherCoverageData: false

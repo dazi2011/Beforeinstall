@@ -1,0 +1,12 @@
+{
+  "app_id": "com.synthetic.noisy.updater",
+  "name": "Synthetic Updater",
+  "version": "2.1.0",
+  "auto_update": true,
+  "update_channel": "beta",
+  "update_urls": [
+    "https://updates.example.invalid/check",
+    "https://updates.example.invalid/download"
+  ],
+  "notes": "Fixture only, no executable updater included."
+}

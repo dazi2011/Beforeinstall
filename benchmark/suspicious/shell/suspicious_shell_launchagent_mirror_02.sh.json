@@ -1,0 +1,10 @@
+{
+  "sample_id": "suspicious_shell_launchagent_mirror_02",
+  "group": "suspicious",
+  "language_or_type": "shell",
+  "summary": "Simulates LaunchAgent persistence by writing plist to sandbox mirror path.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [58, 72],
+  "why": "LaunchAgent indicators and RunAtLoad are present, but no system path or launchctl action is used.",
+  "expected_rules_hit": ["persistence_pattern"]
+}

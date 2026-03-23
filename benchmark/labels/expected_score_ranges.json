@@ -1,0 +1,294 @@
+{
+  "clean_app_manifest_01": [
+    0,
+    10
+  ],
+  "clean_applescript_notification_01": [
+    0,
+    12
+  ],
+  "clean_applescript_open_finder_01": [
+    0,
+    8
+  ],
+  "clean_applescript_prompt_01": [
+    0,
+    6
+  ],
+  "clean_applescript_textedit_newdoc_01": [
+    0,
+    8
+  ],
+  "clean_js_base64_demo_01": [
+    3,
+    15
+  ],
+  "clean_js_child_process_echo_01": [
+    5,
+    18
+  ],
+  "clean_js_config_merge_01": [
+    0,
+    12
+  ],
+  "clean_js_read_local_config_02": [
+    0,
+    8
+  ],
+  "clean_pkg_receipt_stub_01": [
+    0,
+    10
+  ],
+  "clean_plist_launchagent_template_01": [
+    0,
+    18
+  ],
+  "clean_python_config_rw_02": [
+    0,
+    12
+  ],
+  "clean_python_directory_scan_01": [
+    0,
+    10
+  ],
+  "clean_python_log_rotate_01": [
+    0,
+    15
+  ],
+  "clean_python_subprocess_safe_01": [
+    5,
+    18
+  ],
+  "clean_python_text_summary_01": [
+    0,
+    8
+  ],
+  "clean_shell_backup_01": [
+    0,
+    15
+  ],
+  "clean_shell_backup_02": [
+    0,
+    12
+  ],
+  "clean_shell_log_archive_01": [
+    0,
+    12
+  ],
+  "clean_shell_open_safe_site_01": [
+    0,
+    8
+  ],
+  "clean_shell_write_test_plist_01": [
+    0,
+    14
+  ],
+  "noisy_app_bundle_fixture_01": [
+    12,
+    30
+  ],
+  "noisy_app_updater_manifest_01": [
+    18,
+    38
+  ],
+  "noisy_applescript_admin_prompt_sim_01": [
+    18,
+    40
+  ],
+  "noisy_applescript_finder_batch_rename_01": [
+    10,
+    28
+  ],
+  "noisy_applescript_terminal_echo_pwd_01": [
+    12,
+    30
+  ],
+  "noisy_js_child_process_ls_01": [
+    12,
+    30
+  ],
+  "noisy_js_eval_math_only_01": [
+    15,
+    35
+  ],
+  "noisy_js_network_cache_text_01": [
+    14,
+    32
+  ],
+  "noisy_js_postinstall_sim_01": [
+    20,
+    42
+  ],
+  "noisy_pkg_fixture_02": [
+    15,
+    35
+  ],
+  "noisy_pkg_preinstall_sim_01": [
+    22,
+    48
+  ],
+  "noisy_python_build_subprocess_01": [
+    12,
+    28
+  ],
+  "noisy_python_dynamic_loader_sim_01": [
+    16,
+    35
+  ],
+  "noisy_python_remote_text_api_01": [
+    14,
+    32
+  ],
+  "noisy_python_tempfile_cleanup_01": [
+    10,
+    24
+  ],
+  "noisy_python_updater_01": [
+    20,
+    45
+  ],
+  "noisy_shell_appsupport_style_write_01": [
+    10,
+    24
+  ],
+  "noisy_shell_base64_config_01": [
+    12,
+    30
+  ],
+  "noisy_shell_chmod_tool_01": [
+    10,
+    26
+  ],
+  "noisy_shell_installer_like_01": [
+    20,
+    45
+  ],
+  "noisy_shell_update_checker_02": [
+    12,
+    30
+  ],
+  "replay_clean_backup_flow_01": [
+    0,
+    15
+  ],
+  "replay_malicious_chain_01": [
+    85,
+    100
+  ],
+  "replay_suspicious_persistence_attempt_01": [
+    60,
+    80
+  ],
+  "suspicious_applescript_auth_lure_prompt_02": [
+    35,
+    52
+  ],
+  "suspicious_applescript_doshell_echo_02": [
+    55,
+    72
+  ],
+  "suspicious_applescript_keystroke_sim_01": [
+    58,
+    78
+  ],
+  "suspicious_applescript_system_settings_text_02": [
+    35,
+    50
+  ],
+  "suspicious_applescript_terminal_download_print_02": [
+    52,
+    70
+  ],
+  "suspicious_hybrid_app_bundle_fixture_02": [
+    60,
+    78
+  ],
+  "suspicious_hybrid_chain_sim_01": [
+    65,
+    88
+  ],
+  "suspicious_hybrid_dmg_mirror_fixture_02": [
+    70,
+    80
+  ],
+  "suspicious_hybrid_pkg_fixture_02": [
+    68,
+    80
+  ],
+  "suspicious_js_buffer_obfuscation_sim_02": [
+    55,
+    74
+  ],
+  "suspicious_js_child_process_echo_chain_02": [
+    55,
+    72
+  ],
+  "suspicious_js_download_execute_sim_02": [
+    60,
+    78
+  ],
+  "suspicious_js_eval_decode_message_02": [
+    58,
+    76
+  ],
+  "suspicious_js_obfuscation_sim_01": [
+    60,
+    80
+  ],
+  "suspicious_python_download_would_execute_02": [
+    55,
+    72
+  ],
+  "suspicious_python_downloader_sim_01": [
+    62,
+    82
+  ],
+  "suspicious_python_echo_chain_02": [
+    52,
+    68
+  ],
+  "suspicious_python_launchagent_mirror_02": [
+    52,
+    68
+  ],
+  "suspicious_python_obfuscation_restore_02": [
+    58,
+    76
+  ],
+  "suspicious_python_reverse_shell_string_02": [
+    60,
+    78
+  ],
+  "suspicious_python_socket_metadata_sim_02": [
+    40,
+    58
+  ],
+  "suspicious_shell_base64_decode_print_02": [
+    55,
+    72
+  ],
+  "suspicious_shell_download_exec_string_02": [
+    60,
+    75
+  ],
+  "suspicious_shell_launchagent_mirror_02": [
+    58,
+    72
+  ],
+  "suspicious_shell_mktemp_chain_sim_02": [
+    60,
+    78
+  ],
+  "suspicious_shell_multistage_chain_note_02": [
+    62,
+    80
+  ],
+  "suspicious_shell_persistence_sim_01": [
+    60,
+    80
+  ],
+  "suspicious_shell_profile_mirror_02": [
+    50,
+    68
+  ]
+}

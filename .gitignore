@@ -1,0 +1,21 @@
+# macOS / Xcode
+.DS_Store
+*.xcuserstate
+xcuserdata/
+DerivedData/
+
+# SwiftPM / build outputs
+.build/
+.swiftpm/
+
+# Temporary / logs
+*.log
+.tmp/
+
+# Local benchmark artifacts
+BeforeInstall-Benchmark-*/
+benchmark/*/results/
+
+# Large local sample corpora (keep local, do not upload)
+样本/
+应用分组样本_*/

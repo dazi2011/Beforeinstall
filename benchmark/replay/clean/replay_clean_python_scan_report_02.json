@@ -1,0 +1,78 @@
+{
+  "sample_id": "replay_clean_python_scan_report_02",
+  "group": "clean",
+  "summary": "Python utility scans a directory, writes report, removes temporary file, exits.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 18],
+  "expected_top_findings": [
+    "local_inventory_scan",
+    "report_generation"
+  ],
+  "events": [
+    {
+      "timestamp": "2026-03-08T09:10:00Z",
+      "category": "processCreated",
+      "processID": 2200,
+      "parentProcessID": 1300,
+      "processName": "python3",
+      "executablePath": "/usr/bin/python3",
+      "action": "spawn",
+      "target": "benchmark/tools/scan_report.py",
+      "details": "Developer launched local scan tool from Terminal.",
+      "riskScoreDeltaHint": 1,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:10:01Z",
+      "category": "scriptExecuted",
+      "processID": 2200,
+      "parentProcessID": 1300,
+      "processName": "python3",
+      "executablePath": "/usr/bin/python3",
+      "action": "executeScript",
+      "target": "benchmark/tools/scan_report.py",
+      "details": "Script enumerated files under benchmark/sandbox_output.",
+      "riskScoreDeltaHint": 1,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:10:02Z",
+      "category": "fileCreated",
+      "processID": 2200,
+      "parentProcessID": 1300,
+      "processName": "python3",
+      "executablePath": "/usr/bin/python3",
+      "action": "create",
+      "target": "benchmark/sandbox_output/reports/scan_report_20260308.json",
+      "details": "Summary report file created.",
+      "riskScoreDeltaHint": 1,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:10:03Z",
+      "category": "fileDeleted",
+      "processID": 2200,
+      "parentProcessID": 1300,
+      "processName": "python3",
+      "executablePath": "/usr/bin/python3",
+      "action": "delete",
+      "target": "benchmark/sandbox_output/reports/scan_report_20260308.tmp",
+      "details": "Temporary working file cleaned up after successful report write.",
+      "riskScoreDeltaHint": 1,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:10:05Z",
+      "category": "processExited",
+      "processID": 2200,
+      "parentProcessID": 1300,
+      "processName": "python3",
+      "executablePath": "/usr/bin/python3",
+      "action": "exit",
+      "target": "self",
+      "details": "Script finished with exit code 0.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "sample_id": "replay_clean_backup_flow_01",
+  "replay_only": true,
+  "events": [
+    {"ts": "2026-03-01T08:00:00Z", "event": "file_create", "path": "benchmark/sandbox_runtime/demo/a.txt"},
+    {"ts": "2026-03-01T08:00:01Z", "event": "file_copy", "src": "a.txt", "dst": "a.txt.bak"},
+    {"ts": "2026-03-01T08:00:02Z", "event": "log", "message": "backup complete"}
+  ]
+}

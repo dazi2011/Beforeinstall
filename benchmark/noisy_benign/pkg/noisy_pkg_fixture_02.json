@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_pkg_fixture_02",
+  "group": "noisy_benign",
+  "language_or_type": "pkg",
+  "summary": "Package-like folder with pre/post scripts that only touch sandbox paths.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [15, 35],
+  "why": "Installer lifecycle scripts resemble package behavior, but all write targets are project-local and no privileged operations are performed."
+}

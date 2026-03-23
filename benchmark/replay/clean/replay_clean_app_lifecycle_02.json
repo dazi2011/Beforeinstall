@@ -1,0 +1,78 @@
+{
+  "sample_id": "replay_clean_app_lifecycle_02",
+  "group": "clean",
+  "summary": "Normal app launch lifecycle: read config, write cache, graceful exit.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 15],
+  "expected_top_findings": [
+    "normal_user_app_activity",
+    "local_cache_write"
+  ],
+  "events": [
+    {
+      "timestamp": "2026-03-08T09:00:00Z",
+      "category": "processCreated",
+      "processID": 2100,
+      "parentProcessID": 1,
+      "processName": "NotesLite",
+      "executablePath": "/Applications/NotesLite.app/Contents/MacOS/NotesLite",
+      "action": "spawn",
+      "target": "self",
+      "details": "User launched NotesLite from Finder.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:00:01Z",
+      "category": "scriptExecuted",
+      "processID": 2100,
+      "parentProcessID": 1,
+      "processName": "NotesLite",
+      "executablePath": "/Applications/NotesLite.app/Contents/MacOS/NotesLite",
+      "action": "runStartupRoutine",
+      "target": "~/Library/Application Support/NotesLite/config.json",
+      "details": "Application startup routine loaded user config.",
+      "riskScoreDeltaHint": 1,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:00:02Z",
+      "category": "fileCreated",
+      "processID": 2100,
+      "parentProcessID": 1,
+      "processName": "NotesLite",
+      "executablePath": "/Applications/NotesLite.app/Contents/MacOS/NotesLite",
+      "action": "create",
+      "target": "~/Library/Caches/NotesLite/session.cache",
+      "details": "Session cache file initialized.",
+      "riskScoreDeltaHint": 1,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:00:03Z",
+      "category": "fileModified",
+      "processID": 2100,
+      "parentProcessID": 1,
+      "processName": "NotesLite",
+      "executablePath": "/Applications/NotesLite.app/Contents/MacOS/NotesLite",
+      "action": "append",
+      "target": "~/Library/Caches/NotesLite/session.cache",
+      "details": "Cache updated with recent document index.",
+      "riskScoreDeltaHint": 1,
+      "rawSource": "synthetic.replay.v1"
+    },
+    {
+      "timestamp": "2026-03-08T09:00:05Z",
+      "category": "processExited",
+      "processID": 2100,
+      "parentProcessID": 1,
+      "processName": "NotesLite",
+      "executablePath": "/Applications/NotesLite.app/Contents/MacOS/NotesLite",
+      "action": "exit",
+      "target": "self",
+      "details": "Application exited with code 0.",
+      "riskScoreDeltaHint": 0,
+      "rawSource": "synthetic.replay.v1"
+    }
+  ]
+}

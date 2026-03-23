@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_python_updater_01",
+  "group": "noisy_benign",
+  "language_or_type": "python",
+  "summary": "Updater simulation with URL artifacts but no outbound requests.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [20, 45],
+  "why": "Network indicators are present as data points only; script is non-operational."
+}

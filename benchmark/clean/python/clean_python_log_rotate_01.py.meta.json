@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_python_log_rotate_01",
+  "group": "clean",
+  "language_or_type": "python",
+  "summary": "Local log-rotation style task in sandbox only.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 15],
+  "why": "No network, no process execution, no system path access."
+}

@@ -1,0 +1,10 @@
+{
+  "sample_id": "suspicious_python_download_would_execute_02",
+  "group": "suspicious",
+  "language_or_type": "python",
+  "summary": "Downloads public text and explicitly logs would-execute without execution.",
+  "expected_verdict": "suspicious",
+  "expected_score_range": [55, 72],
+  "why": "Network retrieval and execute-intent wording are present, but content is only printed and never interpreted.",
+  "expected_rules_hit": ["download_execute_pattern"]
+}

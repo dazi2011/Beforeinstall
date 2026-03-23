@@ -1,0 +1,9 @@
+{
+  "sample_id": "noisy_shell_appsupport_style_write_01",
+  "group": "noisy_benign",
+  "language_or_type": "shell",
+  "summary": "Writes app-style settings under a sandboxed Application Support-like path.",
+  "expected_verdict": "benign_noisy",
+  "expected_score_range": [10, 24],
+  "why": "Path pattern resembles real user support directories, but this fixture stays inside project sandbox and is plain config output."
+}

@@ -1,0 +1,9 @@
+{
+  "sample_id": "clean_python_config_rw_02",
+  "group": "clean",
+  "language_or_type": "python",
+  "summary": "Reads local JSON config and writes transformed config to sandbox output.",
+  "expected_verdict": "clean",
+  "expected_score_range": [0, 12],
+  "why": "Configuration mutation can resemble setup scripts, but all I/O is local and confined to benchmark sandbox paths."
+}
