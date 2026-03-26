@@ -216,6 +216,7 @@ final class ConfigProfileService: @unchecked Sendable {
             "useRandomForestPrediction": String(settings.useRandomForestPrediction),
             "fullDiskScanMaxConcurrency": String(settings.fullDiskScanMaxConcurrency),
             "autoCheckAndInstallUpdates": String(settings.autoCheckAndInstallUpdates),
+            "enablePrereleaseUpdates": String(settings.enablePrereleaseUpdates),
             "showWelcomeOnLaunch": String(settings.showWelcomeOnLaunch)
         ])
         let rebuilt = renderProfile(globals: globals, rules: rules)
@@ -325,6 +326,8 @@ final class ConfigProfileService: @unchecked Sendable {
                 }
             case "autoCheckAndInstallUpdates":
                 settings.autoCheckAndInstallUpdates = parseBool(value, fallback: settings.autoCheckAndInstallUpdates)
+            case "enablePrereleaseUpdates":
+                settings.enablePrereleaseUpdates = parseBool(value, fallback: settings.enablePrereleaseUpdates)
             case "showWelcomeOnLaunch":
                 settings.showWelcomeOnLaunch = parseBool(value, fallback: settings.showWelcomeOnLaunch)
             default:
@@ -345,6 +348,7 @@ final class ConfigProfileService: @unchecked Sendable {
             "useRandomForestPrediction": "false",
             "fullDiskScanMaxConcurrency": "6",
             "autoCheckAndInstallUpdates": "false",
+            "enablePrereleaseUpdates": "false",
             "showWelcomeOnLaunch": "true"
         ]
 

@@ -119,6 +119,14 @@ final class AppSettingsStore: ObservableObject {
         }
     }
 
+    @Published var enablePrereleaseUpdates: Bool {
+        didSet {
+            guard oldValue != enablePrereleaseUpdates else { return }
+            defaults.set(enablePrereleaseUpdates, forKey: Keys.enablePrereleaseUpdates)
+            syncDefaultProfileGlobals()
+        }
+    }
+
     @Published var developerModeEnabled: Bool {
         didSet {
             guard oldValue != developerModeEnabled else { return }
@@ -196,6 +204,12 @@ final class AppSettingsStore: ObservableObject {
             autoCheckAndInstallUpdates = false
         } else {
             autoCheckAndInstallUpdates = defaults.bool(forKey: Keys.autoCheckAndInstallUpdates)
+        }
+
+        if defaults.object(forKey: Keys.enablePrereleaseUpdates) == nil {
+            enablePrereleaseUpdates = false
+        } else {
+            enablePrereleaseUpdates = defaults.bool(forKey: Keys.enablePrereleaseUpdates)
         }
 
         if defaults.object(forKey: Keys.developerModeEnabled) == nil {
@@ -310,6 +324,7 @@ final class AppSettingsStore: ObservableObject {
         static let useRandomForestPrediction = "beforeinstall.useRandomForestPrediction"
         static let fullDiskScanMaxConcurrency = "beforeinstall.fullDiskScanMaxConcurrency"
         static let autoCheckAndInstallUpdates = "beforeinstall.autoCheckAndInstallUpdates"
+        static let enablePrereleaseUpdates = "beforeinstall.enablePrereleaseUpdates"
         static let developerModeEnabled = "beforeinstall.developerModeEnabled"
         static let benchmarkRootPath = "beforeinstall.benchmarkRootPath"
         static let benchmarkRootBookmark = "beforeinstall.benchmarkRootBookmark"

@@ -210,7 +210,7 @@ private struct UpdateResolution {
 }
 
 private enum AppUpdateError: LocalizedError {
-    case noStableRelease
+    case noEligibleRelease
     case missingZipAsset
     case invalidResponse
     case cannotDetermineCurrentAppBundle
@@ -220,10 +220,10 @@ private enum AppUpdateError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .noStableRelease:
-            return "No stable release found."
+        case .noEligibleRelease:
+            return "No eligible release found for current update channel."
         case .missingZipAsset:
-            return "Latest stable release does not contain app.zip."
+            return "No eligible release contains app.zip."
         case .invalidResponse:
             return "GitHub API response is invalid."
         case .cannotDetermineCurrentAppBundle:
@@ -308,7 +308,7 @@ final class AppUpdateManager: ObservableObject {
         }
 
         do {
-            let resolution = try await resolveLatestStableRelease()
+            let resolution = try await resolveLatestRelease(allowPrerelease: settings.enablePrereleaseUpdates)
             defaults.set(Date(), forKey: Keys.lastAutoUpdateCheckAt)
 
             latestAssetURL = resolution.asset.browserDownloadURL
@@ -346,7 +346,7 @@ final class AppUpdateManager: ObservableObject {
         }
     }
 
-    private func resolveLatestStableRelease() async throws -> UpdateResolution {
+    private func resolveLatestRelease(allowPrerelease: Bool) async throws -> UpdateResolution {
         var request = URLRequest(url: AppRepositoryInfo.releasesAPIURL)
         request.httpMethod = "GET"
         request.setValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
@@ -360,26 +360,33 @@ final class AppUpdateManager: ObservableObject {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         let releases = try decoder.decode([GitHubRelease].self, from: data)
-        guard let release = releases.first(where: { !$0.prerelease && !$0.draft }) else {
-            throw AppUpdateError.noStableRelease
-        }
-
         let preferredName = AppRepositoryInfo.preferredZipAssetName.lowercased()
-        let asset = release.assets.first(where: { $0.name.lowercased() == preferredName })
-            ?? release.assets.first(where: { $0.name.lowercased().hasSuffix(".zip") })
-        guard let asset else {
-            throw AppUpdateError.missingZipAsset
+        let eligibleReleases = releases.filter { release in
+            guard !release.draft else { return false }
+            return allowPrerelease || !release.prerelease
         }
 
-        let releaseVersionText = normalizedReleaseVersionText(from: release.tagName)
-        return UpdateResolution(
-            release: release,
-            asset: asset,
-            releaseVersionText: releaseVersionText,
-            releaseVersion: ComparableVersion(raw: releaseVersionText),
-            currentVersionText: currentVersionText(),
-            currentVersion: ComparableVersion(raw: currentVersionText())
-        )
+        guard !eligibleReleases.isEmpty else {
+            throw AppUpdateError.noEligibleRelease
+        }
+
+        for release in eligibleReleases {
+            let asset = release.assets.first(where: { $0.name.lowercased() == preferredName })
+                ?? release.assets.first(where: { $0.name.lowercased().hasSuffix(".zip") })
+            guard let asset else { continue }
+
+            let releaseVersionText = normalizedReleaseVersionText(from: release.tagName)
+            return UpdateResolution(
+                release: release,
+                asset: asset,
+                releaseVersionText: releaseVersionText,
+                releaseVersion: ComparableVersion(raw: releaseVersionText),
+                currentVersionText: currentVersionText(),
+                currentVersion: ComparableVersion(raw: currentVersionText())
+            )
+        }
+
+        throw AppUpdateError.missingZipAsset
     }
 
     private func installLatestUpdateIfAvailable(initiatedManually: Bool) async {

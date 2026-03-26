@@ -248,14 +248,18 @@ struct SettingsView: View {
             GroupBox(settings.language == .zhHans ? "应用更新" : "App Updates") {
                 VStack(alignment: .leading, spacing: metrics.rowSpacing) {
                     Toggle(
+                        settings.language == .zhHans ? "启用预览版更新（pre-release）" : "Enable pre-release updates",
+                        isOn: $settings.enablePrereleaseUpdates
+                    )
+                    .appFont(.body, metrics: metrics)
+
+                    Toggle(
                         settings.language == .zhHans ? "自动检查并安装更新（实验）" : "Auto-check and install updates (experimental)",
                         isOn: $settings.autoCheckAndInstallUpdates
                     )
                     .appFont(.body, metrics: metrics)
 
-                    Text(settings.language == .zhHans
-                         ? "启用后会在启动时自动检查仓库最新稳定版（非 pre-release），若存在 app.zip 更新包则自动安装。"
-                         : "When enabled, the app checks the latest stable (non-pre-release) version on startup and auto-installs when app.zip is available.")
+                    Text(updateChannelHintText)
                         .appFont(.caption, metrics: metrics)
                         .foregroundStyle(.secondary)
                 }
@@ -556,6 +560,20 @@ struct SettingsView: View {
         return settings.language == .zhHans
             ? "检测到 \(candidates.count) 个 .joblib。脚本会报错，请仅保留一个。"
             : "Detected \(candidates.count) .joblib files. Keep only one to avoid runtime errors."
+    }
+
+    private var updateChannelHintText: String {
+        if settings.language == .zhHans {
+            if settings.enablePrereleaseUpdates {
+                return "启用后会检查最新发布（包含 pre-release）；关闭时仅检查稳定版。若存在 app.zip 更新包则可安装。"
+            }
+            return "当前仅检查稳定版（不含 pre-release）。启用预览版后可跟踪最新 pre 发布。"
+        }
+
+        if settings.enablePrereleaseUpdates {
+            return "Checks latest releases including pre-release builds; when disabled it uses stable only. Updates require app.zip."
+        }
+        return "Currently checks stable releases only (no pre-release). Enable preview updates to follow latest pre builds."
     }
 
     private var metrics: AppScaleMetrics {
