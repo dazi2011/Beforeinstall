@@ -53,30 +53,36 @@ struct SettingsView: View {
     @AppStorage("uiFontScale") private var uiFontScale = 1.0
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: metrics.groupSpacing) {
-                Text(Localizer.text("settings.title", language: settings.language))
-                    .appFont(.headline, metrics: metrics)
+        ZStack {
+            AppLiquidGlassBackdrop()
 
-                categoryTabs
+            ScrollView {
+                VStack(alignment: .leading, spacing: metrics.groupSpacing) {
+                    Text(Localizer.text("settings.title", language: settings.language))
+                        .appFont(.headline, metrics: metrics)
 
-                switch selectedCategory {
-                case .general:
-                    generalSection
-                case .advanced:
-                    advancedSection
-                case .about:
-                    aboutSection
-                case .developer:
-                    developerSection
+                    categoryTabs
+
+                    switch selectedCategory {
+                    case .general:
+                        generalSection
+                    case .advanced:
+                        advancedSection
+                    case .about:
+                        aboutSection
+                    case .developer:
+                        developerSection
+                    }
                 }
+                .padding(metrics.cardPadding)
+                .padding(.top, metrics.compactPadding)
+                .frame(maxWidth: .infinity, alignment: .topLeading)
             }
-            .padding(metrics.cardPadding)
-            .padding(.top, metrics.compactPadding)
-            .frame(maxWidth: .infinity, alignment: .topLeading)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .appFont(.body, metrics: metrics)
+        .appWindowGlassBackground()
+        .groupBoxStyle(AppLiquidGlassGroupBoxStyle(metrics: metrics))
         .onAppear {
             refreshPermissionItems(withDelay: false)
         }
@@ -91,22 +97,19 @@ struct SettingsView: View {
     }
 
     private var categoryTabs: some View {
-        HStack(spacing: metrics.compactPadding) {
-            ForEach(SettingsCategory.allCases) { category in
-                Button {
-                    selectedCategory = category
-                } label: {
+        HStack {
+            Picker("", selection: $selectedCategory) {
+                ForEach(SettingsCategory.allCases) { category in
                     Label(category.title(language: settings.language), systemImage: category.icon)
                         .appFont(.body, metrics: metrics)
-                        .padding(.horizontal, metrics.compactPadding)
-                        .padding(.vertical, metrics.compactPadding * 0.7)
-                        .background(
-                            RoundedRectangle(cornerRadius: metrics.cornerRadius)
-                                .fill(selectedCategory == category ? Color.accentColor.opacity(0.16) : Color(nsColor: .controlBackgroundColor))
-                        )
+                        .tag(category)
                 }
-                .buttonStyle(.plain)
             }
+            .labelsHidden()
+            .appLiquidPalettePickerStyle()
+            .controlSize(.large)
+            .fixedSize(horizontal: true, vertical: false)
+
             Spacer()
         }
     }
@@ -124,7 +127,7 @@ struct SettingsView: View {
                     }
                 }
                 .labelsHidden()
-                .pickerStyle(.segmented)
+                .appLiquidPalettePickerStyle()
                 .frame(maxWidth: metrics.layoutTier == .normal ? 260 : .infinity)
             }
 
@@ -139,7 +142,7 @@ struct SettingsView: View {
                     }
                 }
                 .labelsHidden()
-                .pickerStyle(.segmented)
+                .appLiquidPalettePickerStyle()
                 .frame(maxWidth: metrics.layoutTier == .normal ? 280 : .infinity)
             }
 
@@ -212,7 +215,7 @@ struct SettingsView: View {
                         }
                     }
                     .labelsHidden()
-                    .pickerStyle(.segmented)
+                    .appLiquidPalettePickerStyle()
 
                     Text(settings.language == .zhHans
                          ? "乐观：降低风险分并提高判定阈值；均衡：默认策略；激进：提高风险分并降低阈值。"
@@ -421,7 +424,7 @@ struct SettingsView: View {
                     Button(settings.language == .zhHans ? "安装更新" : "Install Update") {
                         updateManager.triggerManualInstallIfAvailable()
                     }
-                    .buttonStyle(.borderedProminent)
+                    .appPrimaryButtonStyle()
                     .disabled(!updateManager.updateAvailable || updateManager.isChecking || updateManager.isInstalling)
                 }
 
@@ -468,8 +471,8 @@ struct SettingsView: View {
 
     private var appVersionText: String {
         let info = Bundle.main.infoDictionary
-        let version = info?["CFBundleShortVersionString"] as? String ?? "1.0.0beta1"
-        let build = info?["CFBundleVersion"] as? String ?? "1"
+        let version = info?["CFBundleShortVersionString"] as? String ?? "1.0.0beta2"
+        let build = info?["CFBundleVersion"] as? String ?? "2"
         return "\(version) (\(build))"
     }
 

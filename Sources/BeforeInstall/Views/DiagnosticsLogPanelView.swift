@@ -14,75 +14,80 @@ struct DiagnosticsLogPanelView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: metrics.groupSpacing) {
-            HStack {
-                Text(settings.language == .zhHans ? "运行日志" : "Runtime Logs")
-                    .appFont(.headline, metrics: metrics)
+        ZStack {
+            AppLiquidGlassBackdrop()
 
-                Spacer()
+            VStack(alignment: .leading, spacing: metrics.groupSpacing) {
+                HStack {
+                    Text(settings.language == .zhHans ? "运行日志" : "Runtime Logs")
+                        .appFont(.headline, metrics: metrics)
 
-                Toggle(settings.language == .zhHans ? "包含 debug" : "Include debug", isOn: $includeDebug)
-                    .toggleStyle(.checkbox)
-                    .appFont(.caption, metrics: metrics)
+                    Spacer()
 
-                Button(settings.language == .zhHans ? "导出" : "Export") {
-                    do {
-                        let url = try logService.export(includeDebug: includeDebug)
-                        exportMessage = (settings.language == .zhHans ? "已导出：" : "Exported: ") + url.path
-                    } catch {
-                        exportMessage = (settings.language == .zhHans ? "导出失败：" : "Export failed: ") + error.localizedDescription
+                    Toggle(settings.language == .zhHans ? "包含 debug" : "Include debug", isOn: $includeDebug)
+                        .toggleStyle(.checkbox)
+                        .appFont(.caption, metrics: metrics)
+
+                    Button(settings.language == .zhHans ? "导出" : "Export") {
+                        do {
+                            let url = try logService.export(includeDebug: includeDebug)
+                            exportMessage = (settings.language == .zhHans ? "已导出：" : "Exported: ") + url.path
+                        } catch {
+                            exportMessage = (settings.language == .zhHans ? "导出失败：" : "Export failed: ") + error.localizedDescription
+                        }
                     }
+                    .appSecondaryButtonStyle()
+
+                    Button(settings.language == .zhHans ? "关闭" : "Close") {
+                        dismiss()
+                    }
+                    .appPrimaryButtonStyle()
                 }
-                .buttonStyle(.bordered)
 
-                Button(settings.language == .zhHans ? "关闭" : "Close") {
-                    dismiss()
-                }
-                .buttonStyle(.borderedProminent)
-            }
-
-            Text(settings.language == .zhHans
-                 ? "记录自本次 App 启动以来的关键操作。"
-                 : "Entries include key operations since this app launch.")
-                .appFont(.footnote, metrics: metrics)
-                .foregroundStyle(.secondary)
-
-            if let exportMessage, !exportMessage.isEmpty {
-                Text(exportMessage)
-                    .appFont(.caption, metrics: metrics)
-                    .foregroundStyle(.secondary)
-                    .textSelection(.enabled)
-            }
-
-            if entries.isEmpty {
-                Text(settings.language == .zhHans ? "暂无日志记录。" : "No log entries.")
+                Text(settings.language == .zhHans
+                     ? "记录自本次 App 启动以来的关键操作。"
+                     : "Entries include key operations since this app launch.")
                     .appFont(.footnote, metrics: metrics)
                     .foregroundStyle(.secondary)
-            } else {
-                Table(entries.prefix(1200)) {
-                    TableColumn(settings.language == .zhHans ? "时间" : "Time") { entry in
-                        Text(formatDate(entry.timestamp))
-                            .appFont(.caption, metrics: metrics)
-                    }
-                    TableColumn(settings.language == .zhHans ? "级别" : "Level") { entry in
-                        Text(levelName(entry.level))
-                            .appFont(.caption, metrics: metrics)
-                    }
-                    TableColumn(settings.language == .zhHans ? "分类" : "Category") { entry in
-                        Text(entry.category)
-                            .appFont(.caption, metrics: metrics)
-                    }
-                    TableColumn(settings.language == .zhHans ? "消息" : "Message") { entry in
-                        Text(entry.message)
-                            .appFont(.caption, metrics: metrics)
-                            .lineLimit(2)
-                    }
+
+                if let exportMessage, !exportMessage.isEmpty {
+                    Text(exportMessage)
+                        .appFont(.caption, metrics: metrics)
+                        .foregroundStyle(.secondary)
+                        .textSelection(.enabled)
                 }
-                .frame(minHeight: 360)
+
+                if entries.isEmpty {
+                    Text(settings.language == .zhHans ? "暂无日志记录。" : "No log entries.")
+                        .appFont(.footnote, metrics: metrics)
+                        .foregroundStyle(.secondary)
+                } else {
+                    Table(entries.prefix(1200)) {
+                        TableColumn(settings.language == .zhHans ? "时间" : "Time") { entry in
+                            Text(formatDate(entry.timestamp))
+                                .appFont(.caption, metrics: metrics)
+                        }
+                        TableColumn(settings.language == .zhHans ? "级别" : "Level") { entry in
+                            Text(levelName(entry.level))
+                                .appFont(.caption, metrics: metrics)
+                        }
+                        TableColumn(settings.language == .zhHans ? "分类" : "Category") { entry in
+                            Text(entry.category)
+                                .appFont(.caption, metrics: metrics)
+                        }
+                        TableColumn(settings.language == .zhHans ? "消息" : "Message") { entry in
+                            Text(entry.message)
+                                .appFont(.caption, metrics: metrics)
+                                .lineLimit(2)
+                        }
+                    }
+                    .frame(minHeight: 360)
+                }
             }
+            .padding(metrics.cardPadding)
+            .frame(minWidth: 920, minHeight: 580)
         }
-        .padding(metrics.cardPadding)
-        .frame(minWidth: 920, minHeight: 580)
+        .appWindowGlassBackground()
     }
 
     private func levelName(_ level: LogLevel) -> String {

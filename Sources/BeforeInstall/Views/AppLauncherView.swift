@@ -83,14 +83,7 @@ struct AppLauncherView: View {
             }
             .padding(.horizontal, metrics.compactPadding)
             .padding(.vertical, metrics.compactPadding * 0.65)
-            .background(
-                RoundedRectangle(cornerRadius: metrics.cornerRadius)
-                    .fill(Color(nsColor: .controlBackgroundColor))
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: metrics.cornerRadius)
-                    .strokeBorder(Color.gray.opacity(0.20), lineWidth: 1)
-            )
+            .appGlassPanel(metrics: metrics, interactive: true)
 
             if isLoadingApps {
                 HStack(spacing: metrics.rowSpacing) {
@@ -267,7 +260,7 @@ struct AppLauncherView: View {
             Button(isLaunching ? (settings.language == .zhHans ? "启动中..." : "Launching...") : (settings.language == .zhHans ? "启动" : "Launch")) {
                 launch(app: app)
             }
-            .buttonStyle(.borderedProminent)
+            .appPrimaryButtonStyle()
             .disabled(isLaunching)
             .appFont(.body, metrics: metrics)
 
@@ -282,14 +275,7 @@ struct AppLauncherView: View {
         }
         .padding(metrics.compactPadding)
         .frame(minHeight: metrics.scaled(80), alignment: .leading)
-        .background(
-            RoundedRectangle(cornerRadius: metrics.cornerRadius)
-                .fill(Color(nsColor: .controlBackgroundColor))
-        )
-        .overlay(
-            RoundedRectangle(cornerRadius: metrics.cornerRadius)
-                .strokeBorder(Color.gray.opacity(0.20), lineWidth: 1)
-        )
+        .appGlassPanel(metrics: metrics, interactive: true)
     }
 
     private func presetSummary(_ preset: AppLaunchPreset) -> String {
@@ -629,7 +615,7 @@ private struct AppPresetEditorSheet: View {
                     onSave(preset)
                     dismiss()
                 }
-                .buttonStyle(.borderedProminent)
+                .appPrimaryButtonStyle()
                 .appFont(.body, metrics: metrics)
             }
         }

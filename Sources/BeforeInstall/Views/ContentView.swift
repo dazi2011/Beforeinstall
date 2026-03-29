@@ -99,6 +99,7 @@ struct ContentView: View {
             .padding(metrics.cardPadding)
             .frame(maxWidth: .infinity, alignment: .topLeading)
         }
+        .appLiquidGlassScene(metrics: metrics)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .onChange(of: settings.language) { _ in
             DispatchQueue.main.async {
@@ -198,28 +199,18 @@ struct ContentView: View {
 
     private var mainFeatureTabs: some View {
         HStack(spacing: metrics.compactPadding) {
-            ForEach(MainFeatureTab.allCases) { tab in
-                Button {
-                    selectedFeatureTab = tab
-                    if tab == .launchApp {
-                        launchTabInitialized = true
-                    } else if tab == .fullDiskScan {
-                        fullDiskScanTabInitialized = true
-                    } else if tab == .configProfiles {
-                        configTabInitialized = true
-                    }
-                } label: {
+            Picker("", selection: $selectedFeatureTab) {
+                ForEach(MainFeatureTab.allCases) { tab in
                     Label(tab.title(language: settings.language), systemImage: tab.icon)
                         .appFont(.body, metrics: metrics)
-                        .padding(.horizontal, metrics.compactPadding)
-                        .padding(.vertical, metrics.compactPadding * 0.7)
-                        .background(
-                            RoundedRectangle(cornerRadius: metrics.cornerRadius)
-                                .fill(selectedFeatureTab == tab ? Color.accentColor.opacity(0.16) : Color(nsColor: .controlBackgroundColor))
-                        )
+                        .tag(tab)
                 }
-                .buttonStyle(.plain)
             }
+            .labelsHidden()
+            .appLiquidPalettePickerStyle()
+            .controlSize(.large)
+            .fixedSize(horizontal: true, vertical: false)
+
             Spacer()
 
             Button {
@@ -228,7 +219,7 @@ struct ContentView: View {
                 Label(settings.language == .zhHans ? "日志" : "Logs", systemImage: "text.justify.left")
                     .appFont(.body, metrics: metrics)
             }
-            .buttonStyle(.bordered)
+            .appSecondaryButtonStyle()
         }
     }
 
@@ -273,7 +264,7 @@ struct ContentView: View {
                     Button(viewModel.text("permissions.banner.fullDisk")) {
                         PermissionGuidanceService.openFullDiskAccess()
                     }
-                    .buttonStyle(.borderedProminent)
+                    .appPrimaryButtonStyle()
 
                     Button(viewModel.text("permissions.banner.dismiss")) {
                         permissionBannerDismissed = true
@@ -300,7 +291,7 @@ struct ContentView: View {
                         }
                     }
                     .labelsHidden()
-                    .pickerStyle(.segmented)
+                    .appLiquidPalettePickerStyle()
                 }
 
                 modeSpecificControls
@@ -319,7 +310,7 @@ struct ContentView: View {
                         Button(viewModel.text("controls.endInteraction")) {
                             viewModel.requestStopDynamicAnalysis()
                         }
-                        .buttonStyle(.borderedProminent)
+                        .appPrimaryButtonStyle()
                     }
 
                     Spacer()
@@ -384,7 +375,7 @@ struct ContentView: View {
                 }
             }
             .labelsHidden()
-            .pickerStyle(.segmented)
+            .appLiquidPalettePickerStyle()
             .frame(maxWidth: 260)
 
             Spacer()

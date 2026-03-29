@@ -9,69 +9,75 @@ struct WelcomeView: View {
     @Environment(\.appFontScale) private var appFontScale
 
     var body: some View {
-        VStack(alignment: .leading, spacing: metrics.groupSpacing) {
-            Text(Localizer.text("welcome.title", language: settings.language))
-                .appFont(.headline, metrics: metrics)
-                .fontWeight(.bold)
+        ZStack {
+            AppLiquidGlassBackdrop()
 
-            Text(Localizer.text("welcome.subtitle", language: settings.language))
-                .appFont(.body, metrics: metrics)
-                .foregroundStyle(.secondary)
+            VStack(alignment: .leading, spacing: metrics.groupSpacing) {
+                Text(Localizer.text("welcome.title", language: settings.language))
+                    .appFont(.headline, metrics: metrics)
+                    .fontWeight(.bold)
 
-            Text(Localizer.text("welcome.capability", language: settings.language))
-                .appFont(.footnote, metrics: metrics)
-
-            if fullDiskStatus == .granted {
-                Text(Localizer.text("welcome.permissionAlreadyGrantedIntro", language: settings.language))
-                    .appFont(.footnote, metrics: metrics)
+                Text(Localizer.text("welcome.subtitle", language: settings.language))
+                    .appFont(.body, metrics: metrics)
                     .foregroundStyle(.secondary)
-            } else {
-                Text(Localizer.text("welcome.permissionNote", language: settings.language))
-                    .appFont(.footnote, metrics: metrics)
-                    .foregroundStyle(.orange)
 
-                GroupBox(Localizer.text("welcome.permissionHealth", language: settings.language)) {
-                    VStack(alignment: .leading, spacing: metrics.rowSpacing) {
-                        ForEach(permissionItems) { item in
-                            permissionRow(item)
+                Text(Localizer.text("welcome.capability", language: settings.language))
+                    .appFont(.footnote, metrics: metrics)
+
+                if fullDiskStatus == .granted {
+                    Text(Localizer.text("welcome.permissionAlreadyGrantedIntro", language: settings.language))
+                        .appFont(.footnote, metrics: metrics)
+                        .foregroundStyle(.secondary)
+                } else {
+                    Text(Localizer.text("welcome.permissionNote", language: settings.language))
+                        .appFont(.footnote, metrics: metrics)
+                        .foregroundStyle(.orange)
+
+                    GroupBox(Localizer.text("welcome.permissionHealth", language: settings.language)) {
+                        VStack(alignment: .leading, spacing: metrics.rowSpacing) {
+                            ForEach(permissionItems) { item in
+                                permissionRow(item)
+                            }
+
+                            Text(Localizer.text("welcome.permissionDetectionNote", language: settings.language))
+                                .appFont(.caption, metrics: metrics)
+                                .foregroundStyle(.secondary)
                         }
-
-                        Text(Localizer.text("welcome.permissionDetectionNote", language: settings.language))
-                            .appFont(.caption, metrics: metrics)
-                            .foregroundStyle(.secondary)
+                        .padding(.top, metrics.compactPadding * 0.4)
                     }
-                    .padding(.top, metrics.compactPadding * 0.4)
-                }
-                .appFont(.body, metrics: metrics)
+                    .appFont(.body, metrics: metrics)
 
-                Button(Localizer.text("welcome.openFullDisk", language: settings.language)) {
-                    PermissionGuidanceService.openFullDiskAccess()
-                    permissionStatusText = Localizer.text("welcome.openedSystemSettings", language: settings.language)
-                    refreshPermissionItems(withDelay: true)
+                    Button(Localizer.text("welcome.openFullDisk", language: settings.language)) {
+                        PermissionGuidanceService.openFullDiskAccess()
+                        permissionStatusText = Localizer.text("welcome.openedSystemSettings", language: settings.language)
+                        refreshPermissionItems(withDelay: true)
+                    }
+                    .appPrimaryButtonStyle()
                 }
-                .buttonStyle(.borderedProminent)
-            }
-
-            if let permissionStatusText {
-                Text(permissionStatusText)
-                    .appFont(.footnote, metrics: metrics)
-                    .foregroundStyle(.secondary)
-            }
-
-            HStack {
-                Spacer()
-                Button(Localizer.text("welcome.continue", language: settings.language)) {
-                    settings.markWelcomeShownAtLeastOnce()
-                    isPresented = false
+ 
+                if let permissionStatusText {
+                    Text(permissionStatusText)
+                        .appFont(.footnote, metrics: metrics)
+                        .foregroundStyle(.secondary)
                 }
-                .buttonStyle(.borderedProminent)
-                .appFont(.body, metrics: metrics)
+
+                HStack {
+                    Spacer()
+                    Button(Localizer.text("welcome.continue", language: settings.language)) {
+                        settings.markWelcomeShownAtLeastOnce()
+                        isPresented = false
+                    }
+                    .appPrimaryButtonStyle()
+                    .appFont(.body, metrics: metrics)
+                }
             }
         }
         .frame(width: 860, alignment: .topLeading)
         .fixedSize(horizontal: false, vertical: true)
         .padding(metrics.cardPadding)
         .appFont(.body, metrics: metrics)
+        .appWindowGlassBackground()
+        .groupBoxStyle(AppLiquidGlassGroupBoxStyle(metrics: metrics))
         .onAppear {
             refreshPermissionItems(withDelay: false)
         }
@@ -138,7 +144,7 @@ struct WelcomeView: View {
                     PermissionGuidanceService.performAction(item.action)
                     refreshPermissionItems(withDelay: true)
                 }
-                .buttonStyle(.bordered)
+                .appSecondaryButtonStyle()
                 .appFont(.body, metrics: metrics)
             }
         }

@@ -81,9 +81,13 @@ struct DeveloperBenchmarkPanelView: View {
     private var internalBanner: some View {
         HStack(spacing: metrics.rowSpacing) {
             labelTag("Internal")
+                .appGlassBadge(tint: .orange, metrics: metrics)
             labelTag("Benchmark")
+                .appGlassBadge(tint: .blue, metrics: metrics)
             labelTag("Developer Tools")
+                .appGlassBadge(tint: .teal, metrics: metrics)
             labelTag("Regression")
+                .appGlassBadge(tint: .indigo, metrics: metrics)
 
             Spacer()
         }
@@ -91,21 +95,28 @@ struct DeveloperBenchmarkPanelView: View {
 
     private var moduleTabs: some View {
         HStack(spacing: metrics.rowSpacing) {
-            ForEach(DeveloperModule.allCases) { module in
-                Button {
-                    selectedModule = module
-                } label: {
-                    Text(moduleTitle(module))
-                        .appFont(.body, metrics: metrics)
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 4)
-                        .background(
-                            Capsule()
-                                .fill(selectedModule == module ? Color.accentColor.opacity(0.16) : Color(nsColor: .controlBackgroundColor))
-                        )
+            HStack(spacing: metrics.rowSpacing) {
+                ForEach(DeveloperModule.allCases) { module in
+                    Button {
+                        selectedModule = module
+                    } label: {
+                        Text(moduleTitle(module))
+                            .appFont(.body, metrics: metrics)
+                            .fontWeight(selectedModule == module ? .semibold : .regular)
+                            .foregroundStyle(.primary)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 4)
+                            .appGlassPanel(
+                                metrics: metrics,
+                                interactive: true,
+                                cornerRadius: metrics.scaled(999),
+                                emphasized: selectedModule == module
+                            )
+                    }
+                    .buttonStyle(.plain)
                 }
-                .buttonStyle(.plain)
             }
+            .appGlassCluster(spacing: metrics.rowSpacing)
             Spacer()
             Text(t("构建通道：", "Build: ") + DeveloperModePolicy.buildLabel)
                 .appFont(.caption, metrics: metrics)
@@ -140,7 +151,7 @@ struct DeveloperBenchmarkPanelView: View {
                         Button(t("开始训练", "Start Training")) {
                             viewModel.runAIModelTraining()
                         }
-                        .buttonStyle(.borderedProminent)
+                        .appPrimaryButtonStyle()
                         .disabled(viewModel.isAITrainingRunning)
 
                         Spacer()
@@ -245,7 +256,7 @@ struct DeveloperBenchmarkPanelView: View {
                     Button(t("运行全量 Benchmark", "Run Full Benchmark")) {
                         viewModel.runFullBenchmark()
                     }
-                    .buttonStyle(.borderedProminent)
+                    .appPrimaryButtonStyle()
                     .disabled(viewModel.isBenchmarkRunning)
 
                     Button(t("取消", "Cancel")) {
@@ -777,11 +788,7 @@ struct DeveloperBenchmarkPanelView: View {
         Text(title)
             .appFont(.caption, metrics: metrics)
             .fontWeight(.semibold)
-            .padding(.horizontal, 8)
-            .padding(.vertical, 4)
-            .background(Color.orange.opacity(0.16))
             .foregroundStyle(.orange)
-            .clipShape(Capsule())
     }
 
     private func t(_ zh: String, _ en: String) -> String {

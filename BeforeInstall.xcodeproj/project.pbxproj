@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A2B3C4D5E6F708192A3B4C5 /* AppLiquidGlass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F708192A3B4C6 /* AppLiquidGlass.swift */; };
 		04430DCF0D7D1F7B77142DD2 /* DiagnosticsLogPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3A39C19CC548F7D3AADEFE /* DiagnosticsLogPanelView.swift */; };
 		0821CB235A7318B4646CEAF1 /* DynamicStopToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCB553452E4D78CE922FB0 /* DynamicStopToken.swift */; };
 		09C217811C0592A841B5E1E0 /* ScanPerformanceTraceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3276346A9A81E6A13B14D85C /* ScanPerformanceTraceStore.swift */; };
@@ -109,6 +110,7 @@
 
 /* Begin PBXFileReference section */
 		0105B30CC959F77CEBD9EF92 /* no_terminal.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = no_terminal.dylib; sourceTree = "<group>"; };
+		1A2B3C4D5E6F708192A3B4C6 /* AppLiquidGlass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLiquidGlass.swift; sourceTree = "<group>"; };
 		038FE58E2E00BCCBED6BDA95 /* FixtureRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureRouter.swift; sourceTree = "<group>"; };
 		0C13FCD0969ED28FCAA28497 /* BeforeInstall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeforeInstall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7F7656E3B3330023677681 /* ThreatIntelDictionaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreatIntelDictionaryManager.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 		9238697DEB365DDB22E70B60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1A2B3C4D5E6F708192A3B4C6 /* AppLiquidGlass.swift */,
 				285F1540238BF280C13B01F8 /* AppLauncherView.swift */,
 				E448E2426B14EF901993E307 /* ConfigProfilesView.swift */,
 				FA72E1AC123878A259B3F6AF /* ContentView.swift */,
@@ -539,6 +542,7 @@
 				7DEF320D9936BBC5D8DA4106 /* AppLaunchModels.swift in Sources */,
 				50AFE883CCF1316B73CDD426 /* AppLaunchService.swift in Sources */,
 				3675F86284E619B8B27B3B0A /* AppLauncherView.swift in Sources */,
+				1A2B3C4D5E6F708192A3B4C5 /* AppLiquidGlass.swift in Sources */,
 				249E8814007434EFF610CD84 /* AppPaths.swift in Sources */,
 				2B8E73961A2F83713FD6DDB5 /* AppSettingsStore.swift in Sources */,
 				F4D85B0C4D80D6AD1C694677 /* AppTypography.swift in Sources */,
@@ -743,7 +747,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = BeforeInstall;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -753,7 +757,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.0beta1;
+				MARKETING_VERSION = 1.0.0beta2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beforeinstall.app;
 				PRODUCT_NAME = BeforeInstall;
 				SDKROOT = macosx;
@@ -766,7 +770,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = BeforeInstall;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -776,7 +780,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0.0beta1;
+				MARKETING_VERSION = 1.0.0beta2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beforeinstall.app;
 				PRODUCT_NAME = BeforeInstall;
 				SDKROOT = macosx;

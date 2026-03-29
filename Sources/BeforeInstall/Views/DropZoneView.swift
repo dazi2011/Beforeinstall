@@ -9,14 +9,13 @@ struct DropZoneView: View {
     let onSelectFiles: () -> Void
 
     @State private var isTargeted = false
-    @Environment(\.colorScheme) private var colorScheme
     @Environment(\.appFontScale) private var appFontScale
 
     var body: some View {
         VStack(spacing: metrics.groupSpacing) {
             Image(systemName: "tray.and.arrow.down")
                 .font(.system(size: metrics.iconSize, weight: .medium))
-                .foregroundStyle(Color.accentColor)
+                .foregroundStyle(isTargeted ? .primary : .secondary)
 
             Text(hintText)
                 .appFont(.headline, metrics: metrics)
@@ -28,24 +27,25 @@ struct DropZoneView: View {
             Button(buttonText) {
                 onSelectFiles()
             }
-            .buttonStyle(.borderedProminent)
+            .appPrimaryButtonStyle()
             .frame(minHeight: metrics.controlHeight)
         }
         .frame(maxWidth: .infinity)
         .frame(minHeight: metrics.scaled(180))
         .padding(metrics.cardPadding)
-        .background(
-            RoundedRectangle(cornerRadius: metrics.cornerRadius)
-                .fill(isTargeted ? Color.accentColor.opacity(0.12) : Color(nsColor: .controlBackgroundColor))
-        )
         .overlay(
             RoundedRectangle(cornerRadius: metrics.cornerRadius)
                 .stroke(
                     isTargeted
-                    ? Color.accentColor
-                    : Color(nsColor: colorScheme == .dark ? .separatorColor : .tertiaryLabelColor),
+                    ? Color.primary.opacity(0.34)
+                    : Color.secondary.opacity(0.22),
                     style: StrokeStyle(lineWidth: 1.5, dash: [6])
                 )
+        )
+        .appGlassPanel(
+            metrics: metrics,
+            interactive: true,
+            emphasized: isTargeted
         )
         .onDrop(of: [UTType.fileURL.identifier], isTargeted: $isTargeted) { providers in
             guard !providers.isEmpty else { return false }

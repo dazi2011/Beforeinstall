@@ -104,21 +104,27 @@ struct FullDiskScanView: View {
 
     private var tabBar: some View {
         HStack(spacing: metrics.compactPadding) {
-            ForEach(FullScanTab.allCases) { tab in
-                Button {
-                    selectedTab = tab
-                } label: {
-                    Label(tab.title(language: settings.language), systemImage: tab.icon)
-                        .appFont(.body, metrics: metrics)
-                        .padding(.horizontal, metrics.compactPadding)
-                        .padding(.vertical, metrics.compactPadding * 0.7)
-                        .background(
-                            RoundedRectangle(cornerRadius: metrics.cornerRadius)
-                                .fill(selectedTab == tab ? Color.accentColor.opacity(0.16) : Color(nsColor: .controlBackgroundColor))
-                        )
+            HStack(spacing: metrics.compactPadding) {
+                ForEach(FullScanTab.allCases) { tab in
+                    Button {
+                        selectedTab = tab
+                    } label: {
+                        Label(tab.title(language: settings.language), systemImage: tab.icon)
+                            .appFont(.body, metrics: metrics)
+                            .fontWeight(selectedTab == tab ? .semibold : .regular)
+                            .foregroundStyle(.primary)
+                            .padding(.horizontal, metrics.compactPadding)
+                            .padding(.vertical, metrics.compactPadding * 0.7)
+                            .appGlassPanel(
+                                metrics: metrics,
+                                interactive: true,
+                                emphasized: selectedTab == tab
+                            )
+                    }
+                    .buttonStyle(.plain)
                 }
-                .buttonStyle(.plain)
             }
+            .appGlassCluster(spacing: metrics.compactPadding)
             Spacer()
         }
     }
@@ -148,7 +154,7 @@ struct FullDiskScanView: View {
                             Label(settings.language == .zhHans ? "快速扫描" : "Quick Scan", systemImage: "bolt.fill")
                                 .appFont(.body, metrics: metrics)
                         }
-                        .buttonStyle(.borderedProminent)
+                        .appPrimaryButtonStyle()
                         .disabled(viewModel.isScanning)
 
                         Button {
@@ -330,10 +336,8 @@ struct FullDiskScanView: View {
             TextEditor(text: $viewModel.customFocusPathsInput)
                 .appFont(.monospacedBody, metrics: metrics)
                 .frame(minHeight: metrics.scaled(220))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.secondary.opacity(0.25), lineWidth: 1)
-                )
+                .padding(metrics.compactPadding)
+                .appGlassPanel(metrics: metrics, interactive: true, cornerRadius: metrics.scaled(14))
 
             Toggle(
                 settings.language == .zhHans ? "将重点路径持久化到配置文件（RULE-PATH-PREFIX,notice）" : "Persist focus paths to profile (RULE-PATH-PREFIX,notice)",
@@ -353,7 +357,7 @@ struct FullDiskScanView: View {
                 Button(settings.language == .zhHans ? "关闭" : "Close") {
                     isScanSettingsPresented = false
                 }
-                .buttonStyle(.borderedProminent)
+                .appPrimaryButtonStyle()
             }
         }
     }
@@ -483,7 +487,7 @@ struct FullDiskScanView: View {
                     Button(settings.language == .zhHans ? "隔离所选" : "Quarantine Selected") {
                         viewModel.requestBulkAction(.quarantine)
                     }
-                    .buttonStyle(.borderedProminent)
+                    .appPrimaryButtonStyle()
 
                     Button(settings.language == .zhHans ? "移到废纸篓" : "Move to Trash") {
                         viewModel.requestBulkAction(.moveToTrash)
@@ -550,19 +554,13 @@ struct FullDiskScanView: View {
 
                     Text(settings.language == .zhHans ? "分 \(threat.score)" : "Score \(threat.score)")
                         .appFont(.caption, metrics: metrics)
-                        .padding(.horizontal, 6)
-                        .padding(.vertical, 2)
-                        .background(scoreColor(threat.score).opacity(0.16))
                         .foregroundStyle(scoreColor(threat.score))
-                        .clipShape(RoundedRectangle(cornerRadius: 6))
+                        .appGlassBadge(tint: scoreColor(threat.score), metrics: metrics)
 
                     Text(threat.riskLevel.displayName(language: settings.language))
                         .appFont(.caption, metrics: metrics)
-                        .padding(.horizontal, 6)
-                        .padding(.vertical, 2)
-                        .background(riskColor(threat.riskLevel).opacity(0.16))
                         .foregroundStyle(riskColor(threat.riskLevel))
-                        .clipShape(RoundedRectangle(cornerRadius: 6))
+                        .appGlassBadge(tint: riskColor(threat.riskLevel), metrics: metrics)
                 }
 
                 Text(pathSummary(threat.path))
@@ -590,9 +588,11 @@ struct FullDiskScanView: View {
             }
             .padding(8)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(selected ? Color.accentColor.opacity(0.12) : Color(nsColor: .controlBackgroundColor))
+            .appGlassPanel(
+                metrics: metrics,
+                interactive: true,
+                cornerRadius: metrics.scaled(10),
+                emphasized: selected
             )
         }
         .buttonStyle(.plain)
@@ -700,7 +700,7 @@ struct FullDiskScanView: View {
                 Button(settings.language == .zhHans ? "隔离" : "Quarantine") {
                     viewModel.requestSingleAction(.quarantine, threatID: threat.threatID)
                 }
-                .buttonStyle(.borderedProminent)
+                .appPrimaryButtonStyle()
                 .disabled(!threat.canQuarantine)
 
                 Button(settings.language == .zhHans ? "移到废纸篓" : "Move to Trash") {
@@ -771,10 +771,7 @@ struct FullDiskScanView: View {
                                     }
                                 }
                                 .padding(8)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .fill(Color(nsColor: .controlBackgroundColor))
-                                )
+                                .appGlassPanel(metrics: metrics, interactive: true, cornerRadius: metrics.scaled(10))
                             }
                         }
                         .padding(.top, 4)

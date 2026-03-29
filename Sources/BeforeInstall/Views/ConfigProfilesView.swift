@@ -1,5 +1,6 @@
 import SwiftUI
 import AppKit
+import UniformTypeIdentifiers
 
 struct ConfigProfilesView: View {
     @ObservedObject var settings: AppSettingsStore
@@ -80,7 +81,7 @@ struct ConfigProfilesView: View {
                         statusText = settings.language == .zhHans ? "保存失败：\(error.localizedDescription)" : "Save failed: \(error.localizedDescription)"
                     }
                 }
-                .buttonStyle(.borderedProminent)
+                .appPrimaryButtonStyle()
                 .appFont(.body, metrics: metrics)
             }
 
@@ -110,6 +111,8 @@ struct ConfigProfilesView: View {
                 TextEditor(text: $contentText)
                     .appFont(.monospacedBody, metrics: metrics)
                     .frame(minHeight: metrics.scaled(360))
+                    .padding(metrics.compactPadding)
+                    .appGlassPanel(metrics: metrics, interactive: true, cornerRadius: metrics.scaled(14))
                     .padding(.top, 6)
             }
             .appFont(.body, metrics: metrics)
@@ -222,7 +225,7 @@ struct ConfigProfilesView: View {
         panel.allowsMultipleSelection = false
         panel.canChooseDirectories = false
         panel.canChooseFiles = true
-        panel.allowedFileTypes = ["joblib"]
+        panel.allowedContentTypes = [UTType(filenameExtension: "joblib") ?? .data]
         panel.title = settings.language == .zhHans ? "选择 joblib 模型文件" : "Select joblib model file"
         panel.prompt = settings.language == .zhHans ? "替换核心" : "Replace Core"
 
